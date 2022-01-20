@@ -253,7 +253,7 @@ void ABLBoundaryPlane::write_header()
                    << std::endl;
 
     auto ncf = ncutils::NCFile::create_par(
-        m_filename, NC_CLOBBER | NC_NETCDF4 | NC_MPIIO,
+        m_filename, NC_CLOBBER | NC_MPIIO,
         amrex::ParallelContext::CommunicatorSub(), MPI_INFO_NULL);
 
     ncf.enter_def_mode();
@@ -373,7 +373,7 @@ void ABLBoundaryPlane::write_file()
                    << time << std::endl;
 
     auto ncf = ncutils::NCFile::open_par(
-        m_filename, NC_WRITE | NC_NETCDF4 | NC_MPIIO,
+        m_filename, NC_WRITE | NC_MPIIO,
         amrex::ParallelContext::CommunicatorSub(), MPI_INFO_NULL);
 
     auto v_time = ncf.var("time");
@@ -414,7 +414,7 @@ void ABLBoundaryPlane::read_header()
 
     amrex::Print() << "Reading input NetCDF file: " << m_filename << std::endl;
     auto ncf = ncutils::NCFile::open_par(
-        m_filename, NC_NOWRITE | NC_NETCDF4 | NC_MPIIO,
+        m_filename, NC_NOWRITE | NC_MPIIO,
         amrex::ParallelContext::CommunicatorSub(), MPI_INFO_NULL);
 
     // Store the input file times and reset to start at 0
@@ -502,7 +502,7 @@ void ABLBoundaryPlane::read_file()
     if (!((m_in_data.tn() <= time) && (time < m_in_data.tnp1()))) {
 
         auto ncf = ncutils::NCFile::open_par(
-            m_filename, NC_NOWRITE | NC_NETCDF4 | NC_MPIIO,
+            m_filename, NC_NOWRITE | NC_MPIIO,
             amrex::ParallelContext::CommunicatorSub(), MPI_INFO_NULL);
 
         for (amrex::OrientationIter oit; oit; ++oit) {
