@@ -40,6 +40,7 @@ public:
         auto& divtau = this->m_pdefields.diff_term.state(tau_state);
 
         amrex::MLMG mlmg(*this->m_applier);
+        // TODO(psakiev) this is computing divtau
         mlmg.apply(divtau.vec_ptrs(), this->m_pdefields.field.vec_ptrs());
 
         const auto& repo = this->m_pdefields.repo;

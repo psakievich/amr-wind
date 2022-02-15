@@ -2,6 +2,7 @@
 #include "amr-wind/core/MultiParser.H"
 #include "amr-wind/utilities/ncutils/nc_interface.H"
 #include "amr-wind/utilities/io_utils.H"
+#include "amr-wind/core/vs/tensor.H"
 
 #include "amr-wind/fvm/gradient.H"
 #include "amr-wind/core/field_ops.H"
@@ -25,7 +26,7 @@ void read_inputs(
 
 void init_data_structures(ComplexTerrainBaseData& /*unused*/) {}
 
-void apply_dirichlet_vel(CFDSim& sim, const amrex::Vector<amrex::Real>& vel_bc)
+void apply_dirichlet_vel(CFDSim& sim, const vs::Vector& vel_bc)
 {
     const int nlevels = sim.repo().num_active_levels();
     auto& geom = sim.mesh().Geom();
@@ -73,9 +74,29 @@ void apply_dirichlet_vel(CFDSim& sim, const amrex::Vector<amrex::Real>& vel_bc)
     }
 }
 
-void compute_wall_stresses(
-    CFDSim& sim, const amrex::Vector<amrex::Real>& tau_wall)
-{}
+void compute_wall_stresses(CFDSim& sim, const vs::Tensor& tau_wall)
+{
+    const int nlevels = sim.repo().num_active_levels();
+    auto& geom = sim.mesh().Geom();
+    auto& normal = sim.repo().get_field("ib_normal");
+    for (int lev = 0; lev < nlevels; ++lev) {
+        const auto& dx = geom[lev].CellSizeArray();
+        for (amrex::MFIter mfi(levelset(lev)); mfi.isValid(); ++mfi) {
+            const auto& bx = mfi.tilebox();
+            auto norm_arr = normal(lev).array(mfi);
+            amrex::ParallelFor(
+                bx, [=] AMREX_GPU_DEVICE(int i, int j, int k) noexcept {
+                    // const auto ftemp = tau_wall & norm_arr
+                    /*
+                    // check the sign
+                    for (int ii = 0 ; i<3; i++){
+                        force(i,j,k,ii) += ftemp(ii)
+                    }
+                    */
+                });
+        }
+    }
+}
 
 void prepare_netcdf_file(
     const std::string& ncfile,

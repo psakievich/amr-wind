@@ -118,6 +118,8 @@ void ABLWallFunction::update_umean(
         m_mo.vmag_mean = m_wf_vmag;
         m_mo.theta_mean = m_wf_theta;
     } else {
+        // TODO(psakiev) these line averages are not appropriate for complex
+        // terrain
         m_mo.vel_mean[0] = vpa.line_average_interpolated(m_mo.zref, 0);
         m_mo.vel_mean[1] = vpa.line_average_interpolated(m_mo.zref, 1);
         m_mo.vmag_mean = vpa.line_hvelmag_average_interpolated(m_mo.zref);
@@ -160,6 +162,7 @@ void ABLVelWallFunc::wall_model(
 
     amrex::Orientation zlo(amrex::Direction::z, amrex::Orientation::low);
     amrex::Orientation zhi(amrex::Direction::z, amrex::Orientation::high);
+    // TODO(psakiev) need another check here
     if (!(velocity.bc_type()[zlo] == BC::wall_model ||
           velocity.bc_type()[zhi] == BC::wall_model)) {
         return;
@@ -188,6 +191,7 @@ void ABLVelWallFunc::wall_model(
             auto den = rho_lev.array(mfi);
             auto eta = eta_lev.array(mfi);
 
+            // refactor for velocity normal and tangential
             if (bx.smallEnd(idim) == domain.smallEnd(idim) &&
                 velocity.bc_type()[zlo] == BC::wall_model) {
                 amrex::ParallelFor(

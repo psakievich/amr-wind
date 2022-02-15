@@ -25,10 +25,9 @@ void init_data_structures(CFDSim&);
 
 /** Set the velocity inside the IB Complex Terrain
  */
-void apply_dirichlet_vel(CFDSim&, const amrex::Vector<amrex::Real>& vel_bc);
+void apply_dirichlet_vel(CFDSim&, const vs::Vector& vel_bc);
 
-void compute_wall_stresses(
-    CFDSim& sim, const amrex::Vector<amrex::Real>& tau_wall);
+void compute_wall_stresses(CFDSim& sim, const vs::Tensor& tau_wall);
 
 void prepare_netcdf_file(
     const std::string&, const ComplexTerrainBaseData&, const IBInfo&);
@@ -84,7 +83,15 @@ struct ComputeForceOp<
     typename std::enable_if<
         std::is_base_of<ComplexTerrainType, GeomTrait>::value>::type>
 {
-    void operator()(typename GeomTrait::DataType&) {}
+    void operator()(typename GeomTrait::DataType& data)
+    {
+        BL_PROFILE("amr-wind::ib::IB::compute_forces");
+
+        const auto& wdata = data.meta();
+        auto& sim = data.sim();
+
+        complex_terrain::compute_wall_stresses(sim, wdata.tau_wall);
+    }
 };
 
 template <typename GeomTrait>

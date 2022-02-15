@@ -3,6 +3,7 @@
 
 #include "amr-wind/immersed_boundary/IBTypes.H"
 #include "amr-wind/core/vs/vector_space.H"
+#include "amr-wind/core/vs/tensor.H"
 
 #include <string>
 
@@ -21,12 +22,12 @@ struct ComplexTerrainBaseData
     bool has_wall_model{false};
 
     //! IB velocity in the interior (solid cells)
-    amrex::Vector<amrex::Real> vel_bc{{0.0, 0.0, 0.0}};
+    vs::Vector vel_bc{0.0, 0.0, 0.0};
 
-    amrex::Vector<amrex::Vector<amrex::Real>> tau_wall[3][3];
+    vs::Tensor tau_wall{{0.0, 1.0, 1.0}, {1.0, 0.0, 1.0}, {1.0, 1.0, 0.0}};
 
     //! Total integrated drag forces over the complex terrain
-    amrex::Vector<amrex::Real> frc{{0.0, 0.0, 0.0}};
+    vs::Vector frc{0.0, 0.0, 0.0};
 };
 
 struct ComplexTerrainType : public IBType
