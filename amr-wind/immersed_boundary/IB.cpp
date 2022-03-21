@@ -17,6 +17,7 @@ IB::IB(CFDSim& sim)
 {
     m_ib_levelset.set_default_fillpatch_bc(sim.time());
     m_ib_normal.set_default_fillpatch_bc(sim.time());
+    // nmatula source need to be added here?
 }
 
 IB::~IB() = default;
@@ -127,8 +128,11 @@ void IB::compute_source_term()
 #ifdef _OPENMP
 #pragma omp parallel if (amrex::Gpu::notInLaunchRegion())
 #endif
+
         for (amrex::MFIter mfi(sfab); mfi.isValid(); ++mfi) {
+
             for (auto& ib : m_ibs) {
+
                 // TODO(psakiev) performance optimization to only operate on
                 // processors the boxes intersect
                 // if (ib->info().actuator_in_proc) {
@@ -160,6 +164,8 @@ void IB::post_advance_work()
         ib->update_positions();
         ib->write_outputs();
     }
+    // nmatula any other places where the source term needs to be added?
+    compute_source_term();
 }
 
 } // namespace ib

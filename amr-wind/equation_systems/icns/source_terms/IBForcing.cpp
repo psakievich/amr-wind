@@ -10,7 +10,11 @@ namespace icns {
 
 IBForcing::IBForcing(const CFDSim& sim)
     : m_ib_src(sim.repo().get_field("ib_src_term"))
-{}
+{
+    if (!sim.physics_manager().contains("IB")) {
+        amrex::Abort("IBForcing requires IB physics to be active");
+    }
+}
 
 IBForcing::~IBForcing() = default;
 
@@ -19,7 +23,7 @@ void IBForcing::operator()(
     const amrex::MFIter& mfi,
     const amrex::Box& bx,
     const FieldState /*fstate*/,
-    const amrex::Array4<amrex::Real>& src_term)
+    const amrex::Array4<amrex::Real>& src_term) const
 {
     const auto varr = m_ib_src(lev).const_array(mfi);
 

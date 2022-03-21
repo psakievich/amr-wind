@@ -64,6 +64,9 @@ template <typename GeomTrait, typename = void>
 struct ComputeForceOp;
 
 template <typename GeomTrait, typename = void>
+struct ComputeSourceOp;
+
+template <typename GeomTrait, typename = void>
 struct ProcessOutputsOp;
 
 } // namespace ops
