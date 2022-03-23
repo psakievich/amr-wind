@@ -17,7 +17,7 @@ IB::IB(CFDSim& sim)
 {
     m_ib_levelset.set_default_fillpatch_bc(sim.time());
     m_ib_normal.set_default_fillpatch_bc(sim.time());
-    // nmatula source need to be added here?
+    m_ib_source.set_default_fillpatch_bc(sim.time());
 }
 
 IB::~IB() = default;
@@ -60,6 +60,7 @@ void IB::post_init_actions()
     for (auto& ib : m_ibs) {
         ib->init_ib();
     }
+    compute_source_term();
 }
 
 void IB::post_regrid_actions() {}
@@ -164,7 +165,6 @@ void IB::post_advance_work()
         ib->update_positions();
         ib->write_outputs();
     }
-    // nmatula any other places where the source term needs to be added?
     compute_source_term();
 }
 
