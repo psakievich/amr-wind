@@ -120,7 +120,6 @@ struct ComputeSourceOp<
             bx, [=] AMREX_GPU_DEVICE(int i, int j, int k) noexcept {
                 const amrex::Vector<amrex::Real> vel = {
                     {varr(i, j, k, 0), varr(i, j, k, 1), varr(i, j, k, 2)}};
-                const amrex::Real vmag = utils::vec_mag(vel.data());
                 const amrex::Vector<amrex::Real> norm = {
                     {norm_arr(i, j, k, 0), norm_arr(i, j, k, 1),
                      norm_arr(i, j, k, 2)}};
@@ -128,6 +127,7 @@ struct ComputeSourceOp<
                 // normal vector will only be ~1 or ~0 so 0.5 is a safe value
                 // that to confirm we are in the band where the wall model is
                 // active
+                const amrex::Real nmag = utils::vec_mag(norm.data());
                 if (nmag > 0.5) {
                     const amrex::Real vdotn =
                         utils::dot_prod(norm.data(), vel.data());
