@@ -143,8 +143,7 @@ struct ComputeSourceOp<
                     // vtan already has one factor of vtmag in it, so there's no
                     // need to normalize, just leave off a factor in the
                     // coefficient.
-                    const amrex::Real force =
-                        -0.5 * darr(i, j, k) * gauss_fac * vtmag * cd;
+                    const amrex::Real force = -cd / vtmag;
                     sarr(i, j, k, 0) += force * vtan[0];
                     sarr(i, j, k, 1) += force * vtan[1];
                     sarr(i, j, k, 2) += force * vtan[2];
