@@ -30,6 +30,11 @@ void read_inputs(
     wdata.drag_coefficient = std::pow(
         wdata.kappa / std::log(wdata.sample_height / wdata.roughness_height),
         2.0);
+    if (pp.contains("drag_coefficient")) {
+        pp.query("drag_coefficient", wdata.drag_coefficient);
+        amrex::Print() << "WARNING:: Specifying IB.drag_coefficient overrides "
+                          "the wall model drag value\n";
+    }
 }
 
 void init_data_structures(ComplexTerrainBaseData& /*unused*/) {}
@@ -81,10 +86,6 @@ void apply_dirichlet_vel(CFDSim& sim, const amrex::Vector<amrex::Real>& vel_bc)
         }
     }
 }
-
-void compute_wall_stresses(
-    CFDSim& sim, const amrex::Vector<amrex::Real>& tau_wall)
-{}
 
 void prepare_netcdf_file(
     const std::string& ncfile,

@@ -24,8 +24,6 @@ struct ReadInputsOp<Flat>
 
         complex_terrain::read_inputs(wdata, info, pp);
         pp.get("height", wdata.height);
-        pp.get("drag_coefficient", wdata.drag_coefficient);
-        pp.get("eps_spread", wdata.eps_spread);
     }
 };
 

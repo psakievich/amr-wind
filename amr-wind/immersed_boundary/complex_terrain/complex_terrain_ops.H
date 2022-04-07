@@ -29,9 +29,6 @@ void init_data_structures(CFDSim&);
  */
 void apply_dirichlet_vel(CFDSim&, const amrex::Vector<amrex::Real>& vel_bc);
 
-void compute_wall_stresses(
-    CFDSim& sim, const amrex::Vector<amrex::Real>& tau_wall);
-
 void prepare_netcdf_file(
     const std::string&, const ComplexTerrainBaseData&, const IBInfo&);
 
@@ -118,8 +115,8 @@ struct ComputeSourceOp<
         amrex::ParallelFor(
             bx, [=] AMREX_GPU_DEVICE(int i, int j, int k) noexcept {
                 const vs::Vector norm = {
-                    {norm_arr(i, j, k, 0), norm_arr(i, j, k, 1),
-                     norm_arr(i, j, k, 2)}};
+                    norm_arr(i, j, k, 0), norm_arr(i, j, k, 1),
+                    norm_arr(i, j, k, 2)};
                 // Outside the band if the normal vector is assigned to be zero
                 // normal vector will only be ~1 or ~0 so 0.5 is a safe value
                 // that to confirm we are in the band where the wall model is
@@ -129,12 +126,13 @@ struct ComputeSourceOp<
                     // TODO(psakiev) make a general function, perhaps just cache
                     // in UpdateVelOp?
                     const vs::Vector vMe = {
-                        {varr(i, j, k, 0), varr(i, j, k, 1), varr(i, j, k, 2)}};
+                        varr(i, j, k, 0), varr(i, j, k, 1), varr(i, j, k, 2)};
                     const vs::Vector vNeighbor = {
-                        {varr(i, j, k, 0), varr(i, j, k, 1), varr(i, j, k, 2)}};
+                        varr(i, j, k + 1, 0), varr(i, j, k + 1, 1),
+                        varr(i, j, k + 1, 2)};
 
                     // TODO(psakiev) need to actually compute the weights
-                    const auto = 0.5 * vMe + 0.5 * vNeighbor;
+                    const auto vel = 0.5 * vMe + 0.5 * vNeighbor;
 
                     // v_tan = v - (v dot n) n
                     const auto vtan = vel - (vel & norm) * norm;
