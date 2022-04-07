@@ -114,13 +114,10 @@ struct ComputeSourceOp<
         auto sarr = source(lev).array(mfi);
 
         const amrex::Real cd = data.meta().drag_coefficient;
-        const amrex::Real eps = data.meta().eps_spread;
 
         amrex::ParallelFor(
             bx, [=] AMREX_GPU_DEVICE(int i, int j, int k) noexcept {
-                const amrex::Vector<amrex::Real> vel = {
-                    {varr(i, j, k, 0), varr(i, j, k, 1), varr(i, j, k, 2)}};
-                const amrex::Vector<amrex::Real> norm = {
+                const vs::Vector norm = {
                     {norm_arr(i, j, k, 0), norm_arr(i, j, k, 1),
                      norm_arr(i, j, k, 2)}};
                 // Outside the band if the normal vector is assigned to be zero
@@ -129,21 +126,29 @@ struct ComputeSourceOp<
                 // active
                 const amrex::Real nmag = utils::vec_mag(norm.data());
                 if (nmag > 0.5) {
-                    const amrex::Real vdotn =
-                        utils::dot_prod(norm.data(), vel.data());
-                    const auto gauss_fac = actuator::utils::gaussian1d(
-                        amrex::Math::abs(phi_arr(i, j, k)), eps);
+                    // TODO(psakiev) make a general function, perhaps just cache
+                    // in UpdateVelOp?
+                    const vs::Vector vMe = {
+                        {varr(i, j, k, 0), varr(i, j, k, 1), varr(i, j, k, 2)}};
+                    const vs::Vector vNeighbor = {
+                        {varr(i, j, k, 0), varr(i, j, k, 1), varr(i, j, k, 2)}};
+
+                    // TODO(psakiev) need to actually compute the weights
+                    const auto = 0.5 * vMe + 0.5 * vNeighbor;
+
                     // v_tan = v - (v dot n) n
-                    amrex::Vector<amrex::Real> vtan = {
-                        {vel[0] - vdotn * norm[0], vel[1] - vdotn * norm[1],
-                         vel[2] - vdotn * norm[2]}};
+                    const auto vtan = vel - (vel & norm) * norm;
                     // Get tangent velocity magnitude
-                    const amrex::Real vtmag = utils::vec_mag(vtan.data());
+                    const amrex::Real vtmag = vs::mag(vtan);
+                    const amrex::Real rho = darr(i, j, k);
                     // Calculate drag force C_D * 0.5 * rho * vtmag^2
                     // vtan already has one factor of vtmag in it, so there's no
                     // need to normalize, just leave off a factor in the
                     // coefficient.
-                    const amrex::Real force = -cd / vtmag;
+
+                    // TODO(psakiev)missing an area factor? maybe dz/V for a
+                    // start?
+                    const amrex::Real force = -0.5 * cd * vtmag * rho;
                     sarr(i, j, k, 0) += force * vtan[0];
                     sarr(i, j, k, 1) += force * vtan[1];
                     sarr(i, j, k, 2) += force * vtan[2];

@@ -23,10 +23,13 @@ struct ComplexTerrainBaseData
     //! IB velocity in the interior (solid cells)
     amrex::Vector<amrex::Real> vel_bc{{0.0, 0.0, 0.0}};
 
-    amrex::Vector<amrex::Vector<amrex::Real>> tau_wall[3][3];
-
     //! Total integrated drag forces over the complex terrain
     amrex::Vector<amrex::Real> frc{{0.0, 0.0, 0.0}};
+    amrex::Real band_width;
+    amrex::Real sample_height;
+    amrex::Real drag_coefficient;
+    amrex::Real kappa{0.41};
+    amrex::Real roughness_height;
 };
 
 struct ComplexTerrainType : public IBType

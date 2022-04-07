@@ -9,8 +9,6 @@ namespace ib {
 struct FlatData : public ComplexTerrainBaseData
 {
     amrex::Real height{0.04};
-    amrex::Real drag_coefficient{0.1};
-    amrex::Real eps_spread{0.3};
 };
 
 struct Flat : public ComplexTerrainType

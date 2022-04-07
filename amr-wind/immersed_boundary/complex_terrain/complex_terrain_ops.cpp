@@ -20,6 +20,16 @@ void read_inputs(
     const ::amr_wind::utils::MultiParser& pp)
 {
     pp.query("has_wall_model", wdata.has_wall_model);
+    pp.query("band_width", wdata.band_width);
+    pp.query("sample_height", wdata.sample_height);
+    pp.query("kappa", wdata.kappa);
+    pp.query("surface_roughness_z0", wdata.roughness_height);
+    if (wdata.band_width < wdata.sample_height) {
+        amrex::Abort("IB:: sample_height must be >= band_width");
+    }
+    wdata.drag_coefficient = std::pow(
+        wdata.kappa / std::log(wdata.sample_height / wdata.roughness_height),
+        2.0);
 }
 
 void init_data_structures(ComplexTerrainBaseData& /*unused*/) {}
