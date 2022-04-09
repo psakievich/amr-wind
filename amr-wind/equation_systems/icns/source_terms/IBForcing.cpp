@@ -43,27 +43,11 @@ void IBForcing::operator()(
 
         const amrex::Real mag_phi_norm = vs::mag(phi_norm);
 
+        // subtract the viscous term in locations where we are adding the
+        // modeled stress
         for (int ii = 0; ii < 3; ii++) {
-            const amrex::Real viscous_delta =
-                diffterm(i, j, k, ii) * mag_phi_norm - varr(i, j, k, ii);
-            const amrex::Real viscous_nudge =
-                viscous_delta < 0 ? viscous_delta : 0.0;
-            if (k == 3 && i == 0 && j == 0) {
-                amrex::Print()
-                    << "src: " << varr(i, j, k, ii)
-                    << " diffterm: " << diffterm(i, j, k, ii)
-                    << " viscous_delta: " << viscous_delta
-                    << " viscous_nudge: " << viscous_nudge
-                    << " actual additiona: "
-                    << varr(i, j, k, ii) + viscous_nudge -
-                           diffterm(i, j, k, ii) * mag_phi_norm
-                    << " mag_phi_norm: " << mag_phi_norm << std::endl;
-            }
-            const amrex::Real fac = 1.0;
-            src_term(i, j, k, ii) += fac * (varr(i, j, k, ii) + viscous_nudge);
-            src_term(i, j, k, ii) -=
-                fac * (diffterm(i, j, k, ii) * mag_phi_norm);
-            //  varr(i, j, k, ii) - diffterm(i, j, k, ii) * mag_phi_norm;
+            src_term(i, j, k, ii) +=
+                (varr(i, j, k, ii) - diffterm(i, j, k, ii));
         }
     });
 }
