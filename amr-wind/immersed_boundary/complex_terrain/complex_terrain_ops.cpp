@@ -20,8 +20,12 @@ void read_inputs(
     const ::amr_wind::utils::MultiParser& pp)
 {
     pp.query("has_wall_model", wdata.has_wall_model);
-    pp.query("band_width", wdata.band_width);
-    pp.query("sample_height", wdata.sample_height);
+    // TODO it would be nice to configure these things. for now we are just
+    // going to use a fixed bandwidth based on a single cell
+    // and use that as the sample height
+    //
+    // pp.query("band_width", wdata.band_width);
+    // pp.query("sample_height", wdata.sample_height);
     pp.query("kappa", wdata.kappa);
     pp.query("surface_roughness_z0", wdata.roughness_height);
     if (wdata.band_width < wdata.sample_height) {

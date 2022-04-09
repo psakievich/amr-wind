@@ -43,11 +43,13 @@ void IBForcing::operator()(
 
         const amrex::Real mag_phi_norm = vs::mag(phi_norm);
 
-        // subtract the viscous term in locations where we are adding the
-        // modeled stress
-        for (int ii = 0; ii < 3; ii++) {
-            src_term(i, j, k, ii) +=
-                (varr(i, j, k, ii) - diffterm(i, j, k, ii));
+        if (mag_phi_norm > 0.5) {
+            // subtract the viscous term in locations where we are adding the
+            // modeled stress
+            for (int ii = 0; ii < 3; ii++) {
+                src_term(i, j, k, ii) +=
+                    (varr(i, j, k, ii) - diffterm(i, j, k, ii));
+            }
         }
     });
 }

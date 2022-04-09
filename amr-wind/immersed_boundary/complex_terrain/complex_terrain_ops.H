@@ -110,6 +110,9 @@ struct ComputeSourceOp<
         const auto& norm_arr = normal(lev).array(mfi);
         auto sarr = source(lev).array(mfi);
 
+        const auto& dx = geom.CellSizeArray();
+        const amrex::Real phi_bandwidth = 1. * std::cbrt(dx[0] * dx[1] * dx[2]);
+
         const amrex::Real cd = data.meta().drag_coefficient;
 
         amrex::ParallelFor(
@@ -125,14 +128,27 @@ struct ComputeSourceOp<
                 if (nmag > 0.5) {
                     // TODO(psakiev) make a general function, perhaps just cache
                     // in UpdateVelOp?
-                    const vs::Vector vMe = {
-                        varr(i, j, k, 0), varr(i, j, k, 1), varr(i, j, k, 2)};
-                    const vs::Vector vNeighbor = {
-                        varr(i, j, k + 1, 0), varr(i, j, k + 1, 1),
-                        varr(i, j, k + 1, 2)};
 
-                    // TODO(psakiev) need to actually compute the weights
-                    const auto vel = 0.5 * vMe + 0.5 * vNeighbor;
+                    // Interpolate the velocity at the bandwidth based on a cell
+                    // inside and outside the band
+
+                    // orientation for outside the band based on which
+                    //  way phi is growing
+                    const int iO =
+                        phi_arr(i, j, k + 1) > phi_arr(i, j, k) ? 1 : -1;
+                    const vs::Vector vIn = {
+                        varr(i, j, k, 0), varr(i, j, k, 1), varr(i, j, k, 2)};
+                    const vs::Vector vOut = {
+                        varr(i, j, k + iO, 0), varr(i, j, k + iO, 1),
+                        varr(i, j, k + iO, 2)};
+
+                    // phi at this location will always be <= bandwidth
+                    const amrex::Real wIn =
+                        1.0 -
+                        (phi_bandwidth - phi_arr(i, j, k)) / phi_bandwidth;
+                    const amrex::Real wOut = 1.0 - wIn;
+
+                    const auto vel = wIn * vIn + wOut * vOut;
 
                     // v_tan = v - (v dot n) n
                     const auto vtan = vel - (vel & norm) * norm;
