@@ -92,8 +92,8 @@ void ABL::post_init_actions()
         m_stats->vel_profile(), m_stats->theta_profile());
 
     // Register ABL wall function for velocity
-    m_velocity.register_custom_bc<ABLVelWallFunc>(m_abl_wall_func);
-    (*m_temperature).register_custom_bc<ABLTempWallFunc>(m_abl_wall_func);
+    // m_velocity.register_custom_bc<ABLVelWallFunc>(m_abl_wall_func);
+    //(*m_temperature).register_custom_bc<ABLTempWallFunc>(m_abl_wall_func);
 
     m_bndry_plane->post_init_actions();
 }

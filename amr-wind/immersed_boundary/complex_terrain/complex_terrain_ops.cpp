@@ -60,7 +60,8 @@ void apply_dirichlet_vel(CFDSim& sim, const amrex::Vector<amrex::Real>& vel_bc)
         const auto& dx = geom[lev].CellSizeArray();
         // const auto& problo = geom[lev].ProbLoArray();
         // Defining the band distance
-        amrex::Real phi_b = 1. * std::cbrt(dx[0] * dx[1] * dx[2]);
+        // amrex::Real phi_b = 1. * std::cbrt(dx[0] * dx[1] * dx[2]);
+        amrex::Real phi_b = dx[2];
 
         for (amrex::MFIter mfi(levelset(lev)); mfi.isValid(); ++mfi) {
             const auto& bx = mfi.tilebox();

@@ -102,16 +102,20 @@ struct ComputeSourceOp<
         const Field& normal = data.sim().repo().get_field("ib_normal");
         const Field& velocity = data.sim().repo().get_field("velocity");
         const Field& density = data.sim().repo().get_field("density");
+        const Field& viscosity = data.sim().repo().get_field("velocity_mueff");
 
         const auto& bx = mfi.tilebox();
         const auto& varr = velocity(lev).array(mfi);
         const auto& darr = density(lev).array(mfi);
         const auto& phi_arr = level(lev).array(mfi);
         const auto& norm_arr = normal(lev).array(mfi);
+        const auto& mueff = viscosity(lev).array(mfi);
         auto sarr = source(lev).array(mfi);
 
         const auto& dx = geom.CellSizeArray();
-        const amrex::Real phi_bandwidth = 1. * std::cbrt(dx[0] * dx[1] * dx[2]);
+        // const amrex::Real phi_bandwidth = 1. * std::cbrt(dx[0] * dx[1] *
+        // dx[2]);
+        const amrex::Real phi_bandwidth = dx[2];
 
         const amrex::Real cd = data.meta().drag_coefficient;
 
@@ -141,6 +145,11 @@ struct ComputeSourceOp<
                     const vs::Vector vOut = {
                         varr(i, j, k + iO, 0), varr(i, j, k + iO, 1),
                         varr(i, j, k + iO, 2)};
+                    const auto muface =
+                        0.5 * (mueff(i, j, k) + mueff(i, j, k + iO));
+
+                    const auto tau_upper = muface * (vIn[0] - vOut[0]) / dx[2];
+                    // const auto divtau = 0.5 * tau_upper / dx[2];
 
                     // phi at this location will always be <= bandwidth
                     const amrex::Real wIn =
@@ -155,17 +164,31 @@ struct ComputeSourceOp<
                     // Get tangent velocity magnitude
                     const amrex::Real vtmag = vs::mag(vtan);
                     const amrex::Real rho = darr(i, j, k);
+
+                    const auto tau_lower =
+                        -std::pow(0.41 * vtmag / (std::log(dx[2] / 0.056)), 2);
+
+                    const auto divtau = (tau_lower - tau_upper) / dx[2];
+
                     // Calculate drag force C_D * 0.5 * rho * vtmag^2
                     // vtan already has one factor of vtmag in it, so there's no
                     // need to normalize, just leave off a factor in the
                     // coefficient.
 
-                    // TODO(psakiev)missing an area factor? maybe dz/V for a
+                    // TODO(psakiev)missing an area factor? maybe V/dz for a
                     // start?
-                    const amrex::Real force = -0.5 * cd * vtmag * rho;
-                    sarr(i, j, k, 0) += force * vtan[0];
-                    sarr(i, j, k, 1) += force * vtan[1];
-                    sarr(i, j, k, 2) += force * vtan[2];
+                    const amrex::Real force = -0.5 * cd * vtmag * vtan[0] * rho;
+                    sarr(i, j, k, 0) += divtau; // force * vtan[0] + divtau;
+                    // sarr(i, j, k, 1) += force * vtan[1];
+                    // sarr(i, j, k, 2) += force * vtan[2];
+                    if (i == 1 && j == 1) {
+                        amrex::Print()
+                            << std::setw(10) << std::setprecision(7) << "k "
+                            << k << " vtmag " << vtmag << " vIn "
+                            << vs::mag(vIn) << " vOut " << vs::mag(vOut)
+                            << " drag force " << force * vtan[0] << " cd " << cd
+                            << " divtau " << divtau << std::endl;
+                    }
                 }
             });
     }
