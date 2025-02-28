@@ -18,15 +18,8 @@ public:
     static std::string identifier() { return "TwoPhaseTransport"; }
 
     explicit TwoPhaseTransport(const CFDSim& sim)
-        : m_sim(sim), m_repo(sim.repo())
+        : m_repo(sim.repo()), m_physics_mgr(sim.physics_manager())
     {
-        const auto& physics_mgr = m_sim.physics_manager();
-        if (!physics_mgr.contains("MultiPhase")) {
-            amrex::Abort("TwoPhaseTransport requires MultiPhase physics");
-        }
-        const auto& multiphase = physics_mgr.get<MultiPhase>();
-        m_ifacetype = multiphase.interface_capturing_method();
-
         amrex::ParmParse pp("transport");
         pp.query("viscosity_fluid1", m_mu1);
         pp.query("viscosity_fluid2", m_mu2);
@@ -140,61 +133,63 @@ public:
         // Select the interface capturing method
         auto mu = m_repo.create_scratch_field(1, m_ngrow);
 
-        if (m_ifacetype == InterfaceCapturingMethod::VOF) {
+        auto ifacetype = get_iface_method();
+        if (ifacetype == InterfaceCapturingMethod::VOF) {
 
             const auto& vof = m_repo.get_field("vof");
 
             for (int lev = 0; lev < m_repo.num_active_levels(); ++lev) {
-                for (amrex::MFIter mfi((*mu)(lev)); mfi.isValid(); ++mfi) {
-                    const auto& vbx = mfi.growntilebox();
-                    const auto& volfrac = vof(lev).const_array(mfi);
-                    const auto& visc = (*mu)(lev).array(mfi);
-                    const amrex::Real mu1 = m_mu1;
-                    const amrex::Real mu2 = m_mu2;
-                    amrex::ParallelFor(
-                        vbx,
-                        [=] AMREX_GPU_DEVICE(int i, int j, int k) noexcept {
-                            visc(i, j, k) = mu1 * volfrac(i, j, k) +
-                                            mu2 * (1.0 - volfrac(i, j, k));
-                        });
-                }
+                const auto& volfrac_arrs = vof(lev).const_arrays();
+                const auto& visc_arrs = (*mu)(lev).arrays();
+                const amrex::Real mu1 = m_mu1;
+                const amrex::Real mu2 = m_mu2;
+                amrex::ParallelFor(
+                    (*mu)(lev), mu->num_grow(),
+                    [=] AMREX_GPU_DEVICE(
+                        int nbx, int i, int j, int k) noexcept {
+                        visc_arrs[nbx](i, j, k) =
+                            mu1 * volfrac_arrs[nbx](i, j, k) +
+                            mu2 * (1.0 - volfrac_arrs[nbx](i, j, k));
+                    });
             }
+            amrex::Gpu::streamSynchronize();
 
-        } else if (m_ifacetype == InterfaceCapturingMethod::LS) {
+        } else if (ifacetype == InterfaceCapturingMethod::LS) {
 
             const auto& levelset = m_repo.get_field("levelset");
             const auto& geom = m_repo.mesh().Geom();
 
             for (int lev = 0; lev < m_repo.num_active_levels(); ++lev) {
-                for (amrex::MFIter mfi((*mu)(lev)); mfi.isValid(); ++mfi) {
-                    const auto& vbx = mfi.growntilebox();
-                    const auto& dx = geom[lev].CellSizeArray();
-                    const auto& visc = (*mu)(lev).array(mfi);
-                    const auto& phi = levelset(lev).const_array(mfi);
-                    const amrex::Real eps =
-                        std::cbrt(2. * dx[0] * dx[1] * dx[2]);
-                    const amrex::Real mu1 = m_mu1;
-                    const amrex::Real mu2 = m_mu2;
-                    amrex::ParallelFor(
-                        vbx,
-                        [=] AMREX_GPU_DEVICE(int i, int j, int k) noexcept {
-                            amrex::Real smooth_heaviside;
-                            if (phi(i, j, k) > eps) {
-                                smooth_heaviside = 1.0;
-                            } else if (phi(i, j, k) < -eps) {
-                                smooth_heaviside = 0.;
-                            } else {
-                                smooth_heaviside =
-                                    0.5 *
-                                    (1.0 + phi(i, j, k) / eps +
-                                     1.0 / M_PI *
-                                         std::sin(phi(i, j, k) * M_PI / eps));
-                            }
-                            visc(i, j, k) = mu1 * smooth_heaviside +
-                                            mu2 * (1.0 - smooth_heaviside);
-                        });
-                }
+                const auto& dx = geom[lev].CellSizeArray();
+                const auto& visc_arrs = (*mu)(lev).arrays();
+                const auto& phi_arrs = levelset(lev).const_arrays();
+                const amrex::Real eps = std::cbrt(2. * dx[0] * dx[1] * dx[2]);
+                const amrex::Real mu1 = m_mu1;
+                const amrex::Real mu2 = m_mu2;
+
+                amrex::ParallelFor(
+                    (*mu)(lev), mu->num_grow(),
+                    [=] AMREX_GPU_DEVICE(
+                        int nbx, int i, int j, int k) noexcept {
+                        amrex::Real smooth_heaviside;
+                        if (phi_arrs[nbx](i, j, k) > eps) {
+                            smooth_heaviside = 1.0;
+                        } else if (phi_arrs[nbx](i, j, k) < -eps) {
+                            smooth_heaviside = 0.;
+                        } else {
+                            smooth_heaviside =
+                                0.5 *
+                                (1.0 + phi_arrs[nbx](i, j, k) / eps +
+                                 1.0 / M_PI *
+                                     std::sin(
+                                         phi_arrs[nbx](i, j, k) * M_PI / eps));
+                        }
+                        visc_arrs[nbx](i, j, k) =
+                            mu1 * smooth_heaviside +
+                            mu2 * (1.0 - smooth_heaviside);
+                    });
             }
+            amrex::Gpu::streamSynchronize();
         }
         return mu;
     }
@@ -205,68 +200,65 @@ public:
         // Select the interface capturing method
         auto alpha = m_repo.create_scratch_field(1, m_ngrow);
 
-        if (m_ifacetype == InterfaceCapturingMethod::VOF) {
+        auto ifacetype = get_iface_method();
+        if (ifacetype == InterfaceCapturingMethod::VOF) {
 
             const auto& vof = m_repo.get_field("vof");
 
             for (int lev = 0; lev < m_repo.num_active_levels(); ++lev) {
-                for (amrex::MFIter mfi((*alpha)(lev)); mfi.isValid(); ++mfi) {
-                    const auto& vbx = mfi.growntilebox();
-                    const auto& volfrac = vof(lev).const_array(mfi);
-                    const auto& thdiff = (*alpha)(lev).array(mfi);
-                    const amrex::Real mu1 = m_mu1;
-                    const amrex::Real mu2 = m_mu2;
-                    const amrex::Real Pr1 = m_Pr1;
-                    const amrex::Real Pr2 = m_Pr2;
-                    amrex::ParallelFor(
-                        vbx,
-                        [=] AMREX_GPU_DEVICE(int i, int j, int k) noexcept {
-                            thdiff(i, j, k) =
-                                mu1 / Pr1 * volfrac(i, j, k) +
-                                mu2 / Pr2 * (1.0 - volfrac(i, j, k));
-                        });
-                }
+                const auto& volfrac_arrs = vof(lev).const_arrays();
+                const auto& thdiff_arrs = (*alpha)(lev).arrays();
+                const amrex::Real mu1 = m_mu1;
+                const amrex::Real mu2 = m_mu2;
+                const amrex::Real Pr1 = m_Pr1;
+                const amrex::Real Pr2 = m_Pr2;
+                amrex::ParallelFor(
+                    (*alpha)(lev), alpha->num_grow(),
+                    [=] AMREX_GPU_DEVICE(
+                        int nbx, int i, int j, int k) noexcept {
+                        thdiff_arrs[nbx](i, j, k) =
+                            mu1 / Pr1 * volfrac_arrs[nbx](i, j, k) +
+                            mu2 / Pr2 * (1.0 - volfrac_arrs[nbx](i, j, k));
+                    });
             }
 
-        } else if (m_ifacetype == InterfaceCapturingMethod::LS) {
-
+        } else if (ifacetype == InterfaceCapturingMethod::LS) {
             const auto& levelset = m_repo.get_field("levelset");
             const auto& geom = m_repo.mesh().Geom();
 
             for (int lev = 0; lev < m_repo.num_active_levels(); ++lev) {
-                for (amrex::MFIter mfi((*alpha)(lev)); mfi.isValid(); ++mfi) {
-                    const auto& vbx = mfi.growntilebox();
-                    const auto& dx = geom[lev].CellSizeArray();
-                    const auto& visc = (*alpha)(lev).array(mfi);
-                    const auto& phi = levelset(lev).const_array(mfi);
-                    const amrex::Real eps =
-                        std::cbrt(2. * dx[0] * dx[1] * dx[2]);
-                    const amrex::Real mu1 = m_mu1;
-                    const amrex::Real mu2 = m_mu2;
-                    const amrex::Real Pr1 = m_Pr1;
-                    const amrex::Real Pr2 = m_Pr2;
-                    amrex::ParallelFor(
-                        vbx,
-                        [=] AMREX_GPU_DEVICE(int i, int j, int k) noexcept {
-                            amrex::Real smooth_heaviside;
-                            if (phi(i, j, k) > eps) {
-                                smooth_heaviside = 1.0;
-                            } else if (phi(i, j, k) < -eps) {
-                                smooth_heaviside = 0.;
-                            } else {
-                                smooth_heaviside =
-                                    0.5 *
-                                    (1.0 + phi(i, j, k) / eps +
-                                     1.0 / M_PI *
-                                         std::sin(phi(i, j, k) * M_PI / eps));
-                            }
-                            visc(i, j, k) =
-                                mu1 / Pr1 * smooth_heaviside +
-                                mu2 / Pr2 * (1.0 - smooth_heaviside);
-                        });
-                }
+                const auto& dx = geom[lev].CellSizeArray();
+                const auto& visc_arrs = (*alpha)(lev).arrays();
+                const auto& phi_arrs = levelset(lev).const_arrays();
+                const amrex::Real eps = std::cbrt(2. * dx[0] * dx[1] * dx[2]);
+                const amrex::Real mu1 = m_mu1;
+                const amrex::Real mu2 = m_mu2;
+                const amrex::Real Pr1 = m_Pr1;
+                const amrex::Real Pr2 = m_Pr2;
+                amrex::ParallelFor(
+                    (*alpha)(lev), alpha->num_grow(),
+                    [=] AMREX_GPU_DEVICE(
+                        int nbx, int i, int j, int k) noexcept {
+                        amrex::Real smooth_heaviside;
+                        if (phi_arrs[nbx](i, j, k) > eps) {
+                            smooth_heaviside = 1.0;
+                        } else if (phi_arrs[nbx](i, j, k) < -eps) {
+                            smooth_heaviside = 0.;
+                        } else {
+                            smooth_heaviside =
+                                0.5 *
+                                (1.0 + phi_arrs[nbx](i, j, k) / eps +
+                                 1.0 / M_PI *
+                                     std::sin(
+                                         phi_arrs[nbx](i, j, k) * M_PI / eps));
+                        }
+                        visc_arrs[nbx](i, j, k) =
+                            mu1 / Pr1 * smooth_heaviside +
+                            mu2 / Pr2 * (1.0 - smooth_heaviside);
+                    });
             }
         }
+        amrex::Gpu::streamSynchronize();
         return alpha;
     }
 
@@ -330,7 +322,8 @@ public:
                 });
         }
 
-        if (m_ifacetype == InterfaceCapturingMethod::VOF) {
+        auto ifacetype = get_iface_method();
+        if (ifacetype == InterfaceCapturingMethod::VOF) {
             const auto& vof = m_repo.get_field("vof");
             const auto& vof_arr = vof(lev).const_array(mfi);
             amrex::ParallelFor(
@@ -339,7 +332,7 @@ public:
                         beta(i, j, k) = 0.0;
                     }
                 });
-        } else if (m_ifacetype == InterfaceCapturingMethod::LS) {
+        } else if (ifacetype == InterfaceCapturingMethod::LS) {
             const auto& levelset = m_repo.get_field("levelset");
             const auto& dx = m_repo.mesh().Geom(lev).CellSizeArray();
             const auto& phi_arr = levelset(lev).const_array(mfi);
@@ -416,14 +409,11 @@ public:
     }
 
 private:
-    //! Reference to the CFD sim
-    const CFDSim& m_sim;
-
     //! Reference to the field repository (for creating scratch fields)
     FieldRepo& m_repo;
 
-    //! Interface capturing method variable
-    InterfaceCapturingMethod m_ifacetype;
+    //! Reference to the physics manager
+    const PhysicsMgr& m_physics_mgr;
 
     //! Phase 1 (liquid) dynamic molecular viscosity
     amrex::Real m_mu1{1.0e-3};
@@ -445,6 +435,15 @@ private:
 
     //! Reference temperature
     amrex::Real m_reference_temperature{-1.0};
+
+    InterfaceCapturingMethod get_iface_method() const
+    {
+        if (!m_physics_mgr.contains("MultiPhase")) {
+            amrex::Abort("TwoPhaseTransport requires MultiPhase physics");
+        }
+        const auto& multiphase = m_physics_mgr.get<MultiPhase>();
+        return multiphase.interface_capturing_method();
+    }
 };
 
 } // namespace amr_wind::transport

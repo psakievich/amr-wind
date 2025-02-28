@@ -35,6 +35,8 @@ void read_inputs(
         pp.query("initialize_wave_field", wdata.init_wave_field);
     }
 
+    pp.query("current", wdata.current);
+
     wdata.has_ramp = pp.contains("timeramp_period");
     if (wdata.has_ramp) {
         pp.get("timeramp_period", wdata.ramp_period);
@@ -46,32 +48,39 @@ void read_inputs(
 
 void init_data_structures(RelaxZonesBaseData& /*unused*/) {}
 
+void update_target_vof(CFDSim& sim)
+{
+    const int nlevels = sim.repo().num_active_levels();
+    const auto& ow_levelset = sim.repo().get_field("ow_levelset");
+    auto& ow_vof = sim.repo().get_field("ow_vof");
+    const auto& geom = sim.mesh().Geom();
+
+    for (int lev = 0; lev < nlevels; ++lev) {
+        const auto& dx = geom[lev].CellSizeArray();
+        const auto target_phi = ow_levelset(lev).const_arrays();
+        auto target_volfrac = ow_vof(lev).arrays();
+        const amrex::Real eps = 2. * std::cbrt(dx[0] * dx[1] * dx[2]);
+        amrex::ParallelFor(
+            ow_vof(lev), amrex::IntVect(2),
+            [=] AMREX_GPU_DEVICE(int nbx, int i, int j, int k) noexcept {
+                target_volfrac[nbx](i, j, k) =
+                    multiphase::levelset_to_vof(i, j, k, eps, target_phi[nbx]);
+            });
+    }
+    amrex::Gpu::streamSynchronize();
+}
+
 void apply_relaxation_zones(CFDSim& sim, const RelaxZonesBaseData& wdata)
 {
     const int nlevels = sim.repo().num_active_levels();
-    auto& m_ow_levelset = sim.repo().get_field("ow_levelset");
-    auto& m_ow_vof = sim.repo().get_field("ow_vof");
-    const auto& m_ow_vel = sim.repo().get_field("ow_velocity");
+    const auto& ow_vof = sim.repo().get_field("ow_vof");
+    const auto& ow_vel = sim.repo().get_field("ow_velocity");
     const auto& geom = sim.mesh().Geom();
 
     const auto& mphase = sim.physics_manager().get<MultiPhase>();
     const amrex::Real rho1 = mphase.rho1();
     const amrex::Real rho2 = mphase.rho2();
     constexpr amrex::Real vof_tiny = 1e-12;
-
-    for (int lev = 0; lev < nlevels; ++lev) {
-        const auto& dx = geom[lev].CellSizeArray();
-        const auto target_phi = m_ow_levelset(lev).arrays();
-        auto target_volfrac = m_ow_vof(lev).arrays();
-        const amrex::Real eps = 2. * std::cbrt(dx[0] * dx[1] * dx[2]);
-        amrex::ParallelFor(
-            m_ow_vof(lev), amrex::IntVect(2),
-            [=] AMREX_GPU_DEVICE(int nbx, int i, int j, int k) noexcept {
-                target_volfrac[nbx](i, j, k) =
-                    multiphase::levelset_to_vof(i, j, k, eps, target_phi[nbx]);
-            });
-    }
-    amrex::Gpu::synchronize();
 
     // Get time
     const auto& time = sim.time().new_time();
@@ -82,6 +91,15 @@ void apply_relaxation_zones(CFDSim& sim, const RelaxZonesBaseData& wdata)
     auto& velocity = sim.repo().get_field("velocity");
     auto& density = sim.repo().get_field("density");
 
+    amr_wind::IntField* terrain_blank_ptr{nullptr};
+    amr_wind::IntField* terrain_drag_ptr{nullptr};
+    const bool terrain_exists = sim.repo().int_field_exists("terrain_blank");
+    // Get fields to prevent forcing in or near underwater terrain
+    if (terrain_exists) {
+        terrain_blank_ptr = &sim.repo().get_int_field("terrain_blank");
+        terrain_drag_ptr = &sim.repo().get_int_field("terrain_drag");
+    }
+
     for (int lev = 0; lev < nlevels; ++lev) {
         const auto& dx = geom[lev].CellSizeArray();
         const auto& problo = geom[lev].ProbLoArray();
@@ -89,13 +107,21 @@ void apply_relaxation_zones(CFDSim& sim, const RelaxZonesBaseData& wdata)
         auto vel_arrs = velocity(lev).arrays();
         auto rho_arrs = density(lev).arrays();
         auto volfrac_arrs = vof(lev).arrays();
-        const auto target_volfrac_arrs = m_ow_vof(lev).const_arrays();
-        const auto target_vel_arrs = m_ow_vel(lev).const_arrays();
+        const auto target_volfrac_arrs = ow_vof(lev).const_arrays();
+        const auto target_vel_arrs = ow_vel(lev).const_arrays();
+
+        const auto terrain_blank_flags =
+            terrain_exists ? (*terrain_blank_ptr)(lev).const_arrays()
+                           : amrex::MultiArray4<int const>();
+        const auto terrain_drag_flags =
+            terrain_exists ? (*terrain_drag_ptr)(lev).const_arrays()
+                           : amrex::MultiArray4<int const>();
 
         const amrex::Real gen_length = wdata.gen_length;
         const amrex::Real beach_length = wdata.beach_length;
         const amrex::Real beach_length_factor = wdata.beach_length_factor;
         const amrex::Real zsl = wdata.zsl;
+        const amrex::Real current = wdata.current;
         const bool has_beach = wdata.has_beach;
         const bool has_outprofile = wdata.has_outprofile;
 
@@ -115,8 +141,15 @@ void apply_relaxation_zones(CFDSim& sim, const RelaxZonesBaseData& wdata)
                 const auto target_volfrac = target_volfrac_arrs[nbx];
                 const auto target_vel = target_vel_arrs[nbx];
 
+                bool in_or_near_terrain{false};
+                if (terrain_exists) {
+                    in_or_near_terrain =
+                        (terrain_blank_flags[nbx](i, j, k) == 1 ||
+                         terrain_drag_flags[nbx](i, j, k) == 1);
+                }
+
                 // Generation region
-                if (x <= problo[0] + gen_length) {
+                if (x <= problo[0] + gen_length && !in_or_near_terrain) {
                     const amrex::Real Gamma =
                         utils::gamma_generate(x - problo[0], gen_length);
                     // Get bounded new vof, incorporate with increment
@@ -154,7 +187,7 @@ void apply_relaxation_zones(CFDSim& sim, const RelaxZonesBaseData& wdata)
                     }
                 }
                 // Outlet region
-                if (x + beach_length >= probhi[0]) {
+                if (x + beach_length >= probhi[0] && !in_or_near_terrain) {
                     const amrex::Real Gamma = utils::gamma_absorb(
                         x - (probhi[0] - beach_length), beach_length,
                         beach_length_factor);
@@ -172,14 +205,24 @@ void apply_relaxation_zones(CFDSim& sim, const RelaxZonesBaseData& wdata)
                         // Conserve momentum when density changes
                         amrex::Real rho_ = rho1 * volfrac(i, j, k) +
                                            rho2 * (1.0 - volfrac(i, j, k));
-                        // Target solution in liquid is vel = 0, assume
-                        // added liquid already has target velocity
+                        // Target vel is current, 0, 0
+                        amrex::Real out_vel{0.0};
                         for (int n = 0; n < vel.ncomp; ++n) {
-                            vel(i, j, k, n) =
-                                (rho1 * (volfrac(i, j, k) * Gamma -
-                                         amrex::max(0.0, dvf)) +
-                                 rho2 * (1. - volfrac(i, j, k))) *
-                                vel(i, j, k, n) / rho_;
+                            if (n == 0) {
+                                out_vel = current;
+                            } else {
+                                out_vel = 0.0;
+                            }
+                            const amrex::Real vel_liq = utils::combine_linear(
+                                Gamma, out_vel, vel(i, j, k, n));
+                            amrex::Real integrated_vel_liq =
+                                volfrac(i, j, k) * vel_liq;
+                            integrated_vel_liq += amrex::max(0.0, dvf) *
+                                                  (out_vel - vel(i, j, k, n));
+                            vel(i, j, k, n) = (rho1 * integrated_vel_liq +
+                                               rho2 * (1. - volfrac(i, j, k)) *
+                                                   vel(i, j, k, n)) /
+                                              rho_;
                         }
                     }
                     // Forcing to wave profile instead
@@ -222,7 +265,7 @@ void apply_relaxation_zones(CFDSim& sim, const RelaxZonesBaseData& wdata)
                     rho1 * volfrac(i, j, k) + rho2 * (1. - volfrac(i, j, k));
             });
     }
-    amrex::Gpu::synchronize();
+    amrex::Gpu::streamSynchronize();
 
     vof.fillpatch(time);
     velocity.fillpatch(time);

@@ -23,6 +23,10 @@ incflo::incflo()
     // constructor. No valid BoxArray and DistributionMapping have been defined.
     // But the arrays for them have been resized.
 
+    amrex::Print() << std::endl
+                   << "Initializing AMR-Wind." << std::endl
+                   << std::endl;
+
     // Check if dry run is requested and set up if so
     CheckAndSetUpDryRun();
 
@@ -140,7 +144,7 @@ void incflo::prepare_for_time_integration()
         return;
     }
 
-    if (m_do_initial_proj || m_initial_iterations > 0) {
+    if (m_initial_iterations > 0) {
         m_sim.pde_manager().prepare_boundaries();
     }
 
@@ -424,13 +428,13 @@ void incflo::init_physics_and_pde()
         pde_mgr.register_transport_pde("Density");
     }
 
+    m_sim.create_transport_model();
     m_sim.init_physics();
     {
         // Check for if velocity is prescribed
         amrex::ParmParse pp("incflo");
         pp.query("prescribe_velocity", m_prescribe_vel);
     }
-    m_sim.create_transport_model();
     m_sim.create_turbulence_model();
 
     // Initialize the refinement criteria

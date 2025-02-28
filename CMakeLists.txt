@@ -3,7 +3,7 @@
 cmake_minimum_required (VERSION 3.20 FATAL_ERROR)
 project(AMR-Wind CXX C)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
 include(CMakePackageConfigHelpers)
 include(GNUInstallDirs)
 include(amr-wind-utils)
@@ -23,6 +23,10 @@ option(AMR_WIND_TEST_WITH_FCOMPARE "Check test plots against gold files" OFF)
 option(AMR_WIND_SAVE_GOLDS "Provide a directory in which to save golds during testing" OFF)
 option(AMR_WIND_ENABLE_FPE_TRAP_FOR_TESTS "Enable FPE trapping in tests" ON)
 option(AMR_WIND_TEST_WITH_PYTHON "Enable testing relying on python, like postprocessing" OFF)
+
+#Use internal AMReX and AMReX-Hydro by default
+option(AMR_WIND_USE_INTERNAL_AMREX "Use the AMReX submodule" ON)
+option(AMR_WIND_USE_INTERNAL_AMREX_HYDRO "Use the AMReX-Hydro submodule" ON)
 
 #Options for the executable
 option(AMR_WIND_ENABLE_MPI "Enable MPI" OFF)
@@ -173,6 +177,20 @@ if(AMR_WIND_ENABLE_OPENFAST)
   target_compile_definitions(${amr_wind_lib_name} PUBLIC AMR_WIND_USE_OPENFAST)
   target_include_directories(${amr_wind_lib_name} PUBLIC ${OpenFAST_INCLUDE_DIRS})
   target_link_libraries(${amr_wind_lib_name} PUBLIC ${OpenFAST_LIBRARIES})
+
+  set(AMR_WIND_OPENFAST_VERSION "3" CACHE STRING "OpenFAST major version")
+  if((AMR_WIND_OPENFAST_VERSION STREQUAL "master") OR (AMR_WIND_OPENFAST_VERSION STREQUAL "main") OR (AMR_WIND_OPENFAST_VERSION STREQUAL "develop"))
+    set(AMR_WIND_OPENFAST_VERSION "4.0")
+  endif()
+  if(NOT AMR_WIND_OPENFAST_VERSION VERSION_LESS "5")
+    message(FATAL_ERROR "AMR_WIND_OPENFAST_VERSION must be less than 5.")
+  endif()
+  string(REPLACE "." ";" OPENFAST_VERSION_LIST ${AMR_WIND_OPENFAST_VERSION})
+  list(LENGTH OPENFAST_VERSION_LIST OPENFAST_VERSION_LIST_LENGTH)
+  if(OPENFAST_VERSION_LIST_LENGTH GREATER_EQUAL 1)
+    list(GET OPENFAST_VERSION_LIST 0 OPENFAST_VERSION_MAJOR)
+  endif()
+  target_compile_definitions(${amr_wind_lib_name} PUBLIC OPENFAST_VERSION_MAJOR=${OPENFAST_VERSION_MAJOR})
 endif()
 
 if(AMR_WIND_ENABLE_ASCENT)
@@ -186,7 +204,7 @@ if(AMR_WIND_ENABLE_ASCENT)
   target_compile_definitions(${amr_wind_lib_name} PUBLIC AMR_WIND_USE_ASCENT)
 endif()
 
-# Link with HELICS module 
+# Link with HELICS module
 if(AMR_WIND_ENABLE_HELICS)
   set(CMAKE_PREFIX_PATH ${HELICS_DIR} ${CMAKE_PREFIX_PATH})
   find_package(HELICS 3 REQUIRED)
