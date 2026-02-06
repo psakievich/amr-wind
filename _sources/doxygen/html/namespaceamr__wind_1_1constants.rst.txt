@@ -1,0 +1,14 @@
+.. meta::e3c8ec7259904a76ddd7dcada4e9ec79da38f3f7ac4c3c4222afdf8985d6343b8ba130798fbfd74d3ea9c3d71a9c0e831b261b2c8a3467af5e161617b39f1ec3
+
+:orphan:
+
+.. title:: AMR-Wind API: amr_wind::constants Namespace Reference
+
+constants Namespace Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: namespaceamr__wind_1_1constants.html
