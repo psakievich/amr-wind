@@ -20,6 +20,7 @@ DragTempForcing::DragTempForcing(const CFDSim& sim)
     amrex::ParmParse pp("DragTempForcing");
     pp.query("drag_coefficient", m_drag_coefficient);
     pp.query("soil_temperature", m_soil_temperature);
+    pp.query("bc_forcing_time_factor", m_forcing_time_factor);
     amrex::ParmParse pp_abl("ABL");
     pp_abl.query("wall_het_model", m_wall_het_model);
     pp_abl.query("monin_obukhov_length", m_monin_obukhov_length);
@@ -28,10 +29,9 @@ DragTempForcing::DragTempForcing(const CFDSim& sim)
     pp_abl.query("mo_beta_m", m_beta_m);
     pp_abl.query("mo_gamma_m", m_gamma_h);
     pp_abl.query("mo_beta_m", m_beta_h);
-    {
-        amrex::ParmParse pp_incflow("incflo");
-        pp_incflow.queryarr("gravity", m_gravity);
-    }
+
+    amrex::ParmParse pp_incflo("incflo");
+    pp_incflo.queryarr("gravity", m_gravity);
 }
 
 DragTempForcing::~DragTempForcing() = default;
@@ -87,6 +87,7 @@ void DragTempForcing::operator()(
     const auto tiny = std::numeric_limits<amrex::Real>::epsilon();
     const amrex::Real cd_max = 10.0_rt;
     const amrex::Real T0 = m_soil_temperature;
+    const amrex::Real time_factor = m_forcing_time_factor;
     amrex::ParallelFor(bx, [=] AMREX_GPU_DEVICE(int i, int j, int k) {
         const amrex::Real z0 =
             amrex::max<amrex::Real>(terrainz0(i, j, k), z0_min);
@@ -108,7 +109,8 @@ void DragTempForcing::operator()(
         const amrex::Real tTarget =
             surf_temp +
             (thetastar / kappa * (std::log(0.5_rt * dx[2] / z0) - psi_h_cell));
-        const amrex::Real bc_forcing_t = -(tTarget - theta) / dt;
+        const amrex::Real bc_forcing_t =
+            -(tTarget - theta) / (time_factor * dt);
         const amrex::Real m =
             std::sqrt((ux1 * ux1) + (uy1 * uy1) + (uz1 * uz1));
         const amrex::Real Cd = amrex::min<amrex::Real>(

@@ -8,6 +8,7 @@
 #include "amr-wind/utilities/linear_interpolation.H"
 #include "amr-wind/utilities/constants.H"
 #include "AMReX_REAL.H"
+#include <fstream>
 
 using namespace amrex::literals;
 
@@ -96,30 +97,68 @@ DragForcing::DragForcing(const CFDSim& sim)
     amrex::ParmParse pp("DragForcing");
     pp.query("drag_coefficient", m_drag_coefficient);
     pp.query("sponge_strength", m_sponge_strength);
+    pp.query("bc_forcing_time_factor", m_forcing_time_factor);
     pp.query("sponge_density", m_sponge_density);
-    pp.query("sponge_distance_west", m_sponge_distance_west);
-    pp.query("sponge_distance_east", m_sponge_distance_east);
-    pp.query("sponge_distance_south", m_sponge_distance_south);
-    pp.query("sponge_distance_north", m_sponge_distance_north);
     pp.query("sponge_west", m_sponge_west);
     pp.query("sponge_east", m_sponge_east);
     pp.query("sponge_south", m_sponge_south);
     pp.query("sponge_north", m_sponge_north);
+    if (m_sponge_west) {
+        pp.get("sponge_distance_west", m_sponge_distance_west);
+    }
+    if (m_sponge_east) {
+        pp.get("sponge_distance_east", m_sponge_distance_east);
+    }
+    if (m_sponge_south) {
+        pp.get("sponge_distance_south", m_sponge_distance_south);
+    }
+    if (m_sponge_north) {
+        pp.get("sponge_distance_north", m_sponge_distance_north);
+    }
+
     pp.query("is_laminar", m_is_laminar);
     const auto& phy_mgr = m_sim.physics_manager();
-    if (phy_mgr.contains("ABL")) {
-        const auto& abl = m_sim.physics_manager().get<amr_wind::ABL>();
-        const auto& fa_velocity = abl.abl_statistics().vel_profile_coarse();
-        m_device_vel_ht.resize(fa_velocity.line_centroids().size());
-        m_device_vel_vals.resize(fa_velocity.line_average().size());
+    amrex::ParmParse pp_abl("ABL");
+    pp_abl.query("minimum_vertical_position", m_min_z);
+    pp_abl.query("rans_1dprofile_file", m_1d_rans);
+    if (!m_1d_rans.empty()) {
+        std::ifstream ransfile(m_1d_rans, std::ios::in);
+        if (!ransfile.good()) {
+            amrex::Abort("Cannot find 1-D RANS profile file " + m_1d_rans);
+        }
+        amrex::Real value1, value2, value3, value4, value5;
+        while (ransfile >> value1 >> value2 >> value3 >> value4 >> value5) {
+            m_wind_heights.push_back(value1);
+            m_u_values.push_back(value2);
+            m_v_values.push_back(value3);
+            m_w_values.push_back(value4);
+        }
+        int num_wind_values = static_cast<int>(m_wind_heights.size());
+        m_windht_d.resize(num_wind_values);
+        m_prof_u_d.resize(num_wind_values);
+        m_prof_v_d.resize(num_wind_values);
+        m_prof_w_d.resize(num_wind_values);
         amrex::Gpu::copy(
-            amrex::Gpu::hostToDevice, fa_velocity.line_centroids().begin(),
-            fa_velocity.line_centroids().end(), m_device_vel_ht.begin());
+            amrex::Gpu::hostToDevice, m_wind_heights.begin(),
+            m_wind_heights.end(), m_windht_d.begin());
         amrex::Gpu::copy(
-            amrex::Gpu::hostToDevice, fa_velocity.line_average().begin(),
-            fa_velocity.line_average().end(), m_device_vel_vals.begin());
+            amrex::Gpu::hostToDevice, m_u_values.begin(), m_u_values.end(),
+            m_prof_u_d.begin());
+        amrex::Gpu::copy(
+            amrex::Gpu::hostToDevice, m_v_values.begin(), m_v_values.end(),
+            m_prof_v_d.begin());
+        amrex::Gpu::copy(
+            amrex::Gpu::hostToDevice, m_w_values.begin(), m_w_values.end(),
+            m_prof_w_d.begin());
     } else {
-        m_sponge_strength = 0.0_rt;
+        if (m_sponge_west || m_sponge_east || m_sponge_south ||
+            m_sponge_north) {
+            amrex::Print()
+                << " WARNING: Sponge Forcing with no precursor RANS is "
+                   "not recommended; use with caution.\n";
+        } else {
+            m_sponge_strength = 0.0_rt;
+        }
     }
     if (phy_mgr.contains("OceanWaves") && !sim.repo().field_exists("vof")) {
         const auto terrain_phys =
@@ -134,7 +173,6 @@ DragForcing::DragForcing(const CFDSim& sim)
         // i.e., too small to be resolved with cell blanking
         pp.query("wave_model_inviscid_form_drag", m_apply_MOSD);
     }
-    amrex::ParmParse pp_abl("ABL");
     pp_abl.query("wall_het_model", m_wall_het_model);
     pp_abl.query("monin_obukhov_length", m_monin_obukhov_length);
     pp_abl.query("kappa", m_kappa);
@@ -166,7 +204,12 @@ void DragForcing::operator()(
     const auto& drag = (*m_terrain_drag)(lev).const_array(mfi);
     auto* const m_terrainz0 = &this->m_sim.repo().get_field("terrainz0");
     const auto& terrainz0 = (*m_terrainz0)(lev).const_array(mfi);
-
+    auto* const m_terrain_damping =
+        &this->m_sim.repo().get_field("terrain_damping");
+    const auto& damping = (*m_terrain_damping)(lev).const_array(mfi);
+    auto* const m_terrain_height =
+        &this->m_sim.repo().get_field("terrain_height");
+    const auto& terrain_height = (*m_terrain_height)(lev).const_array(mfi);
     const bool is_waves = m_terrain_is_waves;
     const bool model_form_drag = m_apply_MOSD;
     const auto& target_vel_arr = is_waves
@@ -187,21 +230,24 @@ void DragForcing::operator()(
     const amrex::Real start_west = prob_lo[0] - m_sponge_distance_west;
     const amrex::Real start_north = prob_hi[1] - m_sponge_distance_north;
     const amrex::Real start_south = prob_lo[1] - m_sponge_distance_south;
-    const int sponge_east = m_sponge_east;
-    const int sponge_west = m_sponge_west;
-    const int sponge_south = m_sponge_south;
-    const int sponge_north = m_sponge_north;
-    // Copy Data
-    const auto* device_vel_ht = m_device_vel_ht.data();
-    const auto* device_vel_vals = m_device_vel_vals.data();
-    const unsigned vsize = m_device_vel_ht.size();
+    const amrex::Real sdist_east = m_sponge_distance_east;
+    const amrex::Real sdist_west = m_sponge_distance_west;
+    const amrex::Real sdist_north = m_sponge_distance_north;
+    const amrex::Real sdist_south = m_sponge_distance_south;
+    const auto sponge_east = static_cast<int>(m_sponge_east);
+    const auto sponge_west = static_cast<int>(m_sponge_west);
+    const auto sponge_south = static_cast<int>(m_sponge_south);
+    const auto sponge_north = static_cast<int>(m_sponge_north);
+
     const auto& dt = m_time.delta_t();
     const bool is_laminar = m_is_laminar;
+    const amrex::Real time_factor = m_forcing_time_factor;
+    const amrex::Real min_z = m_min_z;
     const amrex::Real scale_factor = (dx[2] < 1.0_rt) ? 1.0_rt : 1.0_rt / dx[2];
     const amrex::Real Cd =
         (is_laminar && dx[2] < 1) ? drag_coefficient : drag_coefficient / dx[2];
+    const amrex::Real kappa = m_kappa;
     const amrex::Real z0_min = 1.0e-4_rt;
-    const amrex::Real kappa = 0.41_rt;
     const amrex::Real cd_max = 1000.0_rt;
 
     const amrex::Real non_neutral_neighbour =
@@ -214,43 +260,52 @@ void DragForcing::operator()(
             ? MOData::calc_psi_m(
                   0.5_rt * dx[2] / m_monin_obukhov_length, m_beta_m, m_gamma_m)
             : 0.0_rt;
+    const int nwvals = static_cast<int>(m_wind_heights.size());
+    const amrex::Real* windh = m_windht_d.data();
+    const amrex::Real* uu = m_prof_u_d.data();
+    const amrex::Real* vv = m_prof_v_d.data();
+    const amrex::Real* ww = m_prof_w_d.data();
     amrex::ParallelFor(bx, [=] AMREX_GPU_DEVICE(int i, int j, int k) {
         const amrex::Real x = prob_lo[0] + ((i + 0.5_rt) * dx[0]);
         const amrex::Real y = prob_lo[1] + ((j + 0.5_rt) * dx[1]);
-        const amrex::Real z = prob_lo[2] + ((k + 0.5_rt) * dx[2]);
-        amrex::Real xstart_damping = 0.0_rt;
-        amrex::Real ystart_damping = 0.0_rt;
-        amrex::Real xend_damping = 0.0_rt;
-        amrex::Real yend_damping = 0.0_rt;
-        amrex::Real xi_end = (x - start_east) / (prob_hi[0] - start_east);
-        amrex::Real xi_start = (start_west - x) / (start_west - prob_lo[0]);
+        const amrex::Real z = amrex::max<amrex::Real>(
+            prob_lo[2] + ((k + 0.5_rt) * dx[2]) - terrain_height(i, j, k),
+            min_z);
+        amrex::Real xi_end = (std::abs(sdist_east) > amr_wind::constants::EPS)
+                                 ? (x - start_east) / (sdist_east)
+                                 : 0.0_rt;
+        amrex::Real xi_start = (std::abs(sdist_west) > amr_wind::constants::EPS)
+                                   ? (start_west - x) / (-sdist_west)
+                                   : 0.0_rt;
         xi_start = sponge_west * amrex::max<amrex::Real>(xi_start, 0.0_rt);
         xi_end = sponge_east * amrex::max<amrex::Real>(xi_end, 0.0_rt);
-        xstart_damping = sponge_west * sponge_strength * xi_start * xi_start;
-        xend_damping = sponge_east * sponge_strength * xi_end * xi_end;
-        amrex::Real yi_end = (y - start_north) / (prob_hi[1] - start_north);
-        amrex::Real yi_start = (start_south - y) / (start_south - prob_lo[1]);
+        const amrex::Real xstart_damping =
+            sponge_strength * xi_start * xi_start;
+        const amrex::Real xend_damping = sponge_strength * xi_end * xi_end;
+        amrex::Real yi_end = (std::abs(sdist_north) > amr_wind::constants::EPS)
+                                 ? (y - start_north) / (sdist_north)
+                                 : 0.0_rt;
+        amrex::Real yi_start =
+            (std::abs(sdist_south) > amr_wind::constants::EPS)
+                ? (start_south - y) / (-sdist_south)
+                : 0.0_rt;
         yi_start = sponge_south * amrex::max<amrex::Real>(yi_start, 0.0_rt);
         yi_end = sponge_north * amrex::max<amrex::Real>(yi_end, 0.0_rt);
-        ystart_damping = sponge_strength * yi_start * yi_start;
-        yend_damping = sponge_strength * yi_end * yi_end;
+        const amrex::Real ystart_damping =
+            sponge_strength * yi_start * yi_start;
+        const amrex::Real yend_damping = sponge_strength * yi_end * yi_end;
         const amrex::Real ux1 = vel(i, j, k, 0);
         const amrex::Real uy1 = vel(i, j, k, 1);
         const amrex::Real uz1 = vel(i, j, k, 2);
-        const auto idx =
-            interp::bisection_search(device_vel_ht, device_vel_ht + vsize, z);
         const amrex::Real spongeVelX =
-            (vsize > 0) ? interp::linear_impl(
-                              device_vel_ht, device_vel_vals, z, idx, 3, 0)
-                        : ux1;
+            (nwvals > 1) ? interp::linear(windh, windh + nwvals, uu, z)
+                         : ((nwvals == 0) ? ux1 : uu[0]);
         const amrex::Real spongeVelY =
-            (vsize > 0) ? interp::linear_impl(
-                              device_vel_ht, device_vel_vals, z, idx, 3, 1)
-                        : uy1;
+            (nwvals > 1) ? interp::linear(windh, windh + nwvals, vv, z)
+                         : ((nwvals == 0) ? uy1 : vv[0]);
         const amrex::Real spongeVelZ =
-            (vsize > 0) ? interp::linear_impl(
-                              device_vel_ht, device_vel_vals, z, idx, 3, 2)
-                        : uz1;
+            (nwvals > 1) ? interp::linear(windh, windh + nwvals, ww, z)
+                         : ((nwvals == 0) ? uz1 : ww[0]);
         amrex::Real Dxz = 0.0_rt;
         amrex::Real Dyz = 0.0_rt;
         amrex::Real bc_forcing_x = 0.0_rt;
@@ -301,8 +356,8 @@ void DragForcing::operator()(
                 (amr_wind::constants::EPS +
                  std::sqrt((ux2r * ux2r) + (uy2r * uy2r)));
             // BC forcing pushes nonrelative velocity toward target velocity
-            bc_forcing_x = -(uxTarget - ux1) / dt;
-            bc_forcing_y = -(uyTarget - uy1) / dt;
+            bc_forcing_x = -(uxTarget - ux1) / (time_factor * dt);
+            bc_forcing_y = -(uyTarget - uy1) / (time_factor * dt);
         }
         // Target velocity intended for within terrain
         amrex::Real target_u = 0.0_rt;
@@ -313,23 +368,27 @@ void DragForcing::operator()(
             target_v = target_vel_arr(i, j, k, 1);
             target_w = target_vel_arr(i, j, k, 2);
         }
-
         const amrex::Real CdM = amrex::min<amrex::Real>(
             Cd / (m + amr_wind::constants::EPS), cd_max / scale_factor);
         src_term(i, j, k, 0) -=
             ((CdM * m * (ux1 - target_u) * blank(i, j, k)) +
              (Dxz * drag(i, j, k)) + (bc_forcing_x * drag(i, j, k)) +
-             ((xstart_damping + xend_damping + ystart_damping + yend_damping) *
-              (ux1 - sponge_density * spongeVelX)));
+             (1 - blank(i, j, k)) * ((xstart_damping + xend_damping +
+                                      ystart_damping + yend_damping) *
+                                     (ux1 - sponge_density * spongeVelX)));
         src_term(i, j, k, 1) -=
             ((CdM * m * (uy1 - target_v) * blank(i, j, k)) +
              (Dyz * drag(i, j, k)) + (bc_forcing_y * drag(i, j, k)) +
-             ((xstart_damping + xend_damping + ystart_damping + yend_damping) *
-              (uy1 - sponge_density * spongeVelY)));
+             (1 - blank(i, j, k)) * ((xstart_damping + xend_damping +
+                                      ystart_damping + yend_damping) *
+                                     (uy1 - sponge_density * spongeVelY)));
         src_term(i, j, k, 2) -=
             ((CdM * m * (uz1 - target_w) * blank(i, j, k)) +
-             ((xstart_damping + xend_damping + ystart_damping + yend_damping) *
-              (uz1 - sponge_density * spongeVelZ)));
+             (CdM * m * (uz1 - target_w) * drag(i, j, k)) +
+             (1 - blank(i, j, k)) * ((xstart_damping + xend_damping +
+                                      ystart_damping + yend_damping) *
+                                     (uz1 - sponge_density * spongeVelZ)) +
+             damping(i, j, k) * (uz1));
     });
 }
 

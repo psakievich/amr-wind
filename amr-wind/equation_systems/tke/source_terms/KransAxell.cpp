@@ -59,21 +59,28 @@ KransAxell::KransAxell(const CFDSim& sim)
     pp.query("monin_obukhov_length", m_monin_obukhov_length);
     pp.query("mo_gamma_m", m_gamma_m);
     pp.query("mo_beta_m", m_beta_m);
-    {
-        amrex::ParmParse pp_incflow("incflo");
-        pp_incflow.queryarr("gravity", m_gravity);
-    }
+
+    amrex::ParmParse pp_incflo("incflo");
+    pp_incflo.queryarr("gravity", m_gravity);
 
     amrex::ParmParse pp_drag("DragForcing");
-    pp_drag.query("sponge_strength", m_sponge_strength);
-    pp_drag.query("sponge_distance_west", m_sponge_distance_west);
-    pp_drag.query("sponge_distance_east", m_sponge_distance_east);
-    pp_drag.query("sponge_distance_south", m_sponge_distance_south);
-    pp_drag.query("sponge_distance_north", m_sponge_distance_north);
+    pp_drag.query("bc_forcing_time_factor", m_forcing_time_factor);
     pp_drag.query("sponge_west", m_sponge_west);
     pp_drag.query("sponge_east", m_sponge_east);
     pp_drag.query("sponge_south", m_sponge_south);
     pp_drag.query("sponge_north", m_sponge_north);
+    if (m_sponge_west) {
+        pp_drag.get("sponge_distance_west", m_sponge_distance_west);
+    }
+    if (m_sponge_east) {
+        pp_drag.get("sponge_distance_east", m_sponge_distance_east);
+    }
+    if (m_sponge_south) {
+        pp_drag.get("sponge_distance_south", m_sponge_distance_south);
+    }
+    if (m_sponge_north) {
+        pp_drag.get("sponge_distance_north", m_sponge_distance_north);
+    }
 }
 
 KransAxell::~KransAxell() = default;
@@ -103,6 +110,7 @@ void KransAxell::operator()(
     const amrex::Real heat_flux = m_heat_flux;
     const amrex::Real Cmu = m_Cmu;
     const amrex::Real kappa = m_kappa;
+    const amrex::Real time_factor = m_forcing_time_factor;
     amrex::Real z0 = m_z0;
     const bool has_terrain =
         this->m_sim.repo().int_field_exists("terrain_blank");
@@ -125,20 +133,18 @@ void KransAxell::operator()(
             const amrex::Real uy = vel(i, j, k + 1, 1);
             const amrex::Real m = std::sqrt((ux * ux) + (uy * uy));
             const amrex::Real ustar =
-                m * kappa / (std::log(3 * z / z0) - psi_m);
+                m * kappa / (std::log(3.0_rt * z / z0) - psi_m);
             const amrex::Real T0 = ref_theta_arr(i, j, k);
             const amrex::Real hf = std::abs(gravity[2]) / T0 * heat_flux;
-            const amrex::Real rans_b = std::pow(
-                amrex::max<amrex::Real>(hf, 0.0_rt) * kappa * z /
-                    utils::powi(Cmu, 3),
-                (2.0_rt / 3.0_rt));
-            bcforcing =
-                (ustar * ustar / (Cmu * Cmu) + rans_b - tke_arr(i, j, k)) / dt;
+            const amrex::Real rans_b = amrex::max<amrex::Real>(hf, 0.0_rt) *
+                                       kappa * z / utils::powi(Cmu, 3);
+            const amrex::Real tke_exact = std::pow(
+                ustar * ustar * ustar / (Cmu * Cmu * Cmu) + rans_b,
+                2.0_rt / 3.0_rt);
+            bcforcing = (tke_exact - tke_arr(i, j, k)) / (time_factor * dt);
         }
         amrex::Real ref_tke = tke_arr(i, j, k);
-        const amrex::Real zi = amrex::max<amrex::Real>(
-            (z - sponge_start) / (probhi[2] - sponge_start), 0.0_rt);
-        if (zi > 0) {
+        if (z > sponge_start) {
             ref_tke = (vsize > 0) ? interp::linear(
                                         wind_heights_d, wind_heights_d + vsize,
                                         tke_values_d, z)
@@ -172,8 +178,6 @@ void KransAxell::operator()(
                 (drag_arr(i, j, k) *
                  amrex::max<amrex::Real>(terrainz0(i, j, k), z0_min)) +
                 ((1.0_rt - drag_arr(i, j, k)) * z0);
-            amrex::Real terrainforcing = 0;
-            amrex::Real dragforcing = 0;
             amrex::Real ux = vel(i, j, k + 1, 0);
             amrex::Real uy = vel(i, j, k + 1, 1);
             amrex::Real z = 0.5_rt * dx[2];
@@ -182,12 +186,13 @@ void KransAxell::operator()(
                 m * kappa / (std::log(3.0_rt * z / cell_z0) - psi_m);
             const amrex::Real T0 = ref_theta_arr(i, j, k);
             const amrex::Real hf = std::abs(gravity[2]) / T0 * heat_flux;
-            const amrex::Real rans_b = std::pow(
-                amrex::max<amrex::Real>(hf, 0.0_rt) * kappa * z /
-                    utils::powi(Cmu, 3),
-                (2.0_rt / 3.0_rt));
-            terrainforcing =
-                (ustar * ustar / (Cmu * Cmu) + rans_b - tke_arr(i, j, k)) / dt;
+            const amrex::Real rans_b = amrex::max<amrex::Real>(hf, 0.0_rt) *
+                                       kappa * z / utils::powi(Cmu, 3);
+            const amrex::Real tke_exact = std::pow(
+                ustar * ustar * ustar / (Cmu * Cmu * Cmu) + rans_b,
+                2.0_rt / 3.0_rt);
+            const amrex::Real terrainforcing =
+                (tke_exact - tke_arr(i, j, k)) / (time_factor * dt);
             amrex::Real bcforcing = 0.0_rt;
             if (k == 0) {
                 bcforcing = (1 - blank_arr(i, j, k)) * terrainforcing;
@@ -199,14 +204,12 @@ void KransAxell::operator()(
             const amrex::Real Cd = amrex::min<amrex::Real>(
                 10.0_rt / (dx[2] * m + amr_wind::constants::EPS),
                 100.0_rt / dx[2]);
-            dragforcing = -Cd * m * tke_arr(i, j, k, 0);
+            const amrex::Real dragforcing = -Cd * m * tke_arr(i, j, k, 0);
             z = amrex::max<amrex::Real>(
                 problo[2] + ((k + 0.5_rt) * dx[2]) - terrain_height(i, j, k),
                 0.5_rt * dx[2]);
-            const amrex::Real zi = amrex::max<amrex::Real>(
-                (z - sponge_start) / (probhi[2] - sponge_start), 0.0_rt);
             amrex::Real ref_tke = tke_arr(i, j, k);
-            if (zi > 0) {
+            if (z > sponge_start) {
                 ref_tke = (vsize > 0)
                               ? interp::linear(
                                     wind_heights_d, wind_heights_d + vsize,
@@ -227,41 +230,52 @@ void KransAxell::operator()(
             const amrex::Real start_west = problo[0] - m_sponge_distance_west;
             const amrex::Real start_north = probhi[1] - m_sponge_distance_north;
             const amrex::Real start_south = problo[1] - m_sponge_distance_south;
-            const int sponge_east = m_sponge_east;
-            const int sponge_west = m_sponge_west;
-            const int sponge_south = m_sponge_south;
-            const int sponge_north = m_sponge_north;
+            const amrex::Real sdist_east = m_sponge_distance_east;
+            const amrex::Real sdist_west = m_sponge_distance_west;
+            const amrex::Real sdist_north = m_sponge_distance_north;
+            const amrex::Real sdist_south = m_sponge_distance_south;
+            const auto sponge_east = static_cast<int>(m_sponge_east);
+            const auto sponge_west = static_cast<int>(m_sponge_west);
+            const auto sponge_south = static_cast<int>(m_sponge_south);
+            const auto sponge_north = static_cast<int>(m_sponge_north);
             amrex::ParallelFor(bx, [=] AMREX_GPU_DEVICE(int i, int j, int k) {
                 const amrex::Real x = problo[0] + ((i + 0.5_rt) * dx[0]);
                 const amrex::Real y = problo[1] + ((j + 0.5_rt) * dx[1]);
                 const amrex::Real z = problo[2] + ((k + 0.5_rt) * dx[2]);
-                amrex::Real xstart_damping = 0.0_rt;
-                amrex::Real ystart_damping = 0.0_rt;
-                amrex::Real xend_damping = 0.0_rt;
-                amrex::Real yend_damping = 0.0_rt;
                 amrex::Real xi_end =
-                    (x - start_east) / (probhi[0] - start_east);
+                    (std::abs(sdist_east) > amr_wind::constants::EPS)
+                        ? (x - start_east) / (sdist_east)
+                        : 0.0_rt;
                 amrex::Real xi_start =
-                    (start_west - x) / (start_west - problo[0]);
+                    (std::abs(sdist_west) > amr_wind::constants::EPS)
+                        ? (start_west - x) / (-sdist_west)
+                        : 0.0_rt;
                 xi_start =
                     sponge_west * amrex::max<amrex::Real>(xi_start, 0.0_rt);
                 xi_end = sponge_east * amrex::max<amrex::Real>(xi_end, 0.0_rt);
                 xi_start /= (xi_start + amr_wind::constants::EPS);
                 xi_end /= (xi_end + amr_wind::constants::EPS);
-                xstart_damping =
-                    sponge_west * sponge_strength * xi_start * xi_start;
-                xend_damping = sponge_east * sponge_strength * xi_end * xi_end;
+                const amrex::Real xstart_damping =
+                    sponge_strength * xi_start * xi_start;
+                const amrex::Real xend_damping =
+                    sponge_strength * xi_end * xi_end;
                 amrex::Real yi_end =
-                    (y - start_north) / (probhi[1] - start_north);
+                    (std::abs(sdist_north) > amr_wind::constants::EPS)
+                        ? (y - start_north) / (sdist_north)
+                        : 0.0_rt;
                 amrex::Real yi_start =
-                    (start_south - y) / (start_south - problo[1]);
+                    (std::abs(sdist_south) > amr_wind::constants::EPS)
+                        ? (start_south - y) / (-sdist_south)
+                        : 0.0_rt;
                 yi_start =
                     sponge_south * amrex::max<amrex::Real>(yi_start, 0.0_rt);
                 yi_end = sponge_north * amrex::max<amrex::Real>(yi_end, 0.0_rt);
                 yi_start /= (yi_start + amr_wind::constants::EPS);
                 yi_end /= (yi_end + amr_wind::constants::EPS);
-                ystart_damping = sponge_strength * yi_start * yi_start;
-                yend_damping = sponge_strength * yi_end * yi_end;
+                const amrex::Real ystart_damping =
+                    sponge_strength * yi_start * yi_start;
+                const amrex::Real yend_damping =
+                    sponge_strength * yi_end * yi_end;
                 const amrex::Real ref_tke =
                     (vsize > 0) ? interp::linear(
                                       wind_heights_d, wind_heights_d + vsize,

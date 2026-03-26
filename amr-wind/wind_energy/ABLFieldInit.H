@@ -112,6 +112,9 @@ private:
     //! Reference height for velocity perturbations
     amrex::Real m_ref_height{50.0_rt};
 
+    //! Reference IB height
+    amrex::Real m_ib_height{0.0_rt};
+
     //! Amplitude of temperature perturbations
     amrex::Real m_delta_t{0.8_rt};
 
@@ -132,6 +135,9 @@ private:
 
     //! Cutoff height for init tke profile
     amrex::Real m_tke_cutoff_height{250.0_rt};
+
+    //! Minimum vertical position
+    amrex::Real m_min_z{0.1_rt};
 
     //! Top velocity
     amrex::RealArray m_top_vel{20.0_rt};

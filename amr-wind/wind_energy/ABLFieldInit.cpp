@@ -80,6 +80,7 @@ void ABLFieldInit::initialize_from_inputfile()
 
     pp_abl.query("perturb_velocity", m_perturb_vel);
     pp_abl.query("perturb_ref_height", m_ref_height);
+    pp_abl.query("ib_height", m_ib_height);
     pp_abl.query("Uperiods", m_Uperiods);
     pp_abl.query("Vperiods", m_Vperiods);
     pp_abl.query("deltaU", m_deltaU);
@@ -97,6 +98,8 @@ void ABLFieldInit::initialize_from_inputfile()
     pp_abl.query("init_tke_cutoff_height", m_tke_cutoff_height);
 
     pp_abl.query("linear_profile", m_linear_profile);
+
+    pp_abl.query("minimum_vertical_position", m_min_z);
 
     pp_abl.query("top_velocity", m_top_vel);
     pp_abl.query("bottom_velocity", m_bottom_vel);
@@ -253,6 +256,7 @@ void ABLFieldInit::operator()(
         const amrex::Real* windh = m_windht_d.data();
         const amrex::Real* uu = m_prof_u_d.data();
         const amrex::Real* vv = m_prof_v_d.data();
+        const amrex::Real min_z = m_min_z;
         const bool terrain_aligned_profile = m_terrain_aligned_profile;
         amrex::ParallelFor(vbx, [=] AMREX_GPU_DEVICE(int i, int j, int k) {
             amrex::Real x = problo[0] + ((i + 0.5_rt) * dx[0]);
@@ -265,15 +269,15 @@ void ABLFieldInit::operator()(
                           yterrain_ptr, yterrain_ptr + yterrain_size,
                           zterrain_ptr, x, y)
                     : 0.0_rt;
-            z = amrex::max<amrex::Real>(0.5_rt * dx[2], z - terrainHt);
+            z = amrex::max<amrex::Real>(min_z, z - terrainHt);
             density(i, j, k) = rho_init;
             const amrex::Real theta =
-                (ntvals > 0) ? interp::linear(th, th + ntvals, tv, z) : tv[0];
+                (ntvals > 1) ? interp::linear(th, th + ntvals, tv, z) : tv[0];
             const amrex::Real umean_prof =
-                (nwvals > 0) ? interp::linear(windh, windh + nwvals, uu, z)
+                (nwvals > 1) ? interp::linear(windh, windh + nwvals, uu, z)
                              : uu[0];
             const amrex::Real vmean_prof =
-                (nwvals > 0) ? interp::linear(windh, windh + nwvals, vv, z)
+                (nwvals > 1) ? interp::linear(windh, windh + nwvals, vv, z)
                              : vv[0];
 
             temperature(i, j, k, 0) += theta;
@@ -350,11 +354,14 @@ void ABLFieldInit::operator()(
         const amrex::Real ufac = m_deltaU * std::exp(0.5_rt) / m_ref_height;
         const amrex::Real vfac = m_deltaV * std::exp(0.5_rt) / m_ref_height;
         const amrex::Real ref_height = m_ref_height;
+        const amrex::Real ib_height = m_ib_height;
+        const amrex::Real min_z = m_initial_wind_profile ? m_min_z : 0.0_rt;
 
         amrex::ParallelFor(vbx, [=] AMREX_GPU_DEVICE(int i, int j, int k) {
             const amrex::Real x = problo[0] + ((i + 0.5_rt) * dx[0]);
             const amrex::Real y = problo[1] + ((j + 0.5_rt) * dx[1]);
-            const amrex::Real z = problo[2] + ((k + 0.5_rt) * dx[2]);
+            const amrex::Real z = amrex::max<amrex::Real>(
+                problo[2] + ((k + 0.5_rt) * dx[2]) - ib_height, min_z);
             const amrex::Real xl = x - problo[0];
             const amrex::Real yl = y - problo[1];
             const amrex::Real zl = z / ref_height;
@@ -416,6 +423,7 @@ void ABLFieldInit::init_tke(
     const auto& problo = geom.ProbLoArray();
     const auto tke_cutoff_height = m_tke_cutoff_height;
     const auto tke_init_factor = m_tke_init_factor;
+    const auto min_z = m_min_z;
 
     const auto& tke_arrs = tke_mf.arrays();
     const auto tiny = std::numeric_limits<amrex::Real>::epsilon();
@@ -441,11 +449,11 @@ void ABLFieldInit::init_tke(
                               yterrain_ptr, yterrain_ptr + yterrain_size,
                               zterrain_ptr, x, y)
                         : 0.0_rt;
-                z = amrex::max<amrex::Real>(0.5_rt * dx[2], z - terrainHt);
+                z = amrex::max<amrex::Real>(min_z, z - terrainHt);
                 const amrex::Real tke_prof =
-                    (nwvals > 0)
+                    (nwvals > 1)
                         ? interp::linear(windh, windh + nwvals, tke_data, z)
-                        : tiny;
+                        : ((nwvals == 0) ? tiny : tke_data[0]);
 
                 tke_arrs[nbx](i, j, k) = tke_prof;
             });
