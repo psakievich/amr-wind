@@ -1,12 +1,12 @@
-#ifndef ABLBOUNDARYPLANE_H
-#define ABLBOUNDARYPLANE_H
+#ifndef BOUNDARYPLANE_H
+#define BOUNDARYPLANE_H
 
 #include <cstdint>
 #include "amr-wind/core/Field.H"
 #include "amr-wind/CFDSim.H"
 #include "amr-wind/utilities/ncutils/nc_interface.H"
 #include "amr-wind/utilities/io_utils.H"
-#include "amr-wind/wind_energy/ABLReadERFFunction.H"
+#include "amr-wind/boundary_conditions/field_boundary_fill/ReadERFFunction.H"
 #include "AMReX_Gpu.H"
 #include "AMReX_BndryRegister.H"
 #include "AMReX_REAL.H"
@@ -111,23 +111,36 @@ private:
  *  This class performs the necessary file operations to read and
  *  write boundary planes.
  *
- *  \sa ABLFillInflow
+ *  \sa PlaneFillInflow
  */
-class ABLBoundaryPlane
+class BoundaryPlane : public amr_wind::FieldBoundary::Register<BoundaryPlane>
 {
     static_assert(AMREX_SPACEDIM == 3, "ABL requires 3 dimensional mesh");
 
 public:
-    explicit ABLBoundaryPlane(CFDSim& /*sim*/);
+    static std::string identifier() { return "BoundaryPlane"; }
 
-    //! Execute initialization actions after mesh has been fully generated
-    void post_init_actions();
+    explicit BoundaryPlane(CFDSim& /*sim*/);
 
-    void pre_advance_work();
+    void post_init_actions() override;
 
-    void pre_predictor_work();
+    void pre_advance_work() override;
 
-    void post_advance_work();
+    void post_advance_work() override;
+
+    void pre_predictor_work() override;
+
+    void set_velocity(
+        int lev,
+        amrex::Real time,
+        const Field& fld,
+        amrex::MultiFab& mfab,
+        int dcomp = 0,
+        int orig_comp = 0) const override;
+
+    // Non-inherited public methods
+
+    void pre_advance_inner_calls();
 
     void initialize_data();
 
@@ -147,7 +160,7 @@ public:
     void populate_data(
         int /*lev*/,
         amrex::Real /*time*/,
-        Field& /*fld*/,
+        const Field& /*fld*/,
         amrex::MultiFab& /*mfab*/,
         int dcomp = 0,
         int orig_comp = 0) const;
@@ -162,8 +175,6 @@ public:
         const amrex::Array4<const amrex::Real>& /*fld*/,
         amrex::Gpu::ManagedVector<amrex::Real>& /*buffer*/);
 #endif
-
-    [[nodiscard]] bool is_initialized() const { return m_is_initialized; }
 
     [[nodiscard]] bool box_intersects_boundary(
         const amrex::Box& /*bx*/,
@@ -252,8 +263,9 @@ private:
     //! IO mode
     io_mode m_io_mode{io_mode::undefined};
 
-    //! Flag indicating if this capability is available
-    bool m_is_initialized{false};
+    //! Flag indicating if the simulation is overset -- needed for complicated
+    //! timing of pre_advance_work
+    bool m_has_overset{false};
 
     //! controls extents on native bndry output
     const int m_in_rad = 1;
@@ -266,4 +278,4 @@ private:
 
 } // namespace amr_wind
 
-#endif /* ABLBOUNDARYPLANE_H */
+#endif /* BOUNDARYPLANE_H */

@@ -1,8 +1,9 @@
-#ifndef ABLMODULATEDPOWERLAW_H
-#define ABLMODULATEDPOWERLAW_H
+#ifndef MODULATEDPOWERLAW_H
+#define MODULATEDPOWERLAW_H
 
 #include "amr-wind/core/Field.H"
 #include "amr-wind/CFDSim.H"
+#include "amr-wind/boundary_conditions/field_boundary_fill/FieldBoundary.H"
 #include "AMReX_Gpu.H"
 #include "amr-wind/utilities/trig_ops.H"
 #include "amr-wind/core/vs/vector_space.H"
@@ -18,18 +19,19 @@ namespace amr_wind {
  *  This class sets velocity and temperature at mass inflow bc's
  *
  */
-class ABLModulatedPowerLaw
+class ModulatedPowerLaw : public FieldBoundary::Register<ModulatedPowerLaw>
 {
 
 public:
-    explicit ABLModulatedPowerLaw(CFDSim& /*sim*/);
+    static std::string identifier() { return "ModulatedPowerLaw"; }
 
-    //! Execute initialization actions after mesh has been fully generated
-    void post_init_actions();
+    explicit ModulatedPowerLaw(CFDSim& /*sim*/);
 
-    void pre_advance_work();
+    void post_init_actions() override;
 
-    void post_advance_work();
+    void pre_advance_work() override;
+
+    void post_advance_work() override;
 
     void set_velocity(
         int lev,
@@ -37,15 +39,13 @@ public:
         const Field& fld,
         amrex::MultiFab& mfab,
         int dcomp = 0,
-        int orig_comp = 0) const;
+        int orig_comp = 0) const override;
 
     void set_temperature(
         int lev,
         amrex::Real time,
         const Field& fld,
         amrex::MultiFab& mfab) const;
-
-    [[nodiscard]] bool is_active() const { return m_activate_mpl; }
 
 private:
     const CFDSim& m_sim;
@@ -85,10 +85,8 @@ private:
     amrex::Real m_theta_cutoff_height{250.0_rt};
     amrex::Real m_theta_gauss_mean{0.0_rt};
     amrex::Real m_theta_gauss_var{1.0_rt};
-
-    bool m_activate_mpl{false};
 };
 
 } // namespace amr_wind
 
-#endif /* ABLMODULATEDPOWERLAW_H */
+#endif /* MODULATEDPOWERLAW_H */

@@ -1,6 +1,6 @@
 #include "amr-wind/CFDSim.H"
-#include "amr-wind/wind_energy/ABLBoundaryPlane.H"
-#include "amr-wind/wind_energy/ABLFillInflow.H"
+#include "amr-wind/boundary_conditions/field_boundary_fill/BoundaryPlane.H"
+#include "amr-wind/boundary_conditions/field_boundary_fill/PlaneFillInflow.H"
 #include "AMReX_Gpu.H"
 #include "AMReX_ParmParse.H"
 #include "amr-wind/utilities/ncutils/nc_interface.H"
@@ -89,7 +89,7 @@ void InletData::read_data(
     if (!((m_tn <= time + constants::LOOSE_TOL) &&
           (time <= m_tnp1 + constants::LOOSE_TOL))) {
         amrex::Abort(
-            "ABLBoundaryPlane.cpp InletData::read_data() check failed\n"
+            "BoundaryPlane.cpp InletData::read_data() check failed\n"
             "Left time quantities should be <= right time quantities. Indices "
             "supplied for debugging.\n"
             "m_tn = " +
@@ -179,7 +179,7 @@ void InletData::read_data_native(
     if (!(m_tn <= time + constants::LOOSE_TOL) ||
         !(time <= m_tnp1 + constants::LOOSE_TOL)) {
         amrex::Abort(
-            "ABLBoundaryPlane.cpp InletData::read_data_native() check "
+            "BoundaryPlane.cpp InletData::read_data_native() check "
             "failed\n"
             "Left time quantities should be <= right time quantities. Indices "
             "supplied for debugging.\n"
@@ -284,37 +284,58 @@ bool InletData::is_populated(amrex::Orientation ori) const
     return m_data_n[ori] != nullptr;
 }
 
-ABLBoundaryPlane::ABLBoundaryPlane(CFDSim& sim)
+BoundaryPlane::BoundaryPlane(CFDSim& sim)
     : m_time(sim.time())
     , m_repo(sim.repo())
     , m_mesh(sim.mesh())
     , m_mbc(sim.mbc())
     , m_read_erf(sim.get_read_erf())
 {
-    amrex::ParmParse pp("ABL");
     int pp_io_mode = -1;
-    pp.query("bndry_io_mode", pp_io_mode);
+    amrex::ParmParse pp_abl("ABL");
+    const bool original_input = pp_abl.contains("bndry_io_mode");
+    amrex::ParmParse pp("BoundaryPlane");
+    const bool new_input = pp.contains("io_mode");
+
+    if (original_input && new_input) {
+        amrex::Abort(
+            "BoundaryPlane: both ABL.bndry_io_mode and BoundaryPlane.io_mode "
+            "are set. Please use only BoundaryPlane.io_mode.\n");
+    }
+    if (original_input) {
+        pp_abl.get("bndry_io_mode", pp_io_mode);
+    } else {
+        pp.get("io_mode", pp_io_mode);
+    }
     switch (pp_io_mode) {
     case 0:
         m_io_mode = io_mode::output;
-        m_is_initialized = true;
         break;
     case 1:
         m_io_mode = io_mode::input;
-        m_is_initialized = true;
         break;
     default:
-        m_io_mode = io_mode::undefined;
-        m_is_initialized = false;
-        return;
+        amrex::Abort(
+            "BoundaryPlane: io_mode must be specified as 0 for output or 1 for "
+            "input. \n");
     }
+    m_has_overset = sim.has_overset();
 
-    pp.query("bndry_write_frequency", m_write_frequency);
-    pp.queryarr("bndry_planes", m_planes);
-    pp.query("bndry_output_start_time", m_out_start_time);
-    pp.queryarr("bndry_var_names", m_var_names);
-    pp.get("bndry_file", m_filename);
-    pp.query("bndry_output_format", m_out_fmt);
+    if (!original_input) {
+        pp.query("write_frequency", m_write_frequency);
+        pp.queryarr("planes", m_planes);
+        pp.query("output_start_time", m_out_start_time);
+        pp.queryarr("var_names", m_var_names);
+        pp.get("file", m_filename);
+        pp.query("output_format", m_out_fmt);
+    } else {
+        pp_abl.query("bndry_write_frequency", m_write_frequency);
+        pp_abl.queryarr("bndry_planes", m_planes);
+        pp_abl.query("bndry_output_start_time", m_out_start_time);
+        pp_abl.queryarr("bndry_var_names", m_var_names);
+        pp_abl.get("bndry_file", m_filename);
+        pp_abl.query("bndry_output_format", m_out_fmt);
+    }
 
 #ifndef AMR_WIND_USE_NETCDF
     if (m_out_fmt == "netcdf") {
@@ -338,11 +359,8 @@ ABLBoundaryPlane::ABLBoundaryPlane(CFDSim& sim)
     m_time_file = m_filename + "/time.dat";
 }
 
-void ABLBoundaryPlane::post_init_actions()
+void BoundaryPlane::post_init_actions()
 {
-    if (!m_is_initialized) {
-        return;
-    }
     initialize_data();
     write_header();
     write_file();
@@ -350,55 +368,48 @@ void ABLBoundaryPlane::post_init_actions()
     read_file(false);
 }
 
-void ABLBoundaryPlane::pre_advance_work()
+// At the beginning of a timestep, this method updates plane data for the sake
+// of the boundaries during advection to nph time (n+1/2)
+void BoundaryPlane::pre_advance_work()
 {
-    if (!m_is_initialized) {
-        return;
+    if (!m_has_overset) {
+        pre_advance_inner_calls();
     }
-    read_file(true);
 }
 
-void ABLBoundaryPlane::pre_predictor_work()
-{
-    if (!m_is_initialized) {
-        return;
-    }
-    read_file(false);
-}
+// Isolated calls from within pre_advance_work so it can be called independently
+// for overset simulations where timing is more complicated
+void BoundaryPlane::pre_advance_inner_calls() { read_file(true); }
 
-void ABLBoundaryPlane::post_advance_work()
-{
-    if (!m_is_initialized) {
-        return;
-    }
-    write_file();
-}
+// At the beginning of a timestep but after pre_advance_work, this method
+// updates plane data to new time (n+1) for rest of the algorithm
+void BoundaryPlane::pre_predictor_work() { read_file(false); }
 
-void ABLBoundaryPlane::initialize_data()
+void BoundaryPlane::post_advance_work() { write_file(); }
+
+void BoundaryPlane::initialize_data()
 {
-    BL_PROFILE("amr-wind::ABLBoundaryPlane::initialize_data");
+    BL_PROFILE("amr-wind::BoundaryPlane::initialize_data");
     for (const auto& fname : m_var_names) {
         if (m_repo.field_exists(fname)) {
             auto& fld = m_repo.get_field(fname);
             if (m_io_mode == io_mode::input) {
-                fld.register_fill_patch_op<ABLFillInflow>(
+                fld.register_fill_patch_op<PlaneFillInflow>(
                     m_mesh, m_time, *this);
             }
             m_fields.emplace_back(&fld);
         } else {
-            amrex::Abort(
-                "ABLBoundaryPlane: invalid variable requested: " + fname);
+            amrex::Abort("BoundaryPlane: invalid variable requested: " + fname);
         }
     }
     if ((m_io_mode == io_mode::output) && (m_out_fmt == "erf-multiblock")) {
-        amrex::Abort(
-            "ABLBoundaryPlane: can't output data in erf-multiblock mode");
+        amrex::Abort("BoundaryPlane: can't output data in erf-multiblock mode");
     }
 }
 
-void ABLBoundaryPlane::write_header()
+void BoundaryPlane::write_header()
 {
-    BL_PROFILE("amr-wind::ABLBoundaryPlane::write_header");
+    BL_PROFILE("amr-wind::BoundaryPlane::write_header");
     if (m_io_mode != io_mode::output) {
         return;
     }
@@ -528,9 +539,9 @@ void ABLBoundaryPlane::write_header()
     }
 }
 
-void ABLBoundaryPlane::write_bndry_native_header(const std::string& chkname)
+void BoundaryPlane::write_bndry_native_header(const std::string& chkname)
 {
-    BL_PROFILE("amr-wind::ABLBoundaryPlane::write_bndry_native_header");
+    BL_PROFILE("amr-wind::BoundaryPlane::write_bndry_native_header");
     if (m_io_mode != io_mode::output) {
         return;
     }
@@ -618,9 +629,9 @@ void ABLBoundaryPlane::write_bndry_native_header(const std::string& chkname)
     }
 }
 
-void ABLBoundaryPlane::write_file()
+void BoundaryPlane::write_file()
 {
-    BL_PROFILE("amr-wind::ABLBoundaryPlane::write_file");
+    BL_PROFILE("amr-wind::BoundaryPlane::write_file");
     const amrex::Real time = m_time.new_time();
     const int t_step = m_time.time_index();
 
@@ -734,9 +745,9 @@ void ABLBoundaryPlane::write_file()
     }
 }
 
-void ABLBoundaryPlane::read_header()
+void BoundaryPlane::read_header()
 {
-    BL_PROFILE("amr-wind::ABLBoundaryPlane::read_header");
+    BL_PROFILE("amr-wind::BoundaryPlane::read_header");
     if (m_io_mode != io_mode::input) {
         return;
     }
@@ -761,7 +772,7 @@ void ABLBoundaryPlane::read_header()
         // Sanity check the input file time
         if (!(m_in_times[0] <= m_time.current_time() + constants::LOOSE_TOL)) {
             amrex::Abort(
-                "ABLBoundaryPlane.cpp ABLBoundaryPlane::read_header() check "
+                "BoundaryPlane.cpp BoundaryPlane::read_header() check "
                 "failed\n"
                 "Left time quantities should be <= right time quantities.\n"
                 "m_in_times[0] = " +
@@ -948,10 +959,10 @@ void ABLBoundaryPlane::read_header()
     }
 }
 
-amrex::Vector<amrex::BoxArray> ABLBoundaryPlane::read_bndry_native_boxarrays(
+amrex::Vector<amrex::BoxArray> BoundaryPlane::read_bndry_native_boxarrays(
     const std::string& chkname, const Field& field) const
 {
-    BL_PROFILE("amr-wind::ABLBoundaryPlane::read_bndry_native_boxarrays");
+    BL_PROFILE("amr-wind::BoundaryPlane::read_bndry_native_boxarrays");
     AMREX_ALWAYS_ASSERT(m_io_mode == io_mode::input);
 
 #ifndef AMR_WIND_USE_NETCDF
@@ -1144,9 +1155,9 @@ amrex::Vector<amrex::BoxArray> ABLBoundaryPlane::read_bndry_native_boxarrays(
     return bndry_bas;
 }
 
-void ABLBoundaryPlane::read_file(const bool nph_target_time)
+void BoundaryPlane::read_file(const bool nph_target_time)
 {
-    BL_PROFILE("amr-wind::ABLBoundaryPlane::read_file");
+    BL_PROFILE("amr-wind::BoundaryPlane::read_file");
     if (m_io_mode != io_mode::input) {
         return;
     }
@@ -1169,7 +1180,7 @@ void ABLBoundaryPlane::read_file(const bool nph_target_time)
     if (!(m_in_times[0] <= time + constants::LOOSE_TOL) ||
         !(time < m_in_times.back() + constants::LOOSE_TOL)) {
         amrex::Abort(
-            "ABLBoundaryPlane.cpp ABLBoundaryPlane::read_file() check 1"
+            "BoundaryPlane.cpp BoundaryPlane::read_file() check 1"
             "failed\n"
             "Left time quantities should be <= or < right time quantities.\n"
             "m_in_times[0] = " +
@@ -1223,7 +1234,7 @@ void ABLBoundaryPlane::read_file(const bool nph_target_time)
         if (!(m_in_times[index] <= time + constants::LOOSE_TOL) ||
             !(time <= m_in_times[index + 1] + constants::LOOSE_TOL)) {
             amrex::Abort(
-                "ABLBoundaryPlane.cpp ABLBoundaryPlane::read_file() check 2"
+                "BoundaryPlane.cpp BoundaryPlane::read_file() check 2"
                 "failed\n"
                 "Left time quantities should be <= right time quantities. "
                 "Indices supplied for debugging.\n"
@@ -1301,16 +1312,16 @@ void ABLBoundaryPlane::read_file(const bool nph_target_time)
 }
 
 // NOLINTNEXTLINE(readability-convert-member-functions-to-static)
-void ABLBoundaryPlane::populate_data(
+void BoundaryPlane::populate_data(
     const int lev,
     const amrex::Real time,
-    Field& fld,
+    const Field& fld,
     amrex::MultiFab& mfab,
     const int dcomp,
     const int orig_comp) const
 {
 
-    BL_PROFILE("amr-wind::ABLBoundaryPlane::populate_data");
+    BL_PROFILE("amr-wind::BoundaryPlane::populate_data");
 
     if (m_io_mode != io_mode::input) {
         return;
@@ -1319,7 +1330,7 @@ void ABLBoundaryPlane::populate_data(
     if (!(m_in_data.tn() <= time + constants::LOOSE_TOL) &&
         !(time <= m_in_data.tnp1() + constants::LOOSE_TOL)) {
         amrex::Abort(
-            "ABLBoundaryPlane.cpp ABLBoundaryPlane::populate_data() check 1"
+            "BoundaryPlane.cpp BoundaryPlane::populate_data() check 1"
             "failed\n"
             "Left time quantities should be <= right time quantities\n"
             "m_in_data.tn() = " +
@@ -1332,7 +1343,7 @@ void ABLBoundaryPlane::populate_data(
     }
     if (!(std::abs(time - m_in_data.tinterp()) < constants::LOOSE_TOL)) {
         amrex::Abort(
-            "ABLBoundaryPlane.cpp ABLBoundaryPlane::populate_data() check 2"
+            "BoundaryPlane.cpp BoundaryPlane::populate_data() check 2"
             "failed\n"
             "Left time quantities should be < right time quantities. "
             "Additional quantities supplied on second line for debugging.\n"
@@ -1400,14 +1411,36 @@ void ABLBoundaryPlane::populate_data(
         0, mfab.nComp(), amrex::IntVect(1), geom[lev].periodicity());
 }
 
+void BoundaryPlane::set_velocity(
+    const int lev,
+    const amrex::Real time,
+    const Field& fld,
+    amrex::MultiFab& mfab,
+    const int dcomp,
+    const int orig_comp) const
+{
+    BL_PROFILE("amr-wind::BoundaryPlane::set_velocity");
+    if (m_io_mode != io_mode::input) {
+        return;
+    }
+
+    if (fld.num_comp() != 3) {
+        amrex::Abort(
+            "BoundaryPlane.cpp BoundaryPlane::set_velocity() check failed\n"
+            "Field must have 3 components to set velocity.");
+    }
+
+    populate_data(lev, time, fld, mfab, dcomp, orig_comp);
+}
+
 #ifdef AMR_WIND_USE_NETCDF
-void ABLBoundaryPlane::write_data(
+void BoundaryPlane::write_data(
     const ncutils::NCGroup& grp,
     const amrex::Orientation ori,
     const int lev,
     const Field* fld)
 {
-    BL_PROFILE("amr-wind::ABLBoundaryPlane::write_data");
+    BL_PROFILE("amr-wind::BoundaryPlane::write_data");
     // Plane info
     const int normal = ori.coordDir();
     const amrex::GpuArray<int, 2> perp = utils::perpendicular_idx(normal);
@@ -1520,7 +1553,7 @@ void ABLBoundaryPlane::write_data(
     }
 }
 
-void ABLBoundaryPlane::impl_buffer_field(
+void BoundaryPlane::impl_buffer_field(
     const amrex::Box& bx,
     const int n1,
     const int nc,
@@ -1544,7 +1577,7 @@ void ABLBoundaryPlane::impl_buffer_field(
 #endif
 
 // Count the number of levels defined by the native boundary files
-int ABLBoundaryPlane::boundary_native_file_levels() const
+int BoundaryPlane::boundary_native_file_levels() const
 {
     int nlevels = 0;
     const std::string chkname =
@@ -1561,7 +1594,7 @@ int ABLBoundaryPlane::boundary_native_file_levels() const
 }
 
 //! True if box intersects the boundary
-bool ABLBoundaryPlane::box_intersects_boundary(
+bool BoundaryPlane::box_intersects_boundary(
     const amrex::Box& bx, const int lev, const amrex::Orientation ori) const
 {
     const amrex::Box& domBox = m_mesh.Geom(lev).Domain();

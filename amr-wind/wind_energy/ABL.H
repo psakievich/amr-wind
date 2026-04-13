@@ -7,11 +7,12 @@
 #include "amr-wind/wind_energy/ABLFieldInit.H"
 #include "amr-wind/wind_energy/ABLFieldInitFile.H"
 #include "amr-wind/wind_energy/ABLWallFunction.H"
-#include "amr-wind/wind_energy/ABLBoundaryPlane.H"
+#include "amr-wind/boundary_conditions/field_boundary_fill/FieldBoundary.H"
+#include "amr-wind/boundary_conditions/field_boundary_fill/BoundaryPlane.H"
+#include "amr-wind/boundary_conditions/field_boundary_fill/ModulatedPowerLaw.H"
 #include "amr-wind/core/SimTime.H"
 #include "amr-wind/utilities/FieldPlaneAveraging.H"
 #include "amr-wind/wind_energy/ABLStatsBase.H"
-#include "amr-wind/wind_energy/ABLModulatedPowerLaw.H"
 #include "amr-wind/wind_energy/ABLAnelastic.H"
 #include "AMReX_REAL.H"
 
@@ -62,7 +63,7 @@ class HurricaneTempForcing;
  *  data to be used by wall models as well as any ABLForcing terms that might be
  *  active.
  *
- *  \sa ABLFieldInit, ABLWallFunction, FieldPlaneAveraging, ABLBoundaryPlane
+ *  \sa ABLFieldInit, ABLWallFunction, FieldPlaneAveraging, BoundaryPlane
  */
 class ABL : public Physics::Register<ABL>
 {
@@ -82,8 +83,6 @@ public:
     void initialize_fields(int level, const amrex::Geometry& geom) override;
 
     void pre_advance_work() override;
-
-    void pre_predictor_work() override;
 
     void post_advance_work() override;
 
@@ -117,10 +116,6 @@ public:
         m_hurricane_temp_forcing = forcing;
     }
 
-    const ABLBoundaryPlane& bndry_plane() const { return *m_bndry_plane; }
-    ABLBoundaryPlane& bndry_plane() { return *m_bndry_plane; }
-    const ABLModulatedPowerLaw& abl_mpl() const { return *m_abl_mpl; }
-
     //! Return the ABL statistics calculator
     const ABLStatsBase& abl_statistics() const { return *m_stats; }
 
@@ -142,12 +137,6 @@ private:
 
     //! ABL field initializer instance
     std::unique_ptr<ABLFieldInit> m_field_init;
-
-    //! ABL boundary plane instance
-    std::unique_ptr<ABLBoundaryPlane> m_bndry_plane;
-
-    //! ABL modulated power law instance
-    std::unique_ptr<ABLModulatedPowerLaw> m_abl_mpl;
 
     //! Reference to ABL forcing term if present
     mutable pde::icns::ABLForcing* m_abl_forcing{nullptr};

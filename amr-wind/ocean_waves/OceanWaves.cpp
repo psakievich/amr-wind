@@ -27,7 +27,66 @@ OceanWaves::OceanWaves(CFDSim& sim)
     m_ow_vof.set_default_fillpatch_bc(sim.time());
     m_ow_velocity.set_default_fillpatch_bc(sim.time());
 
-    m_ow_bndry = std::make_unique<OceanWavesBoundary>(sim);
+    // Get the field boundaries named explicitly
+    amrex::ParmParse pp_incflo("incflo");
+    amrex::Vector<std::string> fb_names;
+    pp_incflo.queryarr("field_boundaries", fb_names);
+    bool bp_present = false;
+    bool mpl_present = false;
+    bool owb_present = false;
+    for (const auto& fb : fb_names) {
+        if (fb == "BoundaryPlane") {
+            bp_present = true;
+        }
+        if (fb == "ModulatedPowerLaw") {
+            mpl_present = true;
+        }
+        if (fb == "OceanWavesBoundary") {
+            owb_present = true;
+        }
+    }
+
+    // Add OceanWaves field boundary if not present unless conflicts are
+    // detected
+    int need_changes = static_cast<int>(!owb_present);
+    if (bp_present) {
+        // Check for input mode
+        int pp_io_mode = -1;
+        amrex::ParmParse pp_abl("ABL");
+        pp_abl.query("bndry_io_mode", pp_io_mode);
+        amrex::ParmParse pp_bdy("BoundaryPlane");
+        pp_bdy.query("io_mode", pp_io_mode);
+        if (pp_io_mode == 1) {
+            // Turn off ow_bndry; will rely on bndry_plane for fills
+            // Unless ow_bndry is not present, then no changes needed
+            need_changes -= 1;
+        }
+    }
+    if (mpl_present) {
+        amrex::Abort(
+            "OceanWavesBoundary: not currently compatible with Modulated Power "
+            "Law implementation.");
+    }
+
+    if (need_changes == 1) {
+        // Add OceanWavesBoundary to field boundaries list
+        fb_names.push_back("OceanWavesBoundary");
+    }
+    if (need_changes == -1) {
+        // Remove OceanWavesBoundary from field boundaries list and allow
+        // BoundaryPlane to handle fills
+        amrex::Print() << "OceanWavesBoundary: detected conflict with "
+                       << "BoundaryPlane; removing OceanWavesBoundary from "
+                       << "field boundaries list\n";
+        fb_names.erase(
+            std::remove(fb_names.begin(), fb_names.end(), "OceanWavesBoundary"),
+            fb_names.end());
+    }
+
+    if (need_changes != 0) {
+        // Update the input database with the new field boundaries list
+        pp_incflo.addarr("field_boundaries", fb_names);
+    }
 }
 
 OceanWaves::~OceanWaves() = default;
@@ -72,9 +131,7 @@ void OceanWaves::initialize_fields(int level, const amrex::Geometry& geom)
 void OceanWaves::post_init_actions()
 {
     BL_PROFILE("amr-wind::ocean_waves::OceanWaves::post_init_actions");
-    m_ow_bndry->post_init_actions();
     m_owm->update_target_fields(m_sim.time().current_time());
-    m_ow_bndry->record_boundary_data_time(m_sim.time().current_time());
     if (m_multiphase_mode) {
         m_owm->apply_relax_zones();
     }
@@ -94,7 +151,6 @@ void OceanWaves::pre_advance_work()
     const amrex::Real adv_bdy_time =
         0.5_rt * (m_sim.time().current_time() + m_sim.time().new_time());
     m_owm->update_target_fields(adv_bdy_time);
-    m_ow_bndry->record_boundary_data_time(adv_bdy_time);
 }
 
 void OceanWaves::pre_predictor_work()
@@ -103,12 +159,11 @@ void OceanWaves::pre_predictor_work()
     // Update ow values for boundary fills at new time
     const amrex::Real bdy_fill_time = m_sim.time().new_time();
     m_owm->update_target_fields(bdy_fill_time);
-    m_ow_bndry->record_boundary_data_time(bdy_fill_time);
 }
 
 void OceanWaves::post_advance_work()
 {
-    BL_PROFILE("amr-wind::ocean_waves::OceanWaves::post_init_actions");
+    BL_PROFILE("amr-wind::ocean_waves::OceanWaves::post_advance_work");
     if (m_multiphase_mode) {
         m_owm->apply_relax_zones();
     }

@@ -4,6 +4,7 @@
 #include "amr-wind/core/Field.H"
 #include "amr-wind/core/IntField.H"
 #include "amr-wind/CFDSim.H"
+#include "amr-wind/boundary_conditions/field_boundary_fill/FieldBoundary.H"
 #include "AMReX_Gpu.H"
 #include <AMReX_BndryRegister.H>
 #include "AMReX_REAL.H"
@@ -18,13 +19,20 @@ namespace amr_wind {
  *  available wave data at the boundaries
  *
  */
-class OceanWavesBoundary
+class OceanWavesBoundary : public FieldBoundary::Register<OceanWavesBoundary>
 {
-
 public:
+    static std::string identifier() { return "OceanWavesBoundary"; }
+
     explicit OceanWavesBoundary(CFDSim& /*sim*/);
 
-    void post_init_actions();
+    void post_init_actions() override;
+
+    void pre_advance_work() override;
+
+    void pre_predictor_work() override;
+
+    void post_advance_work() override {}
 
     void set_velocity(
         int lev,
@@ -32,7 +40,7 @@ public:
         const Field& fld,
         amrex::MultiFab& mfab,
         int dcomp = 0,
-        int orig_comp = 0) const;
+        int orig_comp = 0) const override;
 
     void
     set_vof(int lev, amrex::Real time, const Field& fld, amrex::MultiFab& mfab)
@@ -64,12 +72,9 @@ private:
     const amr_wind::SimTime& m_time;
     const FieldRepo& m_repo;
     const amrex::AmrCore& m_mesh;
-    Field& m_ow_velocity;
-    Field& m_ow_vof;
+    Field* m_ow_velocity{nullptr};
+    Field* m_ow_vof{nullptr};
     IntField* m_terrain_blank_ptr{nullptr};
-
-    // Should be active unless boundary planes are used
-    bool m_activate_ow_bndry{true};
 
     // Check for single-phase simulation
     bool m_vof_exists{true};

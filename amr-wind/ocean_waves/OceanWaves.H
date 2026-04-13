@@ -3,7 +3,7 @@
 
 #include "amr-wind/core/Physics.H"
 #include "amr-wind/core/FieldRepo.H"
-#include "amr-wind/ocean_waves/boundary_ops/OceanWavesBoundary.H"
+#include "amr-wind/boundary_conditions/field_boundary_fill/OceanWavesBoundary.H"
 
 /** \defgroup ocean_waves Ocean Waves module
  *  Ocean Waves class
@@ -49,11 +49,6 @@ public:
 
     void post_advance_work() override;
 
-    [[nodiscard]] const OceanWavesBoundary& ow_bndry() const
-    {
-        return *m_ow_bndry;
-    }
-
 protected:
     virtual void prepare_outputs();
 
@@ -62,9 +57,6 @@ private:
 
     //! Unique pointer to the ocean waves model
     std::unique_ptr<OceanWavesModel> m_owm;
-
-    //! Ocean waves boundary instance
-    std::unique_ptr<OceanWavesBoundary> m_ow_bndry;
 
     //! Ocean waves target free surface levelset function
     Field& m_ow_levelset;

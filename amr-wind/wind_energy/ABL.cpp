@@ -2,7 +2,7 @@
 
 #include "amr-wind/wind_energy/ABL.H"
 #include "amr-wind/wind_energy/ABLFieldInit.H"
-#include "amr-wind/wind_energy/ABLBoundaryPlane.H"
+#include "amr-wind/boundary_conditions/field_boundary_fill/BoundaryPlane.H"
 #include "amr-wind/equation_systems/icns/source_terms/ABLForcing.H"
 #include "amr-wind/equation_systems/icns/source_terms/ABLMeanBoussinesq.H"
 #include "amr-wind/equation_systems/icns/source_terms/ABLMesoForcingMom.H"
@@ -74,11 +74,46 @@ ABL::ABL(CFDSim& sim)
     // Instantiate the ABL field initializer
     m_field_init = std::make_unique<ABLFieldInit>();
 
-    // Instantiate the ABL boundary plane IO
-    m_bndry_plane = std::make_unique<ABLBoundaryPlane>(sim);
+    // Get the field boundaries named explicitly
+    amrex::ParmParse pp_incflo("incflo");
+    amrex::Vector<std::string> fb_names;
+    pp_incflo.queryarr("field_boundaries", fb_names);
+    bool abl_fb_present = false;
+    bool mpl_fb_present = false;
+    for (const auto& fb : fb_names) {
+        if (fb == "BoundaryPlane") {
+            abl_fb_present = true;
+        }
+        if (fb == "ModulatedPowerLaw") {
+            mpl_fb_present = true;
+        }
+    }
 
-    // Instantiate the ABL Modulated Power Law
-    m_abl_mpl = std::make_unique<ABLModulatedPowerLaw>(sim);
+    // Check original input arguments and add if requested
+    bool need_changes = false;
+    // - BoundaryPlane
+    if (!abl_fb_present) {
+        int io_mode = -1;
+        pp.query("bndry_io_mode", io_mode);
+        if (io_mode == 0 || io_mode == 1) {
+            fb_names.push_back("BoundaryPlane");
+            need_changes = true;
+        }
+    }
+    // - ModulatedPowerLaw
+    if (!mpl_fb_present) {
+        amrex::ParmParse pp_mpl("MPL");
+        bool activate_mpl = false;
+        pp_mpl.query("activate", activate_mpl);
+        if (activate_mpl) {
+            fb_names.push_back("ModulatedPowerLaw");
+            need_changes = true;
+        }
+    }
+    if (need_changes) {
+        // Update the input database with the new field boundaries list
+        pp_incflo.addarr("field_boundaries", fb_names);
+    }
 
     // Instantiate the ABL anelastic module
     m_abl_anelastic = std::make_unique<ABLAnelastic>(sim);
@@ -157,8 +192,6 @@ void ABL::post_init_actions()
     m_velocity.register_custom_bc<ABLVelWallFunc>(m_abl_wall_func);
     (*m_temperature).register_custom_bc<ABLTempWallFunc>(m_abl_wall_func);
 
-    m_bndry_plane->post_init_actions();
-    m_abl_mpl->post_init_actions();
     m_abl_anelastic->post_init_actions();
 }
 
@@ -243,29 +276,13 @@ void ABL::pre_advance_work()
         m_hurricane_temp_forcing->mean_velocity_update(
             m_stats->vel_profile_coarse());
     }
-
-    if (!m_sim.has_overset()) {
-        m_bndry_plane->pre_advance_work();
-    }
-    m_abl_mpl->pre_advance_work();
 }
-
-/** Perform tasks at the beginning of a timestep, but after pre_advance
- *
- *  For ABL simulations, this method updates plane data to new_time (n+1)
- */
-void ABL::pre_predictor_work() { m_bndry_plane->pre_predictor_work(); }
 
 /** Perform tasks at the end of a new timestep
  *
  *  For ABL simulations, this method writes all plane-averaged profiles and
  *  integrated statistics to output
  */
-void ABL::post_advance_work()
-{
-    m_stats->post_advance_work();
-    m_bndry_plane->post_advance_work();
-    m_abl_mpl->post_advance_work();
-}
+void ABL::post_advance_work() { m_stats->post_advance_work(); }
 
 } // namespace amr_wind
