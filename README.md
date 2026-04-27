@@ -1,4 +1,4 @@
-# Kyenma-SGF (formerly AMR-Wind)
+# Kynema-SGF (formerly AMR-Wind)
 
 [Documentation](https://kynema.github.io/kynema-sgf) | [Nightly test dashboard](http://my.cdash.org/index.php?project=Exawind) 
 
