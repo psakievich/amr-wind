@@ -1,0 +1,14 @@
+.. meta::62083182b299ae8f24b9327b99b69a77bcadf0c122c260ff33d2bf962cfd3565aa8344ba402bafa6311055c069df7f021e02cd1a973759e769c630857d39b05a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ExtSolverMgr Class Reference
+
+ExtSolverMgr Class Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_ext_solver_mgr.html

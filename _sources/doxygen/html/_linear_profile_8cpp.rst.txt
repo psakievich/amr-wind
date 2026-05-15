@@ -1,0 +1,14 @@
+.. meta::447b743bd2c65ddb6f3818418b350c34baca9b2f6b9ec4de0daa45073e23cbf5843130aa1af56918d66c21bc32d62617b5a93fe6e1b9b819e2ea2c462284414b
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/udfs/LinearProfile.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/physics/udfs/LinearProfile.cpp File Reference
+=====================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _linear_profile_8cpp.html

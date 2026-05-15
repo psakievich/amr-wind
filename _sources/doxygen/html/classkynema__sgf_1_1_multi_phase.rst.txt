@@ -1,0 +1,14 @@
+.. meta::d2b2e25488d60e087160a5be6963c60f608753c333df4341cd7a825980689e77fc694e48367cc572357faae998920448c0b2070d7739c138126075b7d84294b1
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::MultiPhase Class Reference
+
+MultiPhase Class Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_multi_phase.html

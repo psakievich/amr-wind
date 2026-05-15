@@ -1,0 +1,14 @@
+.. meta::9a0ec1d3ed944ff053670cfc4e2c211e75ea64770f1a48c6756684ec6e2918c9a1266d34c3ce8f0e868f99d7a7148b92888bebe4f64fe850cee96cd3d00ea55d
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/turbine/kynema/kynema_types.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/turbine/kynema/kynema\_types.H Source File
+========================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: kynema__types_8_h_source.html

@@ -1,0 +1,14 @@
+.. meta::a41960f3d544b51697ebeaedfb08a962b95430c7ada8f5a87ac31cdd0e7b9d4a7b758b8429c29134b7963b05fddd0c5b23136284224b8a764e739680b61ff1f7
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::Intermittency Class Reference
+
+Intermittency Class Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_intermittency.html

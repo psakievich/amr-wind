@@ -1,0 +1,14 @@
+.. meta::cd07022d710ab10845d4a9488a0bf016c2f16f4018ebe52834357883aeeb10a666a4e8455ba29f1d2af08de65a01d00c1f829d57d529bbbca8e4fe74032e5793
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::CollidingRings Struct Reference
+
+CollidingRings Struct Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_colliding_rings.html

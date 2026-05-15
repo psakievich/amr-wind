@@ -1,0 +1,14 @@
+.. meta::fb3143fc58ad831e9427da10c828813a056fab998d1201421ee61a98402d745dd830bd3789bc9f33d5e2df0e5c84c6af1a86bc936e0b167aa24c40b31b721117
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::RefinementCriteria Class Reference
+
+RefinementCriteria Class Reference
+==================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_refinement_criteria.html

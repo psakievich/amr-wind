@@ -1,0 +1,14 @@
+.. meta::732976fc3e6bbf6e4248333637df99c922242d7d62e95337b56bd34806d3f998e7d80a77ade870d36495613713b307c00bceeecfb3822614992de80dd2a0d140
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ocean_waves::ops::UpdateTargetFieldsOp&lt; W2AWaves &gt; Struct Reference
+
+UpdateTargetFieldsOp&lt; W2AWaves &gt; Struct Reference
+=======================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ocean__waves_1_1ops_1_1_update_target_fields_op_3_01_w2_a_waves_01_4.html

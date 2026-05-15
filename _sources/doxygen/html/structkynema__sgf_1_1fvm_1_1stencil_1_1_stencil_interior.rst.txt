@@ -1,0 +1,14 @@
+.. meta::a87eedaa3070244b0440a6748d0277798227ad6592b379c947cbb37151e21cb7f06c2616ee117d07d21c8c2548ae940c11b65f248766cc1c1195b8c3d54df8bf
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::fvm::stencil::StencilInterior Struct Reference
+
+StencilInterior Struct Reference
+================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1fvm_1_1stencil_1_1_stencil_interior.html

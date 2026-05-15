@@ -1,0 +1,14 @@
+.. meta::993e1a75c8a26ed4a1c8496de592e7b35003af30cc667eca5eb947ad73fee8b2bf2052aa0a9f25099c78882408e99694f3e0c464ad9f454495b052bfa213782c
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::FieldBoundary Class Reference
+
+FieldBoundary Class Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_field_boundary.html

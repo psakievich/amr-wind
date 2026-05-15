@@ -1,0 +1,14 @@
+.. meta::f824f1e3ab924b45505177bbffd6f5d478953e746f0b3c8252ecac69bfc8a82651c5cdddeeac48a4f1b7180393e79bae4474d2df6d7879ade9ee6825a2e60b2a
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/vof/vof_ops.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/vof/vof\_ops.H File Reference
+=======================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: vof__ops_8_h.html

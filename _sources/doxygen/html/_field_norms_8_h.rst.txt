@@ -1,0 +1,14 @@
+.. meta::d49b165ea850ce4b79d4aef0d1a2b8be561b2137f30d585ef7cd139003122ce69d13b5c88679bc918a5bf92d524a4fa25f56805ad9795665a1da5ea13c9fac6d
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/sampling/FieldNorms.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/sampling/FieldNorms.H File Reference
+======================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _field_norms_8_h.html

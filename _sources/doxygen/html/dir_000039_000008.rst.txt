@@ -1,0 +1,14 @@
+.. meta::a88191a7d4c56dc455bfa76fe0369db9ad566d757ed5bd01fa4905a31a489c0c47cfb0ea74859a4aba86d19acd373ecd44784f17de61a1fa4d491634cccbec3b
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/icns/source_terms -&gt; core Relation
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/icns/source\_terms -&gt; core Relation
+================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000039_000008.html

@@ -1,0 +1,14 @@
+.. meta::166132e8ae496a75a0ea0ac2286d607e4290cd84d65ce2b57eb0d57fd934b0284e1d0424b7f5fde57e9ed5a87bb2e216e0edb42dadbba76b4f909afebfa4f757
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::tagging::GeometryType Class Reference
+
+GeometryType Class Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1tagging_1_1_geometry_type.html

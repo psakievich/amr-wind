@@ -1,0 +1,14 @@
+.. meta::acff6f372d1309c8f62bf6c44cfbae8abc5fc4a97f97b9772debcb4ad379ad6ddc1022724e53c4a91359cd8825acf615cdf4bf393333e1e8f78fb3d7e2dab699
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/turbulence/LES/AMD.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/turbulence/LES/AMD.cpp File Reference
+=============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _a_m_d_8cpp.html

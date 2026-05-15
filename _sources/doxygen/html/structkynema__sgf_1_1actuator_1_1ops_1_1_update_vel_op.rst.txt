@@ -1,0 +1,14 @@
+.. meta::31c4cf30c3ebd2fc042bd5eb6db3768ea03338882857a67597cdc656fe8c16ba21ad535ea6f8656bdc0c502884fae84a2db6d9e06a2335bd7afa791bddc90ec7
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UpdateVelOp&lt; ActTrait, SrcTrait, typename &gt; Struct Template Reference
+
+UpdateVelOp&lt; ActTrait, SrcTrait, typename &gt; Struct Template Reference
+===========================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_update_vel_op.html

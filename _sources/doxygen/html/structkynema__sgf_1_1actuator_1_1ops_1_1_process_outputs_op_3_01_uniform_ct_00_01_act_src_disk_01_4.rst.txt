@@ -1,0 +1,14 @@
+.. meta::ba4d3bb352c6fc1decb046fed3d37f32bec216c2833e23939e14b316ae3e76d298da24fcc9b55ef8fa51c315ab05ec1811b8b8bd9f8b6e354085fa140499a463
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::ProcessOutputsOp&lt; UniformCt, ActSrcDisk &gt; Struct Reference
+
+ProcessOutputsOp&lt; UniformCt, ActSrcDisk &gt; Struct Reference
+================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_process_outputs_op_3_01_uniform_ct_00_01_act_src_disk_01_4.html

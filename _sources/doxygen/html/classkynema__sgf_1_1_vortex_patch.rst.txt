@@ -1,0 +1,14 @@
+.. meta::bad9b83e003b1bb26fdc2c2061466f2372164f38f2ef783e9633773990f571733a36c1cb442fcef3bcc580645d97fd523033a2c5f9dcdc50388700c72d97dde5
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::VortexPatch Class Reference
+
+VortexPatch Class Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_vortex_patch.html

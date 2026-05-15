@@ -1,0 +1,14 @@
+.. meta::dacf4c0332decc3a063238c26b0542c995058a01ee2706b35c5e3110faaf42c3092db1576ff2287bcfbe99e88689e2231e1012124f8d7efecc983de046770755
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::BCOp&lt; VOF &gt; Struct Reference
+
+BCOp&lt; VOF &gt; Struct Reference
+==================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_b_c_op_3_01_v_o_f_01_4.html

@@ -1,0 +1,14 @@
+.. meta::21921acde8f24d2a829ee6c13cc56a97f150face38d7c81e86f947f5d93f24a523bbd8ab233c65b78e7fb0812aad9c4cb41d5c662500ed364d11727b791da2ca
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/sampling/Enstrophy.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/sampling/Enstrophy.H File Reference
+=====================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _enstrophy_8_h.html

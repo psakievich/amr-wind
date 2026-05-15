@@ -1,0 +1,14 @@
+.. meta::6ba70a3d9dd2e9e482598aeb720cc4a5f020e7cd1dc4df53bcd98cc7b3400723f4351636a307182e940f1d4f8f0e6af6cb79c30f006b0d6766b520bba696bbf9
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::WallFunction Class Reference
+
+WallFunction Class Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_wall_function.html

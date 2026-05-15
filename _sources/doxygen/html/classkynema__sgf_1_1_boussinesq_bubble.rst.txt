@@ -1,0 +1,14 @@
+.. meta::ff26df8ff7a007dbfb0c08c1224f9c9c87750bd28ec050c7e29d32d00ebd639ade493ff0f75edcf180b2d743e7cfb39b9335f2d382e3d42990c988d3b11f94e2
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::BoussinesqBubble Class Reference
+
+BoussinesqBubble Class Reference
+================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_boussinesq_bubble.html

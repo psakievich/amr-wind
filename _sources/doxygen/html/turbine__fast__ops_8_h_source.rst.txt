@@ -1,0 +1,14 @@
+.. meta::644cd670a2488477f38dcdd02a9addcb304a8a974b493cf3329bdc6b6b8dc4e623076acea8bbba7a4d9032fa9f2df8e4de84d1e45396346b34a4c8f2c03ca75a
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/turbine/fast/turbine_fast_ops.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/turbine/fast/turbine\_fast\_ops.H Source File
+===========================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: turbine__fast__ops_8_h_source.html

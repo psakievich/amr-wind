@@ -1,0 +1,14 @@
+.. meta::6234b54b86bc4dd965470260a0fc3bba056f163652e4a7e9a02db76fdcfffee30496de2e126efacbdd881884be0537b5280e8f5b05435a3d947fba91b03b4b53
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::temperature::HurricaneTempForcing Class Reference
+
+HurricaneTempForcing Class Reference
+====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1temperature_1_1_hurricane_temp_forcing.html

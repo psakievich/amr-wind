@@ -1,0 +1,14 @@
+.. meta::388c1101ce1444dfbeb783f10373c8e4651f534d6fd6fdda3de449c05764ab89c3ce5ce22ee9cc648ab1dc5fe70de911cbe7b444fc7899c181f11f3a5650a1cb
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::SourceTerm Class Reference
+
+SourceTerm Class Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1_source_term.html

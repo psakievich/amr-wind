@@ -1,0 +1,14 @@
+.. meta::ed2a18340626341a5720f8de7ff9f4ecb880fdfa61db395e248f884779c5c4737b8bcbb17abe464e7cdd19e8056adc24a83a3eec333c75b25dedccbaf4edbf8e
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::utils::MultiParser Class Reference
+
+MultiParser Class Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1utils_1_1_multi_parser.html

@@ -1,0 +1,14 @@
+.. meta::b5e056d6f3a2c670bf352e791e58d5df2bc7a5b8ec06e8085273dadcef38272e368217cf12d74d8811028819edbf1c3bfc73cb7cdf86982df8f02caaf7947655
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/sdr/source_terms/SDRSrc.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/sdr/source\_terms/SDRSrc.H Source File
+================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _s_d_r_src_8_h_source.html

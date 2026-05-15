@@ -1,0 +1,14 @@
+.. meta::b62b0b073500b81bff880e710acad2ebbbaf2f6b4b5c2c1ceaa1ffe3bb864d5269c4da5d0b10a75b060e9ab0e9d19e0d8aa72e7d59cffd958b4cfb543c7c9e7c
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::sampling::PlaneSampler Class Reference
+
+PlaneSampler Class Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1sampling_1_1_plane_sampler.html

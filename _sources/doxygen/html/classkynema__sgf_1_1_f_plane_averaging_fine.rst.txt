@@ -1,0 +1,14 @@
+.. meta::dfaa47b062c596c46a20372d75cdc970177e4e02e78e295d8d3aef6dacc5adbc78fd2832aba028531bcdf634c69166d7e72c40e77c1ae9b26add9212bd7e4775
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::FPlaneAveragingFine&lt; FType &gt; Class Template Reference
+
+FPlaneAveragingFine&lt; FType &gt; Class Template Reference
+===========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_f_plane_averaging_fine.html

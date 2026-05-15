@@ -1,0 +1,14 @@
+.. meta::36e66a6810aa3938ab2da809b1436ff890eefad1166c5557ee816d1f919f6aabfcb1d787e892cd02c6445ec9668885e74939358a26d47a88cb7305f95b2be043
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::IntField Class Reference
+
+IntField Class Reference
+========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_int_field.html

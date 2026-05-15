@@ -1,0 +1,14 @@
+.. meta::e277d73a1603101640d1ffb1d29205ad85b51bf07bdb7e8276ad854833c0fa1cd25ce606f09869fe9531d10f739fe4416b273472a6dfaab0288a1b712d1b0a7d
+
+:orphan:
+
+.. title:: Kynema-SGF API: Class Members - Variables
+
+Class Members - Variables
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: functions_vars_m.html

@@ -1,0 +1,14 @@
+.. meta::b116da171237315f0deabf345884dd4669f44837c16ca9022dcd66477fa1c767e14d7d1d1f0267de57ce32ed91e9cf28db7856dbf75739c489272ef85fdb7b30
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::derived::Divergence Struct Reference
+
+Divergence Struct Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1derived_1_1_divergence.html

@@ -1,0 +1,14 @@
+.. meta::a5b14228a605625fd2b6d9cc944009aef8cf2c6e86cc3b31d4399bf040688ce531db52911c856996063e6067c7fc1243e840c23fba5c67dff49cee2ca04f3f61
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::LevelDataHolder Struct Reference
+
+LevelDataHolder Struct Reference
+================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_level_data_holder.html

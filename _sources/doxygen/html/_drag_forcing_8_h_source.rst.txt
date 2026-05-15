@@ -1,0 +1,14 @@
+.. meta::d47bb74e0b20ab32efa884550c2524267ba4932195966a3e6e170c0c0b2f1273c3e85e67639f34471d2bbe259496c887146c9777b549e7315921a1366c200f24
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/icns/source_terms/DragForcing.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/icns/source\_terms/DragForcing.H Source File
+======================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _drag_forcing_8_h_source.html

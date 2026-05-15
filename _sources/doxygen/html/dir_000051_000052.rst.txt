@@ -1,0 +1,14 @@
+.. meta::0d598546e6052e0e44e8e5a4e1d0ffd58089fbe5495e8948e81562f2c4b218ea42760a7189312f85511f70f58df9b30ee170d34831c378101e0d85c132d692f0
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/udfs -&gt; utilities Relation
+
+/home/runner/work/amr-wind/amr-wind/src/physics/udfs -&gt; utilities Relation
+=============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000051_000052.html

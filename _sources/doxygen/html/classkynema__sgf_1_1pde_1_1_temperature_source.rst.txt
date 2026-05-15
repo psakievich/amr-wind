@@ -1,0 +1,14 @@
+.. meta::1c7c1bc1520ed626d0079800fb04b8ac341861e0b5deebecc737a9f513fb5380ee775069016346f13d944a26436b0f05675502a43c07871d8acbb5dd8d6d84be
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::TemperatureSource Class Reference
+
+TemperatureSource Class Reference
+=================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1_temperature_source.html

@@ -1,0 +1,14 @@
+.. meta::db52de2a495f8f42e415f52aee98d119ba5c822c52c1f84c9f922d853bb5ed562194a305d50921ce1bb45d0ff2de0d4658bf84f0d788c467dd9be99714645401
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::sampling::Sampling Class Reference
+
+Sampling Class Reference
+========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1sampling_1_1_sampling.html

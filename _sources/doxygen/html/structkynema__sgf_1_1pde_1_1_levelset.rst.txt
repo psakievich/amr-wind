@@ -1,0 +1,14 @@
+.. meta::62150a89c7767dcb3ef9c10ac51c35fc3d0f897dcfa97f97753c84c2954332bb147a3c7eebf788897640e90a72e02a7d55649ea94c2064e25b66bac1a5906bd4
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::Levelset Struct Reference
+
+Levelset Struct Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_levelset.html

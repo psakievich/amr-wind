@@ -1,0 +1,14 @@
+.. meta::9649b90e01d66a32f58202fccfe4b4ca788886a96673cadcc71e0f2c3fc15218ca787f69a0b625e793355dba31888c70d45a31e3b3d937e706d6cc17b67b0d65
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UpdateVelOp&lt; ActTrait, ActSrcLine, typename std::enable_if_t&lt; std::is_base_of_v&lt; WingType, ActTrait &gt; &amp;&amp;UseDefaultOp&lt; ActTrait, ActSrcLine &gt;::update_vel &gt; &gt; Struct Template Reference
+
+update\_vel &gt; &gt; Struct Template Reference
+===============================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_update_vel_op_3_01_act_trait_00_01_act_src_line_00_01ty76a6a9c232548d1be38754c8231be73e.html

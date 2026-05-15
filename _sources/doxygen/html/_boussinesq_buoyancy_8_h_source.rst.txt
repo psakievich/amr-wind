@@ -1,0 +1,14 @@
+.. meta::fb7f94bfd1fe435c8eec0bdc365960b9ac139891681444e203e5e95c6fbfcd50e92c89ffb3b4a59e0b25bb6c0a84d5ea9c04466b1977a9b538537fa1c67c445d
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/icns/source_terms/BoussinesqBuoyancy.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/icns/source\_terms/BoussinesqBuoyancy.H Source File
+=============================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _boussinesq_buoyancy_8_h_source.html

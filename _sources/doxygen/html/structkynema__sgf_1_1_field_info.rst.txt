@@ -1,0 +1,14 @@
+.. meta::95e4f7182498c9035c689529a0c0220b54e6a1e46e2356fd140ecf74a2c625e11fdfd7225ef6d176ee1b6cd51f1cdafc9208e87c3167c020737226c582ded5b1
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::FieldInfo Struct Reference
+
+FieldInfo Struct Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_field_info.html

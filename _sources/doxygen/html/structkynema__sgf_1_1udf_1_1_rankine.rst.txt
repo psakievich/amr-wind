@@ -1,0 +1,14 @@
+.. meta::a3eb8cd2bb078fabe2243561df4dc42b20451e6ef491c6479cd13f1b5888857b581a23498a627a52b7f7faaed76bc35bf75fa9f1e329421607989c54aace5ac4
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::udf::Rankine Struct Reference
+
+Rankine Struct Reference
+========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1udf_1_1_rankine.html

@@ -1,0 +1,14 @@
+.. meta::70777d90655113b0a7965146b2830c3c0441b7b2416d9fee31d05098221cedb26eb60137e35b77f6fab8798708a371b083e8121f0fe8056a30eb4463d0f8e94d
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/setup Directory Reference
+
+/home/runner/work/amr-wind/amr-wind/src/setup Directory Reference
+=================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_46fc92d446af6495036d1feda4625c5b.html

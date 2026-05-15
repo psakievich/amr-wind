@@ -1,0 +1,14 @@
+.. meta::f280f9d19320c16379719f0b6aae180aab2eb710acbdd813bbd9da38c09bc4726cf26324b234184a628e544cc03c75d44c80c2a4b3ed82698ce98be0d7f74a17
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/turbine/external/turbine_external_ops.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/turbine/external/turbine\_external\_ops.H File Reference
+======================================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: turbine__external__ops_8_h.html

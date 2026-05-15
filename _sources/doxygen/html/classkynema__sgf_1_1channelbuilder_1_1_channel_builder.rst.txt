@@ -1,0 +1,14 @@
+.. meta::26617720125e065a6edef02ed8823101808dcf93ab8771d6c10bccb7b5a126d5424f3de120fdd51961d7ee50a47f6ed5d7bb61d63df29d18a373fa98c104c6f1
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::channelbuilder::ChannelBuilder Class Reference
+
+ChannelBuilder Class Reference
+==============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1channelbuilder_1_1_channel_builder.html

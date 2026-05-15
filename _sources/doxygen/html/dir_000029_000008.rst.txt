@@ -1,0 +1,14 @@
+.. meta::c46ce51c4cc2f90bd638ad942ec390bcdf13bde13326d24628da80b94adeeab847ae8a87827deaace3c0c8355b1c8b8f8f6afddf155895ead4e5c93a053bba88
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/ocean_waves -&gt; core Relation
+
+/home/runner/work/amr-wind/amr-wind/src/ocean\_waves -&gt; core Relation
+========================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000029_000008.html

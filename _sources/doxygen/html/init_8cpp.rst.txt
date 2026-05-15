@@ -1,0 +1,14 @@
+.. meta::86ec730520e13e8bed6699d5e3b8094ca6d6694c80b0f3119d4fef32fb0dd898d8152f14c89cc3c765162d623048684f6eb5dc794b637231c6f98773dcd5d1b6
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/setup/init.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/setup/init.cpp File Reference
+=====================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: init_8cpp.html

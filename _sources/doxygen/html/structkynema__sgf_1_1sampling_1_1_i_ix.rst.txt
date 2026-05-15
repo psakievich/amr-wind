@@ -1,0 +1,14 @@
+.. meta::2bf247e87c2f2a4a697bd90ea2588a83c45a0c1aca89ee24326ecb3e246b111947786273100b511fc76428df7d93d32d169e4d6fbee493ce8b560a9f2968df9b
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::sampling::IIx Struct Reference
+
+IIx Struct Reference
+====================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1sampling_1_1_i_ix.html

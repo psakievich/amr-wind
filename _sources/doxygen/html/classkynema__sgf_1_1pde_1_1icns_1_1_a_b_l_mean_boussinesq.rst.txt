@@ -1,0 +1,14 @@
+.. meta::89d4f64a61056ff5ee1c17943e11473f695eeedd932a0aa842bbe87a51255fe2493276258ebfa7e53f2eda15c25c7dedbc71b9f98bc8bfaa6ba64a195cfb0018
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::icns::ABLMeanBoussinesq Class Reference
+
+ABLMeanBoussinesq Class Reference
+=================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1icns_1_1_a_b_l_mean_boussinesq.html

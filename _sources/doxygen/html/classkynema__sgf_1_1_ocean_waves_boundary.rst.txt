@@ -1,0 +1,14 @@
+.. meta::6ccdc7dd06b7ae36b6461abd958d4710737c7365056240f3f64c1f29d83fa8efcd99530e27f4258e45b81828e16de7a42a31a9077bca91d0c3698ac2d54286fd
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::OceanWavesBoundary Class Reference
+
+OceanWavesBoundary Class Reference
+==================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_ocean_waves_boundary.html

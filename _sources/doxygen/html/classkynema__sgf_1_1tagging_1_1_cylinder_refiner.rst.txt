@@ -1,0 +1,14 @@
+.. meta::5948cb9ae0591038d67d8b9b9910aad0dd52972255f48a9680371392443b9785eae2e9260a818e56237d19f1ee5beccca940a837b4ce355b9925a2000540b0bc
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::tagging::CylinderRefiner Class Reference
+
+CylinderRefiner Class Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1tagging_1_1_cylinder_refiner.html

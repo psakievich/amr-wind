@@ -1,0 +1,14 @@
+.. meta::4edbbcc6c846a276b0127e678b9e827b9fc3975fdf90934c0b7e4dc753a096bf3542af89a20600063af2a2e59f1dd6ebe7b5620baeff865ca6e5b8532c71f48e
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ShearStressConstant Struct Reference
+
+ShearStressConstant Struct Reference
+====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_shear_stress_constant.html

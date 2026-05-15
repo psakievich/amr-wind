@@ -1,0 +1,14 @@
+.. meta::9f15149b7b6b57a677a34d6605363565ab7f6b927c6dd8659dec532fe5b74b512070a0b14ebdc44af49642373d1225bcad10c1618a1fb50c908f9c59210c6962
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::LogLaw Struct Reference
+
+LogLaw Struct Reference
+=======================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_log_law.html

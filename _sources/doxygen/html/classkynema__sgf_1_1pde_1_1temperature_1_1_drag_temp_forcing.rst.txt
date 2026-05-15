@@ -1,0 +1,14 @@
+.. meta::7acebfe7f1e4693939d8498c4f3016e063800faba8a5a7c6ad6ecb4356460e20bb6729060ed510954a57b1e275f0414dd2be18e4278eb5778484cb5eca495e20
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::temperature::DragTempForcing Class Reference
+
+DragTempForcing Class Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1temperature_1_1_drag_temp_forcing.html

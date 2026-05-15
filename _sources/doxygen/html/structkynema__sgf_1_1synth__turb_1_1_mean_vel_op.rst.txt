@@ -1,0 +1,14 @@
+.. meta::a25be338b4142f6427acfb6789d525b55fd77c9697831f811cdce0629c3b58c229d7bedbaead4f881ec5a089569aa8c99444c70294bb5b2b560259ddae3eef65
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::synth_turb::MeanVelOp Struct Reference
+
+MeanVelOp Struct Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1synth__turb_1_1_mean_vel_op.html

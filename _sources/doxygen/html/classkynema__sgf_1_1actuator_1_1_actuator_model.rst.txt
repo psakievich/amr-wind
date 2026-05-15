@@ -1,0 +1,14 @@
+.. meta::9efe657125038052b4d52df0c95946a7b367f9bd7d30e4b63113adbb3b94e0e6b11ff1020c5983c6e15d8a75156d174a0b511b2236fb40fb54bafb0d3014343e
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ActuatorModel Class Reference
+
+ActuatorModel Class Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1actuator_1_1_actuator_model.html

@@ -1,0 +1,14 @@
+.. meta::bf4b0dc0370abcec64a55179c52d577b1613164652cb0b5fbdc503c059fee262bc9c30f97fe12f3ea9fbe95b4c194447911f086b83f8307c68de07de8f55cb94
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ib::Cylinder Struct Reference
+
+Cylinder Struct Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ib_1_1_cylinder.html

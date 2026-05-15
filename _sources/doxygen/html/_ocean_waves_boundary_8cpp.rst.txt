@@ -1,0 +1,14 @@
+.. meta::7f1828a4ab3da55cf75e6a373a856dfca2c9d926264a94dd0efd37cb5fc71486d97c517364b6fb7363713535e76564cc2e263d7a06876d877c8e28e61a3d753a
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/boundary_conditions/field_boundary_fill/OceanWavesBoundary.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/boundary\_conditions/field\_boundary\_fill/OceanWavesBoundary.cpp File Reference
+========================================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _ocean_waves_boundary_8cpp.html

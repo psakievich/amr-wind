@@ -1,0 +1,14 @@
+.. meta::a6a7e1aec8485aa38d361c9a320f0b7c17fafcd1e855b8e7d318e886039a2646041080b8344e3f327ff427c232deb8650767e4fc6f24a921ed080c1c9b516c32
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::InletData Class Reference
+
+InletData Class Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_inlet_data.html

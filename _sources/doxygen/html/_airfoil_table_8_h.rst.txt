@@ -1,0 +1,14 @@
+.. meta::a40f2bbc43b691bad1f509660c6416cddabbca8e5c9a72954f12cd1eda1c410bd397365f4943364ec5f67964234534ba835c897fcec214be3904773d2aad4a47
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/aero/AirfoilTable.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/aero/AirfoilTable.H File Reference
+================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _airfoil_table_8_h.html

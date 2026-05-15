@@ -1,0 +1,14 @@
+.. meta::d5149845c3d4c9b3f73b4c9a8e00cbecc244e3586ef1b929dcce36da8d5c03f4fd6d3361fa43c189490e618ee596dd056e34d041931b948b310b2b128cf56f93
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/sampling/KineticEnergy.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/sampling/KineticEnergy.cpp File Reference
+===========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _kinetic_energy_8cpp.html

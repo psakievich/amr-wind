@@ -1,0 +1,14 @@
+.. meta::e6b8c5491aa1d2431f83be3d4f968514d14fd728f991dbf0618d5315bdcf141b5f022c6fc279e1b44dc39f324583078388d82e20668147993243254205f1e30c
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/overset/OversetManager.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/overset/OversetManager.H File Reference
+===============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _overset_manager_8_h.html

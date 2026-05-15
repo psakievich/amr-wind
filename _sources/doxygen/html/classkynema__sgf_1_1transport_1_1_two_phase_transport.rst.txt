@@ -1,0 +1,14 @@
+.. meta::1d62c058109d6565354dc1dab894cc507ad62ee4df41c6453952cc49e423a080e8779d4a0ff1712b2b6a0a605adc6afaa4e3ee7030a791b2a95e1cb892325b57
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::transport::TwoPhaseTransport Class Reference
+
+TwoPhaseTransport Class Reference
+=================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1transport_1_1_two_phase_transport.html

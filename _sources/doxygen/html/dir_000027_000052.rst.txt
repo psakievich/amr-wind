@@ -1,0 +1,14 @@
+.. meta::6ff8b73cb3ae3f086b17cefb82b01af6bfe1776c44bb771508f95ea9aa20347e13a0956d8ebc9451f6d202739bdd9a1d7a4ddc9bfab59eb391e8581d2e71add9
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/multiphase -&gt; utilities Relation
+
+/home/runner/work/amr-wind/amr-wind/src/physics/multiphase -&gt; utilities Relation
+===================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000027_000052.html

@@ -1,0 +1,14 @@
+.. meta::7dac8858d18d638cde1b372ed77767b423ca6d87b459450de10367890b8ad28261b855ca7ed34f4e566f588dd987e19005248a041e9dbf5a1219b156b354e8a5
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::sampling::SampleLocType Struct Reference
+
+SampleLocType Struct Reference
+==============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1sampling_1_1_sample_loc_type.html

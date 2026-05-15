@@ -1,0 +1,14 @@
+.. meta::2f8bf64aa061d41dfe11be2ca1eb33bed764282285140f8d0e2de8598dff7f9aeefa067e257ff62bde623cc94c7310c15a2756d26ae4c3854bb01b726ad05c74
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::udf::TwoLayer Struct Reference
+
+TwoLayer Struct Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1udf_1_1_two_layer.html

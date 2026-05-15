@@ -1,0 +1,14 @@
+.. meta::607c843a946216633402c0f592dbefd561f0c646a19a2ce6907592b545e6be61c2b4aa8117c165dc4932bb520076991f6d560363fa772c0bf9807746976f04d5
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::sampling::LineSampler Class Reference
+
+LineSampler Class Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1sampling_1_1_line_sampler.html

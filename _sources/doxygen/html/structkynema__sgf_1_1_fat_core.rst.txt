@@ -1,0 +1,14 @@
+.. meta::c039905711ec248bfcc4ecaea11aa8f0ccb6514fd352f1da39a5ff6601f7ef78e1523edaf4015b883fa804ffa7477dcda6dba83c603ce9e6f1c926be4ae77493
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::FatCore Struct Reference
+
+FatCore Struct Reference
+========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_fat_core.html

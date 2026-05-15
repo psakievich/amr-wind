@@ -1,0 +1,14 @@
+.. meta::23856d5626fbbf4511d82555f7ba2465239eee8c8916a195b32b57b3c89b179772a1dd82c952645322a8d6085e982c06a7b25a2287af0e0f73aafd0920a9f856
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/boundary_conditions/field_boundary_fill/ReadERFFunction.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/boundary\_conditions/field\_boundary\_fill/ReadERFFunction.H Source File
+================================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _read_e_r_f_function_8_h_source.html

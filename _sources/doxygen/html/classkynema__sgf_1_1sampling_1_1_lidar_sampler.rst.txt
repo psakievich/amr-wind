@@ -1,0 +1,14 @@
+.. meta::8d170d96ba3bbb0486e82b9139a8813ef75d7f475366eb2ec1eb3ff4c6ad0f5092b4bc3c77736808aa64804025f654ef6c91df011828889083f60c77320f39d1
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::sampling::LidarSampler Class Reference
+
+LidarSampler Class Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1sampling_1_1_lidar_sampler.html

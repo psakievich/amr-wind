@@ -1,0 +1,14 @@
+.. meta::328206f8f6235bb7959ec25432d947714a789a96ef9f6a349e3a17c9a6c0c816a9d248f2c82e500b0b4535adf33308f5934c1c4837d3ef83e47154bd28183261
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/Intermittency.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/physics/Intermittency.H File Reference
+==============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _intermittency_8_h.html

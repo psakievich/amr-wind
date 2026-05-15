@@ -1,0 +1,14 @@
+.. meta::f0848e74671d3b8501c1885ef20e8a28a649fdc838abd6f4a295e94d7fd6eb41fb5b826db8eb85b141471c9827c1043edf3d44b08c1bf3dd60ccdc6f69c8ddbe
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src -&gt; turbulence Relation
+
+/home/runner/work/amr-wind/amr-wind/src -&gt; turbulence Relation
+=================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000043_000050.html

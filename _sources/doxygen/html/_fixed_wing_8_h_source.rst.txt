@@ -1,0 +1,14 @@
+.. meta::4265daec1028c4afa6e463e1c7ddc60faa7a576b40f3cfc385b02c0b302f5f6ef0380568d5f5b8f3d21ac6628173bde81e7500e44561eeedff7adb0446de16b8
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/wing/FixedWing.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/wing/FixedWing.H Source File
+==========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _fixed_wing_8_h_source.html

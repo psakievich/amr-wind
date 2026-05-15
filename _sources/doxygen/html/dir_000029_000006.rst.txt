@@ -1,0 +1,14 @@
+.. meta::8b5a9883732e0e3738463267672470906983b3bf6053d33a9bff7a60ba663a15d0eedad6305cdf2bd7d7cf498845f2fac3d174ddfa146ebaf04c0ebd53ea87fa
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/ocean_waves -&gt; boundary_conditions Relation
+
+/home/runner/work/amr-wind/amr-wind/src/ocean\_waves -&gt; boundary\_conditions Relation
+========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000029_000006.html

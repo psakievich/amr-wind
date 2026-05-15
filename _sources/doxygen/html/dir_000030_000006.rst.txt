@@ -1,0 +1,14 @@
+.. meta::4e86794a4c1fe3153dba16281350828c5e43a451ee6726f5a5ee7c4ac3f2dfcb7f5ec1207c03de676a916f95be6086f104826f095ea5ba15e6e2f3ffb2be8e24
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/overset -&gt; boundary_conditions Relation
+
+/home/runner/work/amr-wind/amr-wind/src/overset -&gt; boundary\_conditions Relation
+===================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000030_000006.html

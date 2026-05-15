@@ -1,0 +1,14 @@
+.. meta::4d62c160585873c61a1c1afbd8c584e5680d330e0c725afbe4995d70897a90434f7b913c73aa3caecf30cfa99dda671235a8486b6703840a02f479b268f62da0
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::udf::PowerLawProfile::DeviceOp Struct Reference
+
+DeviceOp Struct Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1udf_1_1_power_law_profile_1_1_device_op.html

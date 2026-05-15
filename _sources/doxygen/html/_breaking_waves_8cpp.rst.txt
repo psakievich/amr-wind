@@ -1,0 +1,14 @@
+.. meta::1b01d7012034e6cc106ae390472488f0e90d53269f1b8f31c49d0b33a2dfcc5dfefe9bc45f15cc620eecc205aec715c3e948d2e0e558f13b60d29ffadee58d3d
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/multiphase/BreakingWaves.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/physics/multiphase/BreakingWaves.cpp File Reference
+===========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _breaking_waves_8cpp.html

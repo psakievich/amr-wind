@@ -1,0 +1,14 @@
+.. meta::abafea708641c4c5432e9110d60af74bf453d110b037ce67e1a7cfbf29d30509a5d8f8da04fd0b6858b46c32689a0ed16550053f583805d9bc123da277ac01d7
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::sampling::RadarSampler Class Reference
+
+RadarSampler Class Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1sampling_1_1_radar_sampler.html

@@ -1,0 +1,14 @@
+.. meta::642815996ac36104f452038da5b985571c3ca23ca05707e8804c337908c3f0b2d220a46d71d32063220bf84db272dfbf68b14124aa3e37261534782b4e6b2e6b
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::SimpleShearSchumann Struct Reference
+
+SimpleShearSchumann Struct Reference
+====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_simple_shear_schumann.html

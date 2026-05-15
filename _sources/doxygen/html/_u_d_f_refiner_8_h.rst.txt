@@ -1,0 +1,14 @@
+.. meta::5f5ece6cd24325345b93f75ad62948d8fb5e8375db8c07dc8fc8ea30082e74f88d5f8828025665220ca859373f31ed8c0c7294a0f25a483d040293297de60824
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/tagging/UDFRefiner.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/tagging/UDFRefiner.H File Reference
+=====================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _u_d_f_refiner_8_h.html

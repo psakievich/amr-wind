@@ -1,0 +1,14 @@
+.. meta::a8f2895d4a88270262f7b2208e2e6ef465c64cfd2daac19c7aed67f3bf257381b71cdbbab90182ee1a658b543b1976967277f9a010abac7608e5cf5dc2ed6f8e
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::sampling::PrismParameters Struct Reference
+
+PrismParameters Struct Reference
+================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1sampling_1_1_prism_parameters.html

@@ -1,0 +1,14 @@
+.. meta::4a73c630b7a1d984c09453504e37b5a7b7de8ce5c8520604e6ec4859053de734bc1242df78ccd33280a8ed37c5cc84ec80eb31492bb275210f8afc826a319a03
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/mesh_mapping_models/ChannelFlowMap.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/mesh\_mapping\_models/ChannelFlowMap.H File Reference
+=============================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _channel_flow_map_8_h.html

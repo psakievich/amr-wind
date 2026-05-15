@@ -1,0 +1,14 @@
+.. meta::7bdf37077f396743c225fbdc9a5eacbc16e9a260a04b3876f541f8c2fc107210800016c1f2cdbda2deea21d95aa526125f70144ba2961b780807abb8b1ccd5dc
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::fvm::Curvature&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+
+Curvature&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+==============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1fvm_1_1_curvature.html

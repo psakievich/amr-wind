@@ -1,0 +1,14 @@
+.. meta::ccb9343b8739700eefd0e157dea437ebda8cd0fc3997184265a3e5e450745dbec4b213f2ca896a0ae594e4fd7e9e24ba3f9c699665b246c60d38dfb1aef8f83d
+
+:orphan:
+
+.. title:: Kynema-SGF API: exw_fast::SC_DX_InputType Struct Reference
+
+SC\_DX\_InputType Struct Reference
+==================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structexw__fast_1_1_s_c___d_x___input_type.html

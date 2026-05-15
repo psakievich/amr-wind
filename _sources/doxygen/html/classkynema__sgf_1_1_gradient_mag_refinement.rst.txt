@@ -1,0 +1,14 @@
+.. meta::7037395a2033db1b6343c6c8967ca457e8ec511e87a18be38f7d87fabbd884dfe07fb53752e9aabafd66cbbe69f42eea1077bf498706dbed06b0c4029dd1c791
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::GradientMagRefinement Class Reference
+
+GradientMagRefinement Class Reference
+=====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_gradient_mag_refinement.html

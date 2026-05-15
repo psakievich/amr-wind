@@ -1,0 +1,14 @@
+.. meta::bc43e2dc081a09761d03789abd8aaf62647f342d369e7ab14f99d9930da0d4e647fcbaadaadd00f20ffea15e5c394772f952b9c7d6a638f683c51df82a65c368
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/immersed_boundary -&gt; fvm Relation
+
+/home/runner/work/amr-wind/amr-wind/src/immersed\_boundary -&gt; fvm Relation
+=============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000021_000019.html

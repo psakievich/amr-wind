@@ -1,0 +1,14 @@
+.. meta::1bab66c303723286883ea24dac01144baa2ca655f3b92d41b512839339ebc52860e8a0d37eb52fe585c882f32b37f5ac4041269c59c8849bd5c2bd9eb97ab450
+
+:orphan:
+
+.. title:: Kynema-SGF API: exw_fast::SC_DX_OutputType Struct Reference
+
+SC\_DX\_OutputType Struct Reference
+===================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structexw__fast_1_1_s_c___d_x___output_type.html

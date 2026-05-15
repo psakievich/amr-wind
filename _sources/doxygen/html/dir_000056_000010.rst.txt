@@ -1,0 +1,14 @@
+.. meta::e1303ae0313e45ec6e74869a752c24f48a1c072d2e9a003a41756974d882e840bb4878f896f4482ad97311ce9bf67cc5fb62c643e2d381d32db3d66c04544487
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/boundary_conditions/wall_models -&gt; diffusion Relation
+
+/home/runner/work/amr-wind/amr-wind/src/boundary\_conditions/wall\_models -&gt; diffusion Relation
+==================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000056_000010.html

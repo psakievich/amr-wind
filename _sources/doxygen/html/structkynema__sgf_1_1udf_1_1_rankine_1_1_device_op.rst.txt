@@ -1,0 +1,14 @@
+.. meta::3ea2931e0de68063b34111731083492355ec116f2927abf5d8cdb7b6a1ab190fb24bfbb6ed9949a33535bff282aecd4ae8f6e670f4b014445bba74737a87f830
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::udf::Rankine::DeviceOp Struct Reference
+
+DeviceOp Struct Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1udf_1_1_rankine_1_1_device_op.html

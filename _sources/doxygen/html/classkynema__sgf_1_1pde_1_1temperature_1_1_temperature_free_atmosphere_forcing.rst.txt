@@ -1,0 +1,14 @@
+.. meta::9277cb9ab5da8ad8066779186f267b7f2395db4ef6efbf455b25038a88e22b7458942a7942a8e5be7e998aa342f1ccdac270fd09be41c45c5085fe98c5484813
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::temperature::TemperatureFreeAtmosphereForcing Class Reference
+
+TemperatureFreeAtmosphereForcing Class Reference
+================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1temperature_1_1_temperature_free_atmosphere_forcing.html

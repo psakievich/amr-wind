@@ -1,0 +1,14 @@
+.. meta::61640acd299db0df779e64c40774e197a57a7948c43ad0fbb89c9bb66ab3530128378bb47673a809fe5c7d300fa509572985373a7913523372ca8730987c680a
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/FieldPlaneAveraging.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/FieldPlaneAveraging.cpp File Reference
+========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _field_plane_averaging_8cpp.html

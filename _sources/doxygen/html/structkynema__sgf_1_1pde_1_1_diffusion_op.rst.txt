@@ -1,0 +1,14 @@
+.. meta::926e0e5e1ca710139105a0805a6bbfb06768196088e61464ee5dcb05e03a2ff08328f43bbecba5aea4b401a2b78f0787368222e06f7b1459ea5c91e2479f37b7
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::DiffusionOp&lt; PDE, Scheme, typename &gt; Struct Template Reference
+
+DiffusionOp&lt; PDE, Scheme, typename &gt; Struct Template Reference
+====================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_diffusion_op.html
