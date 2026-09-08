@@ -1,0 +1,14 @@
+.. meta::23e7ca1a6e0359ea1d6f0bb240b2d9c0022ba1dada4e1a485a5aed0ac3b095a93f59cf8c92c05f1042d33255bd9914faaf76fc239e8afea578f83811da0be91f
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/udfs/Rankine.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/physics/udfs/Rankine.H File Reference
+=============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _rankine_8_h.html

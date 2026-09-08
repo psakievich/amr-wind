@@ -1,0 +1,14 @@
+.. meta::2c0a11010ba9f859d91ca37fedd99bd88404b9b70eb98fe1104dcba2884bbf44317f8c6a9c62af44380ebe8a131fbe48f622b6c2b4346f64245bfdc566cbe361
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::MacProjOp Class Reference
+
+MacProjOp Class Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1_mac_proj_op.html

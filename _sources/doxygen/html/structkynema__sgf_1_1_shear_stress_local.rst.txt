@@ -1,0 +1,14 @@
+.. meta::5345a9084ab774a60f448e341164045295704767bf8b9e9540831e04aa14164ba609ae48b4cfc320b0d50185e3a0fe36962f818275ef634297a0c7f78b23fe25
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ShearStressLocal Struct Reference
+
+ShearStressLocal Struct Reference
+=================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_shear_stress_local.html

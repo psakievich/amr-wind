@@ -1,0 +1,14 @@
+.. meta::054ed2809b56c899a79c6950bddaf9bcff02b5250739f237fa8a2343b9967697d95ccea34298427154c1aef564462d09ff72ecc740c13f8d78fa16e4f939a82e
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::PostProcessManager Class Reference
+
+PostProcessManager Class Reference
+==================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_post_process_manager.html

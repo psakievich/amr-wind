@@ -1,0 +1,14 @@
+.. meta::0b3cf4e83ec5d135b7d607ac97647284deacf10f31bee2d7d810a92508baaac115fec3168a9f32546f20ba14ff5bd285baa58d52fe19fe9487cdd0ff7ac42bc0
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UpdatePosOp&lt; Joukowsky, ActSrcDisk &gt; Struct Reference
+
+UpdatePosOp&lt; Joukowsky, ActSrcDisk &gt; Struct Reference
+===========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_update_pos_op_3_01_joukowsky_00_01_act_src_disk_01_4.html

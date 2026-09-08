@@ -1,0 +1,14 @@
+.. meta::401f1d70b478ecd73551533471c96878604c91024df8fe097767a97b8ae5c388c66238f49d25d1c1352778864eb1367fc0c499b8b09759116bacbec2559132ac
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::udf::BurggrafLid::DeviceOp Struct Reference
+
+DeviceOp Struct Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1udf_1_1_burggraf_lid_1_1_device_op.html

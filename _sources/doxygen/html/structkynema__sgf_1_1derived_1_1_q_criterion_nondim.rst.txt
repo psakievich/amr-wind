@@ -1,0 +1,14 @@
+.. meta::aaeee19c92ae0e7cde51b8c52a40a7f86fa83a438ee1053ecaf97d45b6ebda1d007767681163d90109f84f4a4a9ae5aaf90aab2262665ee35759edd7ba6d1b84
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::derived::QCriterionNondim Struct Reference
+
+QCriterionNondim Struct Reference
+=================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1derived_1_1_q_criterion_nondim.html

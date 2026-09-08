@@ -1,0 +1,14 @@
+.. meta::9d200df363fc838655f2a7467b73b23c2fddf735808f4e8a77fc16ec20cac235c8eebec8d4a8cf98581febfcf3028a532c1a7b7780c143569d1064d6fda5421a
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/temperature/source_terms/PerturbationForcing.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/temperature/source\_terms/PerturbationForcing.H File Reference
+========================================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _perturbation_forcing_8_h.html

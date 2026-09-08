@@ -1,0 +1,14 @@
+.. meta::13040a04d73f17b494857ac814528f5221aaca3a4c4fc7a1beaaea0789c7432a70c0724900f774745757d05c1070acefdbc1e6b8bbea67149044ee6888b0f439
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/vof/vof_hybridsolver_ops.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/vof/vof\_hybridsolver\_ops.H File Reference
+=====================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: vof__hybridsolver__ops_8_h.html

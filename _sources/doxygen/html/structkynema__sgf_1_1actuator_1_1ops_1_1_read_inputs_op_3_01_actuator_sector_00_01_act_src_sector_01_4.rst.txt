@@ -1,0 +1,14 @@
+.. meta::68e980a091c2d5891037d6f57c28d9ed1cc9971b39d282c912a110997a35f303dc5ef40f4b395ba2b70727b639633728f39cdcba3124466e37f35ce56512bb87
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::ReadInputsOp&lt; ActuatorSector, ActSrcSector &gt; Struct Reference
+
+ReadInputsOp&lt; ActuatorSector, ActSrcSector &gt; Struct Reference
+===================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_read_inputs_op_3_01_actuator_sector_00_01_act_src_sector_01_4.html

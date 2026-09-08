@@ -1,0 +1,14 @@
+.. meta::58026457f36c5ccaff144fdec37730fc6c9ff24bc963bd930b88a23712c50cc9ba06ffb104d59925afc6b29e2376a6372c3e34dc9d4c187f0e3054a93ce1c25d
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::tke::KsgsM84Src Class Reference
+
+KsgsM84Src Class Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1tke_1_1_ksgs_m84_src.html

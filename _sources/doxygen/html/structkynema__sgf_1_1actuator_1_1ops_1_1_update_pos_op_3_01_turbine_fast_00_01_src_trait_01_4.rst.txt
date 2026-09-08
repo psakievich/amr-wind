@@ -1,0 +1,14 @@
+.. meta::881aeecced955cc2125d1d2b71d84b6d0a3aad5a2237b1bee9a3f27a1c4ff7741e1ae3d36027121a87266168f1ea519574f32535d7948a1c20f8985cb896fe06
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UpdatePosOp&lt; TurbineFast, SrcTrait &gt; Struct Template Reference
+
+UpdatePosOp&lt; TurbineFast, SrcTrait &gt; Struct Template Reference
+====================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_update_pos_op_3_01_turbine_fast_00_01_src_trait_01_4.html

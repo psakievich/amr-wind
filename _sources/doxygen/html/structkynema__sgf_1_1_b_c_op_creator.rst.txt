@@ -1,0 +1,14 @@
+.. meta::692648fa8e2a7796ce3a4fdffa2b30f8c29464d849f9e021d7f23b92cf5b18f0087f8ddb3d6ae3f7d203c4b051a0c724986ae3f0a3f4b515f7b7fc71dc429d4d
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::BCOpCreator&lt; InflowOp, WallOp &gt; Struct Template Reference
+
+BCOpCreator&lt; InflowOp, WallOp &gt; Struct Template Reference
+===============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_b_c_op_creator.html

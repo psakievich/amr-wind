@@ -1,0 +1,14 @@
+.. meta::62e1e453079d5560fe001770b8da87d6acde077638367aeea80672069f6ef170961da02d3743e921edcbfdd1fe8aec3350aa1b712c8cac30cc361b129c2ee3ff
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::fvm::VorticityMag&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+
+VorticityMag&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+=================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1fvm_1_1_vorticity_mag.html

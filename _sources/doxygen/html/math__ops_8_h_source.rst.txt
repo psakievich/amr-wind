@@ -1,0 +1,14 @@
+.. meta::5651bc4d38f89d2b197d55c24024550aff3d4c2be039195024cc7d6484a3bfe3f50ee18f12bb7db8baf20f014064015bef692cf2b7a34d71720e56db51467189
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/math_ops.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/math\_ops.H Source File
+=========================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: math__ops_8_h_source.html

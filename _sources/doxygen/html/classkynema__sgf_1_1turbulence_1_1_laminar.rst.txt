@@ -1,0 +1,14 @@
+.. meta::bdb0fdefe6fc715512201d4c683d3dbf7cf0faa14020be8a93bae46cc8a323b0c4fe8779d5739d4171ccdc30dd1b4721698bb906c0a9d9096c6618edfe209be7
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::turbulence::Laminar&lt; Transport &gt; Class Template Reference
+
+Laminar&lt; Transport &gt; Class Template Reference
+===================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1turbulence_1_1_laminar.html

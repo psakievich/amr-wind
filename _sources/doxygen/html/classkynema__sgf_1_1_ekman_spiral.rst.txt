@@ -1,0 +1,14 @@
+.. meta::9585fcc7ecdfb0463c844ddf6c376f593cc6817e568825483d2086bb0ac32f77ba04f3dacca273c182cb2457d8de047d6786448c681a1f088055b5de0e5d775f
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::EkmanSpiral Class Reference
+
+EkmanSpiral Class Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_ekman_spiral.html

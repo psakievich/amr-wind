@@ -1,0 +1,14 @@
+.. meta::7bdb48c763eb646b37f0f1b839f312685f04819d2de524a225fe38e76325d98e04e6cf18e1e7585973f48eafe204dc196b06062585008099dcc81596829fa46d
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ib::ImmersedBoundaryModel Class Reference
+
+ImmersedBoundaryModel Class Reference
+=====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1ib_1_1_immersed_boundary_model.html

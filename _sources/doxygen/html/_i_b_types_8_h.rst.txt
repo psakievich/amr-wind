@@ -1,0 +1,14 @@
+.. meta::d7419a0d40d1d8e3dcc28f4226bb8a24b030df2d2beccb3011baf7fff15b2a60ce189e4cd5b328746d8984387605d7a97625d4569cd4da3877a17bda3ff36f3d
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/immersed_boundary/IBTypes.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/immersed\_boundary/IBTypes.H File Reference
+===================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _i_b_types_8_h.html

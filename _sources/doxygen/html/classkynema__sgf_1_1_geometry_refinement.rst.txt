@@ -1,0 +1,14 @@
+.. meta::8ea0761f1667d852d37a5064b0ecdbfc9a04ad7ae66d8a25b3aeb4065a1c26a23ffd7dcd9c86736ad2034b44c5f76dee122c8bc2bd55b11743afecdab663376b
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::GeometryRefinement Class Reference
+
+GeometryRefinement Class Reference
+==================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_geometry_refinement.html

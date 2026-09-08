@@ -1,0 +1,14 @@
+.. meta::96033a6a04fdfe7c1d25799e037567f8bec29090a91f65000cab8742df066a9e3829bc7472f7266fd3c86aa1740f7ac1950aea8f85e6be4058db135445266b31
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/fvm/strainrate.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/fvm/strainrate.H File Reference
+=======================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: strainrate_8_h.html

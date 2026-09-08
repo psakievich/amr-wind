@@ -1,0 +1,14 @@
+.. meta::55fa459afe77922720dca5e7e68bbbd1c603b6436aa422b546bfa601c506e6be964e1abb55780386c8846782ca18d45d004f8d311410e0ba9214148cfabd4fd4
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ActDataHolder&lt; ActTrait &gt; Class Template Reference
+
+ActDataHolder&lt; ActTrait &gt; Class Template Reference
+========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1actuator_1_1_act_data_holder.html

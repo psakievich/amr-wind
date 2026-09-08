@@ -1,0 +1,14 @@
+.. meta::3de9291fd8d87013ff53e9181d3d8442d0296d113958755c90dc2b95bf4cd27aa6d4680c909be9ae8ea24427cdb951c51093a051223edbb79e09af10314ab3cb
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::DiffusionOp&lt; PDE, Scheme, std::enable_if_t&lt; std::is_base_of_v&lt; ScalarTransport, PDE &gt; &gt; &gt; Struct Template Reference
+
+is\_base\_of\_v&lt; ScalarTransport, PDE &gt; &gt; &gt; Struct Template Reference
+=================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_diffusion_op_3_01_p_d_e_00_01_scheme_00_01std_1_1enable__if__t_3_01c6159c8226191ebbc810ca31588d36ec.html

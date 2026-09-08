@@ -1,0 +1,14 @@
+.. meta::89e24c4edcca944803b8ac931122214d74af898f299956249ff32a90b117487a2b7daeb73d7e0d448c0f8b91f8ec881d2b7c5af353349d7ff1c65fece548c0e1
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/icns/icns_advection.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/icns/icns\_advection.cpp File Reference
+=================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: icns__advection_8cpp.html

@@ -1,0 +1,14 @@
+.. meta::623f3d0cb115b9a2e958936d2391768ede21f416e568a02fa8faf8b2144a0053a9119911bd8047d6da6210c0a191a8730a970dd755c2b7c14a77f7de618bc9fc
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/TerrainDrag.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/physics/TerrainDrag.H File Reference
+============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _terrain_drag_8_h.html

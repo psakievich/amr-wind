@@ -1,0 +1,14 @@
+.. meta::8e9e2bad819a64423f446db51cbe4a4cd8b7e95a172e4671dfbba3db544661cf90c47c14f14fbb50f9c9f779968970294d3569d8dc2b6e3096718551c4ee3225
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::MassInflowOutflowBC Class Reference
+
+MassInflowOutflowBC Class Reference
+===================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_mass_inflow_outflow_b_c.html

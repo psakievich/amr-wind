@@ -1,0 +1,12 @@
+<map id="/home/runner/work/amr&#45;wind/amr&#45;wind/src/wind_energy/actuator/turbine/fast/fast_types.H" name="/home/runner/work/amr&#45;wind/amr&#45;wind/src/wind_energy/actuator/turbine/fast/fast_types.H">
+<area shape="rect" id="Node000001" title=" " alt="" coords="108,5,291,75"/>
+<area shape="rect" id="Node000002" href="$_fast_iface_8cpp.html" title=" " alt="" coords="5,123,188,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,87,129,124,125,121,158,83"/>
+<area shape="rect" id="Node000003" href="$_turbine_fast_8_h.html" title=" " alt="" coords="212,123,395,192"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,83,275,121,271,124,237,87"/>
+<area shape="rect" id="Node000004" href="$_turbine_fast_8cpp.html" title=" " alt="" coords="211,357,393,427"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="279,205,266,241,261,275,266,309,284,356,279,358,261,310,256,275,261,239,274,203"/>
+<area shape="rect" id="Node000005" href="$turbine__fast__ops_8_h.html" title=" " alt="" coords="276,240,459,309"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="331,203,351,238,346,241,327,206"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="344,323,323,358,319,356,339,320"/>
+</map>

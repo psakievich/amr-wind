@@ -1,0 +1,14 @@
+.. meta::94d36854778783171440ad531e60dce6f221a4702d9e13dba10cc413b91749d872f510a4d9c638de3c3daf753d6d907ddadee98161555de9ec14de1c30d50abf
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::BCVOF Class Reference
+
+BCVOF Class Reference
+=====================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_b_c_v_o_f.html

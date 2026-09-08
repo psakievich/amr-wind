@@ -1,0 +1,14 @@
+.. meta::35f1db6aa57cd91135898912a80ae746b2047eabbbf0c2d00a1fc2dda3f03c6ba3d13d974bfb6b10117a43296c5c68b524290704a26568c9b7d177f0cca0e879
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::MOData Struct Reference
+
+MOData Struct Reference
+=======================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_m_o_data.html

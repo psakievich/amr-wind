@@ -1,0 +1,14 @@
+.. meta::5fb3165f7c1d96ba9152c1b94b0264032600a6a9befb18cf3579609ff0328d2b13e57698f39d6fd890daf9f6360816b9dec2ee6766290395ac35a172851a7eb5
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::ProcessOutputsOp&lt; Drone, ActSrcDrone &gt; Struct Reference
+
+ProcessOutputsOp&lt; Drone, ActSrcDrone &gt; Struct Reference
+=============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_process_outputs_op_3_01_drone_00_01_act_src_drone_01_4.html

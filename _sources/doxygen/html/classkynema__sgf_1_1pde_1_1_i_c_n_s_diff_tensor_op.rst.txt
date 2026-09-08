@@ -1,0 +1,14 @@
+.. meta::8ce4240b41101e4eb487bb030b508fc8eb787bd6a82d2e1cba25b43381ba1f93ba8f3b9f662a99e14b9996536c0af243d755006dee881d35824d1c0f5d022128
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::ICNSDiffTensorOp Class Reference
+
+ICNSDiffTensorOp Class Reference
+================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1_i_c_n_s_diff_tensor_op.html

@@ -1,0 +1,14 @@
+.. meta::e1053ad543766d55469253f368ea3508368ec4c4bd972b1cf7ab4b45cb05f8581d71cb91e74644756e9770ec2fcdebf4e6ff2b6e326d4c6c0217dc28e9393e10
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::PDEFields Struct Reference
+
+PDEFields Struct Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_p_d_e_fields.html

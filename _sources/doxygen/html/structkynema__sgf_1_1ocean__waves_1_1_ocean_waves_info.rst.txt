@@ -1,0 +1,14 @@
+.. meta::339f73a52458e6fa16224297b0943c4cef48dba624860ee7bd36770bed47f7d42f4e8474c4c41843599bd1180cb5db6594e6a1427c74bf87e44384f3c5593afa
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ocean_waves::OceanWavesInfo Struct Reference
+
+OceanWavesInfo Struct Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ocean__waves_1_1_ocean_waves_info.html

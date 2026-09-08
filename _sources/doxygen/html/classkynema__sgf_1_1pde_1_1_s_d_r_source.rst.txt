@@ -1,0 +1,14 @@
+.. meta::dfc59cfafa38b562adc0af3ba71bb63ffe8e92d1392fc92f4283ff3910ca6b616516cad43b69fbeea653d32433a8efcb2f4d2c9cf7348df8a9d3e5848d488bca
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::SDRSource Class Reference
+
+SDRSource Class Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1_s_d_r_source.html

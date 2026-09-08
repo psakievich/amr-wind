@@ -1,0 +1,14 @@
+.. meta::a6a8ad129a61d83e25cdd9f59d206895b54a7eda0a033aa87000ebc94f7e07a5f65ae7e586952fffd48b7b5210b7355e7d260c5463b1024a54dc1e06deb3f06e
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::PostSolveOp&lt; TKE &gt; Struct Reference
+
+PostSolveOp&lt; TKE &gt; Struct Reference
+=========================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_post_solve_op_3_01_t_k_e_01_4.html

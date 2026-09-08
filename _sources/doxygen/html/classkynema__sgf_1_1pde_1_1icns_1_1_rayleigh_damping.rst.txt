@@ -1,0 +1,14 @@
+.. meta::b54bdac73facf734f60247a9b8b1f63e57456d26ca39a4191133ceccabcf10155d0f8dc86be32d80bebda33636f95b36126c7b64637ece5e97267ccc8f132670
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::icns::RayleighDamping Class Reference
+
+RayleighDamping Class Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1icns_1_1_rayleigh_damping.html

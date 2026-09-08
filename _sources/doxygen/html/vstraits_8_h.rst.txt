@@ -1,0 +1,14 @@
+.. meta::bb6dac8eb14c10b621daa84ccfdd11c3603dd196d9cae26df8a7b09c92385b5a42a0452fc6d227ee3035ca5149738cff97da3658072146b62de313cf6fbedaf3
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/core/vs/vstraits.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/core/vs/vstraits.H File Reference
+=========================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: vstraits_8_h.html

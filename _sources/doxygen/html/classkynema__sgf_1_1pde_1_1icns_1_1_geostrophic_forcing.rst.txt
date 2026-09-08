@@ -1,0 +1,14 @@
+.. meta::1f6b0c91fda535ad16ecc9c58ffcf8e3ef88ee1b8eb877eff3c3247bd82d9275a4ffb475469c0761cfea447b657c17ec62f0dc3cbccff02d31d101a84a0696f9
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::icns::GeostrophicForcing Class Reference
+
+GeostrophicForcing Class Reference
+==================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1icns_1_1_geostrophic_forcing.html

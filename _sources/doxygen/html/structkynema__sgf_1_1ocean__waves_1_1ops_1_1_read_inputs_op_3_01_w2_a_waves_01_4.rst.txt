@@ -1,0 +1,14 @@
+.. meta::65bd43a3817491388ff4fa9971aabbeef4776c460d59f4a16f4691c90c42eb84ae20b1b7d2b7c37d441ba5f65a34fbd9f763109b160058495aefb0866181cc5e
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ocean_waves::ops::ReadInputsOp&lt; W2AWaves &gt; Struct Reference
+
+ReadInputsOp&lt; W2AWaves &gt; Struct Reference
+===============================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ocean__waves_1_1ops_1_1_read_inputs_op_3_01_w2_a_waves_01_4.html

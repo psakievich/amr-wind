@@ -1,0 +1,14 @@
+.. meta::3373ecd6c3cf2525cbd23b401b1f77222c6313c978bec5e82ead3c42439b58060f8e085e9767e7bd9a05b82875747759c33bcf6b323b28ad8746bb3cbca6682a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::BreakingWaves Class Reference
+
+BreakingWaves Class Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_breaking_waves.html

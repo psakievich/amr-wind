@@ -1,0 +1,14 @@
+.. meta::01358e46694b67d6f6579650b4701bd40940985bc95ca534ba23d4b67a78fd29206cd2ed938c6dfd0be03c71fe961fca7a6e54354ffa4eecf21bc14e1c3f7ea1
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::OversetRefinement Class Reference
+
+OversetRefinement Class Reference
+=================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_overset_refinement.html

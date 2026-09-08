@@ -1,0 +1,14 @@
+.. meta::04d6f214204ce67a45381f74559a2e0067982518a906026c24816c131848da65709a474c9bda94b8415b9908c97d5ddee02acf14f61b2a4afe1f1085c26e8778
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::zds::ZalesakDiskScalarVel Class Reference
+
+ZalesakDiskScalarVel Class Reference
+====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1zds_1_1_zalesak_disk_scalar_vel.html

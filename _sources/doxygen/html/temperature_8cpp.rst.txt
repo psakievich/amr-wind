@@ -1,0 +1,14 @@
+.. meta::e718de6e4d0142936c1ce5a73690a01a778decf778c76c61c55c21dd46c8236494f83818cf9f7f280bfa37bcf0522b77b9b24fded61751033ecc554b8c9f696b
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/temperature/temperature.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/temperature/temperature.cpp File Reference
+====================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: temperature_8cpp.html

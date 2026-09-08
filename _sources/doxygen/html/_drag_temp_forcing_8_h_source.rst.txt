@@ -1,0 +1,14 @@
+.. meta::4f1e631554f303aaa6c01124676bffb6427e2fc77608268187d0c32327b40ef23f8f0bd83e404f9ca47ce3811babcd375e7151f4faeba3b135c2e96bc81c618a
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/temperature/source_terms/DragTempForcing.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/temperature/source\_terms/DragTempForcing.H Source File
+=================================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _drag_temp_forcing_8_h_source.html

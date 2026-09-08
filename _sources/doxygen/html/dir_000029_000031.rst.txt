@@ -1,0 +1,14 @@
+.. meta::7f08aabc39437291676a4ab60b2f1f3a376ba04dd0485ca97e9b1a8ddda0a15b9c6ec93b2787180236955a560ec87f0ac1e8bdb16a43e4c083898bedae4da0bd
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/multiphase -&gt; ocean_waves Relation
+
+/home/runner/work/amr-wind/amr-wind/src/physics/multiphase -&gt; ocean\_waves Relation
+======================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000029_000031.html

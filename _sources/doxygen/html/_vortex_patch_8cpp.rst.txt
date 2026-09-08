@@ -1,0 +1,14 @@
+.. meta::6ee36b5723974bc83b221a8e286135f53063c053a9a088ef38486cfb2e3f90f7e8e7187c4214993992ec8122292c5b0503237fe8ad69db501e92f224111ecc0e
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/multiphase/VortexPatch.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/physics/multiphase/VortexPatch.cpp File Reference
+=========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _vortex_patch_8cpp.html

@@ -1,0 +1,14 @@
+.. meta::d988182e1f320ed5aa69ee060cf16d708a976ceb0f17973e1e3bc7e0a0ec84d557ab306f91d71059871e885c3f0031d368b4eb74f0bd0f339970dd1fb0e4104c
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/temperature/source_terms/HurricaneTempForcing.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/temperature/source\_terms/HurricaneTempForcing.H File Reference
+=========================================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _hurricane_temp_forcing_8_h.html

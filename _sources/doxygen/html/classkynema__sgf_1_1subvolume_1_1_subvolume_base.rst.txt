@@ -1,0 +1,14 @@
+.. meta::218f303a57ec0d41fe64ffe12662036ca93748cbae8bd39b63461d3c50b596c495a0190a8c4913e86a71308b2d2d4fe4275b3f80e8364bbb15067c44be5dd5a5
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::subvolume::SubvolumeBase Class Reference
+
+SubvolumeBase Class Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1subvolume_1_1_subvolume_base.html

@@ -1,0 +1,14 @@
+.. meta::292adb4ccdecbcf17d572baafb57862a327897c17bd3f1326309671034482888c86e048980294f1aa3df0ee919e1d8f646ffdd4b7282638e9a74a5d719ac93d7
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/icns/source_terms/GeostrophicForcing.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/icns/source\_terms/GeostrophicForcing.H File Reference
+================================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _geostrophic_forcing_8_h.html

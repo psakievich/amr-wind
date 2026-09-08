@@ -1,0 +1,14 @@
+.. meta::6383708f39a07fb1e6f7e0cf118a1604f2cf222972748b6eae277640387fac54fc66911e24ff6e194c264c58fd55a1288c3e672431dead588ceed4c60b2476a0
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::InitDataOp&lt; ActTrait, SrcTrait, typename &gt; Struct Template Reference
+
+InitDataOp&lt; ActTrait, SrcTrait, typename &gt; Struct Template Reference
+==========================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_init_data_op.html

@@ -1,0 +1,14 @@
+.. meta::aae32795389fa103f42188ac2661312d6561f48c57167164c81fcbf4f9caa43430ce3376db38e3ef262d8a5d1b3d1497f7305857e96c5b8267933d01019d464f
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/turbulence/LES/Kosovic.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/turbulence/LES/Kosovic.H Source File
+============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _kosovic_8_h_source.html

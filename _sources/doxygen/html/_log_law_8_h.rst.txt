@@ -1,0 +1,14 @@
+.. meta::deb8a85040bcd2bbe57585ea5932a24e869e9730b1ffee27dd5dea3186bf22e862b287c428c770dbc15d3d84a82510baf3e56e0f4ea7b69e86b6da84f0bec625
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/boundary_conditions/wall_models/LogLaw.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/boundary\_conditions/wall\_models/LogLaw.H File Reference
+=================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _log_law_8_h.html

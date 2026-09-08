@@ -1,0 +1,14 @@
+.. meta::4a84faad1fd19b218793e206c7e258451ad7f5546a94acf8395f5f5aab0afb67a7289b70240030d8342e895cc0c4c95dd93a9d783076e1f8bb090668a7d39be1
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::fvm::stencil::StencilIhiJhi Struct Reference
+
+StencilIhiJhi Struct Reference
+==============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1fvm_1_1stencil_1_1_stencil_ihi_jhi.html

@@ -1,0 +1,14 @@
+.. meta::4d7ed0b4e9bf9abfdc0953e34b18aae2c1689dde899486425543800b691dfa25f2ff3f2cdce93f8f801bb2455763c2cf881c5c596ffc0f13fff8036c8468eeed
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::sampling::VolumeSampler Class Reference
+
+VolumeSampler Class Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1sampling_1_1_volume_sampler.html

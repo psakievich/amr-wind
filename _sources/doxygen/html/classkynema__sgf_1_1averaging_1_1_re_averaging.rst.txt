@@ -1,0 +1,14 @@
+.. meta::2ad04eca26e80dd59a1c183774bfe577126cf9183cd0a6debdae2672bef9aeda0b2f81d4756d1c7d7a906046129f6e7098288065734feb9b6a14f6772971ccd8
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::averaging::ReAveraging Class Reference
+
+ReAveraging Class Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1averaging_1_1_re_averaging.html

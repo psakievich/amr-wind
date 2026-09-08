@@ -1,0 +1,14 @@
+.. meta::333ead2f9f88afaf242e711048136f58fc126ee4e0df26c511c439e61dbc96df43934f1113f39e667db5aef487ffe5eba9d03a7c72c83a66199fb1b01e0c3eb3
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::utils::Slice&lt; T &gt; Struct Template Reference
+
+Slice&lt; T &gt; Struct Template Reference
+==========================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1utils_1_1_slice.html

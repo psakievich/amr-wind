@@ -1,0 +1,14 @@
+.. meta::07ce17b6ab1ee866f873a513815efeac06287dfbdf03511ae345d93bd385a342600b089100808ce9984f1d3d769037996b26b43d62e3a491ea2b4046d30de01a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::InitDataOp&lt; FixedWing, ActSrcLine &gt; Struct Reference
+
+InitDataOp&lt; FixedWing, ActSrcLine &gt; Struct Reference
+==========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_init_data_op_3_01_fixed_wing_00_01_act_src_line_01_4.html

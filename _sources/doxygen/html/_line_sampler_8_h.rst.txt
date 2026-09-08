@@ -1,0 +1,14 @@
+.. meta::6d2fc820648974bb265ca24eed1b4dd50ee968be41b497a71e351287e07c29d41f1b52cfc646a074c24b54f3a30d5c17c1b02de5b447f865d1e07a8d0aa6f057
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/sampling/LineSampler.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/sampling/LineSampler.H File Reference
+=======================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _line_sampler_8_h.html

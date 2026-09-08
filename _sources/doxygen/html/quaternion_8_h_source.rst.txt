@@ -1,0 +1,14 @@
+.. meta::3e224a908cc685b1950bffaab132b57313044461642027f74cc14535e6060e45e6019be584c547bfb602c2de817a8184c1557f28dcffcd6d6dea4fb2a131d1b6
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/core/vs/quaternion.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/core/vs/quaternion.H Source File
+========================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: quaternion_8_h_source.html

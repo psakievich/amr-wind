@@ -1,0 +1,14 @@
+.. meta::25a24c6f96bf0dcd0de9560641daf0c34dbe75df6f85366085318cbbcae598a7f786c4de683b649b301041c403fa804359d7a020fbe21cccdce3427408d0d728
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::SDR Struct Reference
+
+SDR Struct Reference
+====================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_s_d_r.html

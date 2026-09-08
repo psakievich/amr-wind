@@ -1,0 +1,14 @@
+.. meta::4c79ec867a42912468409b53208180f47f79e4db96bce0d25a58d66cf92a4e0880ca6ae0c2a076968052cebac3648f4f51848e7fb0b74c7de18ef2b071843d1b
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::SimTime Class Reference
+
+SimTime Class Reference
+=======================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_sim_time.html

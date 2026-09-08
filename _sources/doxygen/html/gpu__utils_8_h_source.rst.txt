@@ -1,0 +1,14 @@
+.. meta::a637ce99e94c0b71412169e99d362522d762304e26b008e4b27e4004a54086241e683d7dc132b7f7400a2ab454a20a714f1496be562792687d278dc27947ebd5
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/core/gpu_utils.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/core/gpu\_utils.H Source File
+=====================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: gpu__utils_8_h_source.html

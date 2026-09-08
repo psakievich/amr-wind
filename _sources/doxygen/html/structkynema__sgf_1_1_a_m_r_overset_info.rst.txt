@@ -1,0 +1,14 @@
+.. meta::49e3ffee3fe45d6e145dee8ed3931b15101840e9d3be55a91eed7f298b7134f8f5c17d39f54ad1526c1ed92cb6c73256e4fe67a4c6deb0197cb0ace0a4d9c601
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::AMROversetInfo Struct Reference
+
+AMROversetInfo Struct Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_a_m_r_overset_info.html

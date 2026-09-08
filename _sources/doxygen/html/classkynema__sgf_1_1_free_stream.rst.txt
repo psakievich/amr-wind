@@ -1,0 +1,14 @@
+.. meta::bc421315d565c1411c39954ad7d82849f3d82679d3d7e27ee50254c5e6566e03bc3a1a99583d3c5799cff3c5dc7e1a9aa573cd2bc7ed0542f7e1d869dfdf5e54
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::FreeStream Class Reference
+
+FreeStream Class Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_free_stream.html

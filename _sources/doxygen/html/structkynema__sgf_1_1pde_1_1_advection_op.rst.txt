@@ -1,0 +1,14 @@
+.. meta::d7a1f8839174aa9d6c4ed4a3bb8254ffc88c7ea1f8f3438b49bed56e58a313388cc6a040d7bbed5de118a483d92b6faa85c1351473c31522bc3fa96380647926
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::AdvectionOp&lt; PDE, Scheme, typename &gt; Struct Template Reference
+
+AdvectionOp&lt; PDE, Scheme, typename &gt; Struct Template Reference
+====================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_advection_op.html

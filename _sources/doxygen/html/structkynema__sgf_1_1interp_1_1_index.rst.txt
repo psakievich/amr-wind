@@ -1,0 +1,14 @@
+.. meta::7098b33b28cee39df5f050217839519b965bb86c354db34307478d517ef36c1344d261e23b1d3845e8bf741398757fc5d7059dc28713c3ff10053e6eebb78bbc
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::interp::Index Struct Reference
+
+Index Struct Reference
+======================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1interp_1_1_index.html

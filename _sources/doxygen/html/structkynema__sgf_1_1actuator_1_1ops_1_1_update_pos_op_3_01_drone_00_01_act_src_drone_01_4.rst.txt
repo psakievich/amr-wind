@@ -1,0 +1,14 @@
+.. meta::c7456f0138169898302079934cb52a96a79a2afa5d92c8f962c1d865c418cc4ed0161292e111f5d5d85cdf91de86f1c799376ede4140957b8c814f14e38aeea3
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UpdatePosOp&lt; Drone, ActSrcDrone &gt; Struct Reference
+
+UpdatePosOp&lt; Drone, ActSrcDrone &gt; Struct Reference
+========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_update_pos_op_3_01_drone_00_01_act_src_drone_01_4.html

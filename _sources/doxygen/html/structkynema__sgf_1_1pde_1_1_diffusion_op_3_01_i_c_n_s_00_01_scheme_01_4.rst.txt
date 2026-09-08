@@ -1,0 +1,14 @@
+.. meta::1f2f49a00bdd6ac5b13bd885394af0c2d5b6eb49bd4794cf3a4be9db8f4e906459d33c0a2929aeb8b67629e2a7efdf86feced2d52fd8827a75a47d73fea0ef57
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::DiffusionOp&lt; ICNS, Scheme &gt; Struct Template Reference
+
+DiffusionOp&lt; ICNS, Scheme &gt; Struct Template Reference
+===========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_diffusion_op_3_01_i_c_n_s_00_01_scheme_01_4.html

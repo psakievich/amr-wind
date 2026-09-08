@@ -1,0 +1,14 @@
+.. meta::66e14a6d1e940942486db8cc0755c99c56b367733e26e5a6541f5cd44275e274a56ef8c765fe296f5730d7f00cfa7c3bc1df61b9bacab2a5527cc481583fcc0d
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::InterpWeights Struct Reference
+
+InterpWeights Struct Reference
+==============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_interp_weights.html

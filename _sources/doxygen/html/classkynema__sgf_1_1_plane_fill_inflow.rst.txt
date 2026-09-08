@@ -1,0 +1,14 @@
+.. meta::c2ef430616c4f5e8ddca69a6cc2fdf2c11a4a75c95b67b74a58342945e69acacf6c8546cf6c43f165f0845fe6755b3e9e648f98b5cafad7b944f053272d81fca
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::PlaneFillInflow Class Reference
+
+PlaneFillInflow Class Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_plane_fill_inflow.html

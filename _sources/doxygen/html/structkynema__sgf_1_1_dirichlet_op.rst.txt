@@ -1,0 +1,14 @@
+.. meta::3c3807ace48584d3fca8131c1df5f8f93ad94217d12dbe30d6b01d642cebfaf5b3958d46d388c860beed376cc4781e11bfb0d6ac6e3726df2b6a731d5b97f380
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::DirichletOp&lt; InflowOp, WallOp &gt; Struct Template Reference
+
+DirichletOp&lt; InflowOp, WallOp &gt; Struct Template Reference
+===============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_dirichlet_op.html

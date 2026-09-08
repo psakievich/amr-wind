@@ -1,0 +1,14 @@
+.. meta::7957a577daa82fc50192715ee2ef6fce84981bd460eeadd31ce2b2ccb6a4d3a41677412de9e4742481a28a1cb0341c104ad78c359e4c43adc4a1810914409903
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::ICNS Struct Reference
+
+ICNS Struct Reference
+=====================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_i_c_n_s.html

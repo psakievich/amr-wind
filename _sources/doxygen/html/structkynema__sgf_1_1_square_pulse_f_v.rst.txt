@@ -1,0 +1,14 @@
+.. meta::2a068b691fe085eb72485e8d0645bd0ef01ea7c0963e1785e7560495b2c872ab5d995b94c2c9a8f0025090eaac5deda119c62e577773be9429407c7b71820f16
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::SquarePulseFV Struct Reference
+
+SquarePulseFV Struct Reference
+==============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_square_pulse_f_v.html

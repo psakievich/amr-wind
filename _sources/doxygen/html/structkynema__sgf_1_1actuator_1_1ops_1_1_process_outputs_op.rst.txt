@@ -1,0 +1,14 @@
+.. meta::8715278910ff382d4b0d9fa9ce146d993ab1595f4a846eaef52ee78a9018f290fc000e08f4ef9c9f1156d11ef1318e935af9aec484c9ddb456731cf3e3a96dd0
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::ProcessOutputsOp&lt; ActTrait, SrcTrait, typename &gt; Struct Template Reference
+
+ProcessOutputsOp&lt; ActTrait, SrcTrait, typename &gt; Struct Template Reference
+================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_process_outputs_op.html

@@ -1,0 +1,14 @@
+.. meta::a62ce68baacd43653144382c261158decf7265c6e58f5ebf66d677e87a2f3c2427ff81310d6ea0b383a73c61a88528f57793f366223306bb635cb1986f78e6b3
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/tagging/CylinderRefiner.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/tagging/CylinderRefiner.H File Reference
+==========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _cylinder_refiner_8_h.html

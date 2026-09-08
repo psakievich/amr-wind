@@ -1,0 +1,14 @@
+.. meta::973bedb4637d8ed0af4675990d24c826d837b463864f11bdc2acf33661b4d08751c21b582763685786a87c568d6707208017d04e3e647512ecae00a4bd8b02d4
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::forestdrag::ForestHullEdge Struct Reference
+
+ForestHullEdge Struct Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1forestdrag_1_1_forest_hull_edge.html

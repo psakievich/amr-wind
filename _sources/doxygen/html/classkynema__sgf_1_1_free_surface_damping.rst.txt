@@ -1,0 +1,14 @@
+.. meta::0de7ccc354cf36bc35cbf744214f780593fe61477199175bb94dca84745072d2aa85e0ab61d81282ed03971334c90feae00642c0d605c6a85a00e956b1fd25f3
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::FreeSurfaceDamping Class Reference
+
+FreeSurfaceDamping Class Reference
+==================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_free_surface_damping.html

@@ -1,0 +1,14 @@
+.. meta::1f27d69b420df961fb85791862ab936c5b6f992fa0e515f5c80b5b99268e385def33c7d7dae86c082919b1b783dd70ed775dbb406392f8028c71a52648af8b0f
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/motion Directory Reference
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/motion Directory Reference
+========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_58f4f247eba43da906e7ac1faa08e0d9.html

@@ -1,0 +1,14 @@
+.. meta::dd32bfa9b8656ee9668aa222f6b9453941e98d15baafa59c1cf359f39422496d336c00b72371c6d0735a7c29dfd092cd601b1dbb183d91ef0f38710214ed847a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ThinAirfoil Class Reference
+
+ThinAirfoil Class Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1actuator_1_1_thin_airfoil.html

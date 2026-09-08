@@ -1,0 +1,14 @@
+.. meta::e7560cec82de34b873888422d355746f502bbd5cbd48ed8cc15496f27cb46f6326bce075da839e77f0580450583c378127881880e96645e3eec98e6163dee4bd
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ib::ops::UseDefaultOp&lt; GeomTrait &gt; Struct Template Reference
+
+UseDefaultOp&lt; GeomTrait &gt; Struct Template Reference
+=========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ib_1_1ops_1_1_use_default_op.html

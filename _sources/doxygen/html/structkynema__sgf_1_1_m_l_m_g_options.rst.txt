@@ -1,0 +1,14 @@
+.. meta::665ea22b2dcea40b40ffda847c9a83b72f7ffd92620cf7b46b7909223ab434c98b27d9fcd8c747a4ad26cc71d1505a1f7b5d0fc7a2eca8c6b5720e602386576d
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::MLMGOptions Struct Reference
+
+MLMGOptions Struct Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_m_l_m_g_options.html

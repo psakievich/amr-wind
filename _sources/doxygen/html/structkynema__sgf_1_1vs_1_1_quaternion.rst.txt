@@ -1,0 +1,14 @@
+.. meta::25f1f8ac13eafe2b566c69307351a768cb904a27fbc3de386de48775a5bc207a3cb8c299e811dca4d7fdddbb6f86ee14fd6e20277983a6c64ae79149ffd7dbde
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::vs::Quaternion Struct Reference
+
+Quaternion Struct Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1vs_1_1_quaternion.html
