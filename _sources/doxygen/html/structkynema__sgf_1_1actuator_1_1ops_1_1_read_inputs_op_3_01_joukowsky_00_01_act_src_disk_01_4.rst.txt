@@ -1,0 +1,14 @@
+.. meta::15ed876993d6dbaa8349e2aa7b90c5ca62a986572c6af7c595d2591c08ac02698aff7c9f1b94335ea33faaad0ea05ddda2bc59874aeea1d096587000ef79061e
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::ReadInputsOp&lt; Joukowsky, ActSrcDisk &gt; Struct Reference
+
+ReadInputsOp&lt; Joukowsky, ActSrcDisk &gt; Struct Reference
+============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_read_inputs_op_3_01_joukowsky_00_01_act_src_disk_01_4.html

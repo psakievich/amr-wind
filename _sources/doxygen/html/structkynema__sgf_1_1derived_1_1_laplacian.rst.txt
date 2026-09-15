@@ -1,0 +1,14 @@
+.. meta::67705f1f7a8f6e9984c289310cd20a21cff878360633f525a98c6d5599984bcfa64aba50602eaac040a2c8ffa72876d4c3b536313170100c85929ef4b4ddb188
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::derived::Laplacian Struct Reference
+
+Laplacian Struct Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1derived_1_1_laplacian.html

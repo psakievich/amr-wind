@@ -1,0 +1,14 @@
+.. meta::5fbea3d31bad7c2af3603f6c1d07bcb1023157c154d190397729807bd75b98b4eda3b22918109ef1d8749c10fd2993beba828200ae9333a5cee5749157acd926
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/fvm/laplacian.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/fvm/laplacian.H File Reference
+======================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: laplacian_8_h.html

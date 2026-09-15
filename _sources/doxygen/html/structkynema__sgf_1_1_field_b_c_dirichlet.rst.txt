@@ -1,0 +1,14 @@
+.. meta::be3894f4c5d670e903d40e069663597a39d4b684847392fffd1d9b4ed3429859a5c92c4fbdb93ae95effa74295349393124f896288be214cd00b9a6c0e2c0948
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::FieldBCDirichlet Struct Reference
+
+FieldBCDirichlet Struct Reference
+=================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_field_b_c_dirichlet.html

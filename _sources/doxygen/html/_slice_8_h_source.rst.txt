@@ -1,0 +1,14 @@
+.. meta::d6e5eb4966bcde096de639d16467108a13557c0ff1bab8fd6931a18dd20cb0d33b8fb112f83a235ad181eca3e262bd14d4ec8c341f961e2fab9a2d44c87d66c5
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/core/Slice.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/core/Slice.H Source File
+================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _slice_8_h_source.html

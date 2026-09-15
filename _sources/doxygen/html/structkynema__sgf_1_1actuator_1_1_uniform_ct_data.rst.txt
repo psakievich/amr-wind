@@ -1,0 +1,14 @@
+.. meta::89a8efe6dce421204d0b363b23312001ad196d5299b6ebd67c0d952ebe22b15aa8043e7492689c1c0da9a9cbd8ef9ba490d0cbc6954b57c8171969fb3c46cf54
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::UniformCtData Struct Reference
+
+UniformCtData Struct Reference
+==============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1_uniform_ct_data.html

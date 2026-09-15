@@ -1,0 +1,14 @@
+.. meta::03d776aae9412f9d6754e070a42ab610af3818aa9e2afb87c8316fe83d1cee947a1d9d715dac304458d8c2edb988ff0f79a1e8fc6f71462e584eaaec9a8f826a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UpdateVelOp&lt; ActuatorSector, ActSrcSector &gt; Struct Reference
+
+UpdateVelOp&lt; ActuatorSector, ActSrcSector &gt; Struct Reference
+==================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_update_vel_op_3_01_actuator_sector_00_01_act_src_sector_01_4.html

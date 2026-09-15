@@ -1,0 +1,14 @@
+.. meta::977af7c0f8ae6d6ce54ec8898e7d82de507e69c364ebfda736415be66e2d16f5b1633c8c8c4d12b691c65e4f768f2b797ece6e5f9622640be0e6e45308d7fe86
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::RefineCriteriaManager Class Reference
+
+RefineCriteriaManager Class Reference
+=====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_refine_criteria_manager.html

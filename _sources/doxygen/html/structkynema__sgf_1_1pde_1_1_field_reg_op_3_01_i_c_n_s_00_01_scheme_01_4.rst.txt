@@ -1,0 +1,14 @@
+.. meta::a806e480b26ea5e23a247cd2e6251b0f636371a4c48b8c6df162a68830857b01dc88ac9278bbe856f6dc07da81a40b8333da5b532ffff7e7131847fcacdef0bd
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::FieldRegOp&lt; ICNS, Scheme &gt; Struct Template Reference
+
+FieldRegOp&lt; ICNS, Scheme &gt; Struct Template Reference
+==========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_field_reg_op_3_01_i_c_n_s_00_01_scheme_01_4.html

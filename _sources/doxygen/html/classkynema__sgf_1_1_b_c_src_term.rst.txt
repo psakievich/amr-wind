@@ -1,0 +1,14 @@
+.. meta::6b3c3b049421ea55d87e74c02238fd164be9c733bcf4a90faf0f21ff53a67414950ad79d36238239957732e5029f79af7226d00e70174faf15ec36eea2ed2ae9
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::BCSrcTerm Class Reference
+
+BCSrcTerm Class Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_b_c_src_term.html

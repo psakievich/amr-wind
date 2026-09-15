@@ -1,0 +1,14 @@
+.. meta::aaa9bb5662f42f2069caab4546d088ee9922e6b547de5b125fc9fb43619e9887dfbf0efb7c76dfa3f3f53294ac847fcd36bbcbf82771c019336150bd3753d979
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::OversetOps Class Reference
+
+OversetOps Class Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_overset_ops.html

@@ -1,0 +1,14 @@
+.. meta::3d5cf3429f7278bbc418a518bb945363b10ed28ac8316d58ed4283dd568b62c99c15e04b52022b901240b4c4f82b65529e150866fcd7b938cbbacb26617e7127
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::udf::CustomScalar Struct Reference
+
+CustomScalar Struct Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1udf_1_1_custom_scalar.html

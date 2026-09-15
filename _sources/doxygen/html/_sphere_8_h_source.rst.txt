@@ -1,0 +1,14 @@
+.. meta::bf6bd5a0d7f88b29fb882161f3ebb3b837d042a3f5bbcac0dacbfbcd639f9905288c0efdf913116548988c4f102412629b8ba35c0124f4c8de0e0b5e146280c5
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/immersed_boundary/bluff_body/Sphere.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/immersed\_boundary/bluff\_body/Sphere.H Source File
+===========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _sphere_8_h_source.html

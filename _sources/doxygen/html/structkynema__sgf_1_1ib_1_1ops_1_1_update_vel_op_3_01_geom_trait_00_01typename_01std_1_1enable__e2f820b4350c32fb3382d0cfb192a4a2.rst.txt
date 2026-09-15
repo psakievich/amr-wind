@@ -1,0 +1,14 @@
+.. meta::423599285374d9dcc4bb25d715581b01a05c1e69c8289286eef0e47457457f17ce1adb6e46f0d05ab023dea704348ce41c4b95abb553ec7602ae562a3856565b
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ib::ops::UpdateVelOp&lt; GeomTrait, typename std::enable_if_t&lt; std::is_base_of_v&lt; BluffBodyType, GeomTrait &gt; &gt; &gt; Struct Template Reference
+
+is\_base\_of\_v&lt; BluffBodyType, GeomTrait &gt; &gt; &gt; Struct Template Reference
+=====================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ib_1_1ops_1_1_update_vel_op_3_01_geom_trait_00_01typename_01std_1_1enable__e2f820b4350c32fb3382d0cfb192a4a2.html

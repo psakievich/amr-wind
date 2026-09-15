@@ -1,0 +1,14 @@
+.. meta::73427624ffb644e2cc6a4f483d4e356bffd435ef0d80b6abbf0d8b3a0b7fe5bf234059270c35fc45be326f529a4cfd0bd8fa3dbb8a0e6273648e3e76a74849e1
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/turbulence/RANS/KOmegaSSTIDDES.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/turbulence/RANS/KOmegaSSTIDDES.cpp File Reference
+=========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _k_omega_s_s_t_i_d_d_e_s_8cpp.html

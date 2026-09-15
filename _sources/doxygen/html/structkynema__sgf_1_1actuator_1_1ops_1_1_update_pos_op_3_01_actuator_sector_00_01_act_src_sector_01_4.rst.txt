@@ -1,0 +1,14 @@
+.. meta::8abb9d9efb2c55fee798309e85a19dc2791bac421074468bcc1057ee8e92cbc3b30c2390b5d5f44ab6e8e5fb91fa454cf26b42a8625e36f4f7e69302f13b7cca
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UpdatePosOp&lt; ActuatorSector, ActSrcSector &gt; Struct Reference
+
+UpdatePosOp&lt; ActuatorSector, ActSrcSector &gt; Struct Reference
+==================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_update_pos_op_3_01_actuator_sector_00_01_act_src_sector_01_4.html

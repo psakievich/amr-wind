@@ -1,0 +1,14 @@
+.. meta::8978d311e3cf72f749b8d92f9dd02f7add1ea55f519286ebb8403d70e274bf060b5eb46dd5aadf3a774b323990fe39bd8132d65e5e6141d30f451f51a3c08303
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::SpreadingFunction&lt; T &gt; Class Template Reference
+
+SpreadingFunction&lt; T &gt; Class Template Reference
+=====================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1actuator_1_1ops_1_1_spreading_function.html

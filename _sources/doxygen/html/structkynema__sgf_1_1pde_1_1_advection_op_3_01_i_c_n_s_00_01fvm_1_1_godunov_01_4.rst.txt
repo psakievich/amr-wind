@@ -1,0 +1,14 @@
+.. meta::74afd815ff7d02eba664abbab7566a1529b7902bad372e9db6f3dbdba50ebc47caa2a0502d6494a95392d2f5fe3abc06a4d89bcc8a991d7470111772c3287f13
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::AdvectionOp&lt; ICNS, fvm::Godunov &gt; Struct Reference
+
+Godunov &gt; Struct Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_advection_op_3_01_i_c_n_s_00_01fvm_1_1_godunov_01_4.html

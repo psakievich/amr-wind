@@ -1,0 +1,14 @@
+.. meta::2d30e283be42893351ead642342133db371face6a1b26c76487734a9e7305636a044645ac5e4203188105ae5018a78316489c48629fdc9774456be49a8c56dbc
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::CollMgr&lt; Collection, Type, allow_duplicates &gt; Class Template Reference
+
+CollMgr&lt; Collection, Type, allow\_duplicates &gt; Class Template Reference
+=============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_coll_mgr.html

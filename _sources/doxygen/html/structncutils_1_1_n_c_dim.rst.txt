@@ -1,0 +1,14 @@
+.. meta::db4ac9038aff20f86d3dfb8245a6d81191f0cd4e09bc8ddd50ed3550a57871d8751e8f334f5e73f44b95d63389bcc7affa70cf99218887903cb6f486c1365b84
+
+:orphan:
+
+.. title:: Kynema-SGF API: ncutils::NCDim Struct Reference
+
+NCDim Struct Reference
+======================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structncutils_1_1_n_c_dim.html

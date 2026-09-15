@@ -1,0 +1,14 @@
+.. meta::206d2268db06181fd724af57328f4505bf39106fe19711dca7f4a6fd6ab9c1a8207b378eb21fcf3c1b8fabf461644ff8d72a3b82728f55c6ec7e2724063798b6
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::FLLCOp Struct Reference
+
+FLLCOp Struct Reference
+=======================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1_f_l_l_c_op.html

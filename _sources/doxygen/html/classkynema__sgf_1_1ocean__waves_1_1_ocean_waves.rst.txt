@@ -1,0 +1,14 @@
+.. meta::503ba77999adfbe811c0a1dda808adaca09f3f4a5aec57927dbcb44dadb32e59fbe2932ba1b028c31d8c01c7c567e34bf5ccc4ef53947041d42ce93127ddaa6f
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ocean_waves::OceanWaves Class Reference
+
+OceanWaves Class Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1ocean__waves_1_1_ocean_waves.html

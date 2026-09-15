@@ -1,0 +1,14 @@
+.. meta::0d15917aad906186e5ac50e2e46fd8c72978463a63f217c27e94f680ef3defa7409332857c6707556475312c72c5d81b322759d51d7d613db3a979996ea389b2
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::FieldFillPatchOpsBase Class Reference
+
+FieldFillPatchOpsBase Class Reference
+=====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_field_fill_patch_ops_base.html

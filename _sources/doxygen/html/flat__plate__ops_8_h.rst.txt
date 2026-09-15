@@ -1,0 +1,14 @@
+.. meta::d7ebf1fe91fc31549ded21dd6e0daeb99e571638f6acea227bb4d1084cabe595535d5d3cbd3bd32e0f0507310a3473d3170b773a846d868d249892318eb9576d
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/wing/flat_plate_ops.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/wing/flat\_plate\_ops.H File Reference
+====================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: flat__plate__ops_8_h.html

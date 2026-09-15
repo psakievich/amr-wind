@@ -1,0 +1,14 @@
+.. meta::4d28280ad5d93852a29dcfd3cd48d13db627a2d70139cb529a2dad3ac95804be2c8f820d545d0148008c3702a28759218c41d4fd4d328fb77dc6dc4612b48ca2
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::InitDataOp&lt; ActuatorSector, ActSrcSector &gt; Struct Reference
+
+InitDataOp&lt; ActuatorSector, ActSrcSector &gt; Struct Reference
+=================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_init_data_op_3_01_actuator_sector_00_01_act_src_sector_01_4.html

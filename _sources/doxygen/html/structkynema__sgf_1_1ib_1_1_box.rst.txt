@@ -1,0 +1,14 @@
+.. meta::086f17918bd5ccc7394003de88d856e75d46cbdfd1f1e36a78221e6c5c30842276188e203c3bb0809dae916f9b8ce121a01eec4d2e3533706125614721f4c153
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ib::Box Struct Reference
+
+Box Struct Reference
+====================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ib_1_1_box.html

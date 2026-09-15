@@ -1,0 +1,14 @@
+.. meta::d92afb5211fdf4350d6b36693bd494cdfec2135436f13d75330261680632a477ffc63d495229f6b9832067319cf770404fe364984e5676afe8564161839d307c
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::FieldRefinement Class Reference
+
+FieldRefinement Class Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_field_refinement.html

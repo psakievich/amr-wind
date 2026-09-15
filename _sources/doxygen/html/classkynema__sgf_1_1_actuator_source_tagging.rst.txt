@@ -1,0 +1,14 @@
+.. meta::c136199eb61990706d0bfefc3820bd9a2ac3541025520609e355c5dbaa85134a0f0ea9a91741be2aba8433b97ecdc024bc93a8701b6fbb307eae52c81827721f
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ActuatorSourceTagging Class Reference
+
+ActuatorSourceTagging Class Reference
+=====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_actuator_source_tagging.html

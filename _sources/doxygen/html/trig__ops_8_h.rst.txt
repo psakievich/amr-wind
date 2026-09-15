@@ -1,0 +1,14 @@
+.. meta::e75cedcb1af7873a05b06ff867546924f05fb1fac7563182d8f0afd904023c539b822d40df51031a7dc339b44de69269dd44490d858fabebad5dc7174ff894a4
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/trig_ops.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/trig\_ops.H File Reference
+============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: trig__ops_8_h.html

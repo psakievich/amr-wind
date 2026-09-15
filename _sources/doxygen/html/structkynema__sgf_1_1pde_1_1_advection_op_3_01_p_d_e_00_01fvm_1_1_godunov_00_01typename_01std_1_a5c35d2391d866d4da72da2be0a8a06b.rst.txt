@@ -1,0 +1,14 @@
+.. meta::c5f3405cf88478e501aaed3ee456221267bf414260eaebd3ed3acbe56bad745177ba27a02c3330344e8232c17fdf0d1e1fc53d27b1eb8fdf73993ce2defbef7c
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::AdvectionOp&lt; PDE, fvm::Godunov, typename std::enable_if_t&lt; std::is_base_of_v&lt; ScalarTransport, PDE &gt; &gt; &gt; Struct Template Reference
+
+is\_base\_of\_v&lt; ScalarTransport, PDE &gt; &gt; &gt; Struct Template Reference
+=================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_advection_op_3_01_p_d_e_00_01fvm_1_1_godunov_00_01typename_01std_1_a5c35d2391d866d4da72da2be0a8a06b.html

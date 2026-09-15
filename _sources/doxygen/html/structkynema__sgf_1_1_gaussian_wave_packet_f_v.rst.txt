@@ -1,0 +1,14 @@
+.. meta::0e969b48f8c1aa8ca02523c6793564fdbe72c508a15351407436f4d55d6f4ee0e6f8fdb4674de49f4791ec1f999d7791025d438ebe7afd1419a31214e78fc3a0
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::GaussianWavePacketFV Struct Reference
+
+GaussianWavePacketFV Struct Reference
+=====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_gaussian_wave_packet_f_v.html

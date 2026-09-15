@@ -1,0 +1,14 @@
+.. meta::2f0cbb41b69bce9a01914cb22ed20449662fa161e7c387d1dddd34529914677701cd322bfa951bae381747f0d96eaa0b68f01771ee2def0ded6d9545d855351d
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/ThirdMomentAveraging.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/ThirdMomentAveraging.H Source File
+====================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _third_moment_averaging_8_h_source.html

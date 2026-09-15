@@ -1,0 +1,14 @@
+.. meta::90efc30c987ee0195d7918a0f7d18130b1364cde7f3c02b4d080fc383bbcd4d44907dbf2fc0dfdfa987796cfa669a17084ac27954c138027c945f01a31aa0d25
+
+:orphan:
+
+.. title:: Kynema-SGF API: ncutils::NCVar Struct Reference
+
+NCVar Struct Reference
+======================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structncutils_1_1_n_c_var.html

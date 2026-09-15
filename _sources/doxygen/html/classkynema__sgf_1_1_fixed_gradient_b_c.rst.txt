@@ -1,0 +1,14 @@
+.. meta::3ac6aed4e8150a0a4c4369b146039eaa1cf4936de71b204f90ab0c0492471d4f431f3269d8c68708b0f1053cacad027405402829b982b8a3d2c2d5472401bf9f
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::FixedGradientBC Class Reference
+
+FixedGradientBC Class Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_fixed_gradient_b_c.html
