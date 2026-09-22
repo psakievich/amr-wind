@@ -1,0 +1,14 @@
+.. meta::1e9aca8185353e9e5d9957367e2bf8778530f697d2dd0e9df6f676f06cb11369b1a525fccace0bda03f0677f1bc7cdc54753202ea4dd1764ad0ca5447f6d6fd4
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ConstDirichlet Struct Reference
+
+ConstDirichlet Struct Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_const_dirichlet.html

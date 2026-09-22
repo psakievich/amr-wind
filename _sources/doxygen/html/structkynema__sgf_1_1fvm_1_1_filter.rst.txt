@@ -1,0 +1,14 @@
+.. meta::288a43f49548c1863e8d01ddfd9afacd06ea837007cf91853e91662c6066afb45b3b892d7fd5997da51579032d61288cea8fc2fac8fbfd3f244100da9171907a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::fvm::Filter&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+
+Filter&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+===========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1fvm_1_1_filter.html

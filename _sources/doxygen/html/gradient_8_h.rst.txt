@@ -1,0 +1,14 @@
+.. meta::07b3bb0267a1369fc055dccf675cc275b85578018f0694d9b0af91a5b3de202c2ae15ecca25f269b5d065c3e9eb31d8bb786ef05dad5c107903a2175c36b938a
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/fvm/gradient.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/fvm/gradient.H File Reference
+=====================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: gradient_8_h.html

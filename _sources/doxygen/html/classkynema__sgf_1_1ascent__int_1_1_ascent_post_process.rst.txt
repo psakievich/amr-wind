@@ -1,0 +1,14 @@
+.. meta::b128d0b1cc8b68f4bef9d6f58bd4ac899e640c573f29ce7aeda40a8e8674070f0589adef3a840648354995f103e0cf7c1afc798706d5da1a5a2779344d891dfd
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ascent_int::AscentPostProcess Class Reference
+
+AscentPostProcess Class Reference
+=================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1ascent__int_1_1_ascent_post_process.html

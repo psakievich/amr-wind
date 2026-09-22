@@ -1,0 +1,14 @@
+.. meta::17243a883ed9c1665642ece5f884b98f90bc954f9741713aab7e78debdc138c81de07970b01e761763686d49787f85dbe2b64e15aa3250121fb4917f29db6a93
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ib::ops::ProcessOutputsOp&lt; GeomTrait, typename &gt; Struct Template Reference
+
+ProcessOutputsOp&lt; GeomTrait, typename &gt; Struct Template Reference
+=======================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ib_1_1ops_1_1_process_outputs_op.html

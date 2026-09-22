@@ -1,0 +1,14 @@
+.. meta::780fafa9a5d111371f170133af8ddf72a1aed28707976005f3d781377aa7f1928c3e3fdaae7653b8b95f31dc8571443f1f3f7a445adcc843ec12a844f79692ea
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::turbulence::Smagorinsky&lt; Transport &gt; Class Template Reference
+
+Smagorinsky&lt; Transport &gt; Class Template Reference
+=======================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1turbulence_1_1_smagorinsky.html

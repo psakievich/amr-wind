@@ -1,0 +1,14 @@
+.. meta::6c8fc41b7597916c5cf22844c551aa1699ab1096221631e9e2d8a924e6ca404108230362d4be45e8bd1023a6b7218164960a96726b7b6572beb7349972cd68b1
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::fvm::Vorticity&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+
+Vorticity&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+==============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1fvm_1_1_vorticity.html

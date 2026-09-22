@@ -1,0 +1,14 @@
+.. meta::3ca9a2b4ac62373c3fac38415fe19f0e409eb109b7333886e15edfe1522a4ec92be5849522680ae85675fc795a5967f2b23a408bef51c3c6c11f79ad66a32198
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/tagging/GeometryRefinement.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/tagging/GeometryRefinement.H File Reference
+=============================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _geometry_refinement_8_h.html

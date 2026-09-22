@@ -1,0 +1,14 @@
+.. meta::69087d735747ad4267c7ab89652588723a0761d11d12818a81c019dac88c2f630af9cbd7d7e87d22b02eb4f1f71f8f5b6ca3810b0ef7c8f98c4ff5b6dd3f8ddf
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ib::ops::ComputeForceOp&lt; GeomTrait, typename std::enable_if_t&lt; std::is_base_of_v&lt; BluffBodyType, GeomTrait &gt; &gt; &gt; Struct Template Reference
+
+is\_base\_of\_v&lt; BluffBodyType, GeomTrait &gt; &gt; &gt; Struct Template Reference
+=====================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ib_1_1ops_1_1_compute_force_op_3_01_geom_trait_00_01typename_01std_1_1enabl9875bdb94e43c6261e0ce86895391938.html

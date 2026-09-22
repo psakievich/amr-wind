@@ -1,0 +1,14 @@
+.. meta::08a8742fb977a055ddcc66313ef1254d9458606e63bd75fc32cd06c919ab5665a4d3741e228be90dce804a8147d8bba929bbe9a860587dc8f9f84fd163d81ddf
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::DerivedQtyMgr Class Reference
+
+DerivedQtyMgr Class Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_derived_qty_mgr.html

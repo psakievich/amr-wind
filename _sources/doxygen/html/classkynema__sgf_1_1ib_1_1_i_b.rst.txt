@@ -1,0 +1,14 @@
+.. meta::65411c3009197741a80df22b4fd450841e2a4eb179c6d1c5ba4cd72a7ed5c26c0610a01ec1392d717a245631e86a59b3942823e5cb54c300f03e3f64068661e4
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ib::IB Class Reference
+
+IB Class Reference
+==================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1ib_1_1_i_b.html

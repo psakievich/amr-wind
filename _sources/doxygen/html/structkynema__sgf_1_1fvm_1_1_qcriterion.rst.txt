@@ -1,0 +1,14 @@
+.. meta::12ec0f80c920360ccb823849b0d6ddd201fd7d677a8e1147e314fe6f93098280048eea9cef4bacdf2cf583fe5e0b65619e6de125d7390ceb0d0b32e1e56379d1
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::fvm::Qcriterion&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+
+Qcriterion&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+===============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1fvm_1_1_qcriterion.html

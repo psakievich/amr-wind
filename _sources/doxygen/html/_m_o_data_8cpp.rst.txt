@@ -1,0 +1,14 @@
+.. meta::c8a96791f837cd3352acde0d8ab4085514f9d76d8303a4af67a7dd8c68dd5e2c40daa1d47849fe717fcd98e7edcfb82bfaca975c34d1ee592fc3d827e9891fac
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/MOData.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/MOData.cpp File Reference
+==============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _m_o_data_8cpp.html

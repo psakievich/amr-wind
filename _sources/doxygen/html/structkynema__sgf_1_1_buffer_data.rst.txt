@@ -1,0 +1,14 @@
+.. meta::b38572a19bbdc5d2a000f5fcfd81fb2360af3e2d405068539d9a373086f738bc53730acd7a6ddc518e766616b9c9f57c9b1d0c34e2bc22421cf74f84cf11a4b9
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::BufferData Struct Reference
+
+BufferData Struct Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_buffer_data.html

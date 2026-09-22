@@ -1,0 +1,14 @@
+.. meta::a6526d50c6edc2625dbe11a26d662be23f30db64ce7715784ca6f5a4e2abeecc23e6ea8b79e78e1dff9b4ecce6f721bc9aee808c903802e0ea690226da31873c
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UseDefaultOp&lt; ActTrait, SrcTrait &gt; Struct Template Reference
+
+UseDefaultOp&lt; ActTrait, SrcTrait &gt; Struct Template Reference
+==================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_use_default_op.html

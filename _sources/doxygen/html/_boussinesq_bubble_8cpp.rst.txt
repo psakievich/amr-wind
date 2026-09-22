@@ -1,0 +1,14 @@
+.. meta::5505b38e1b37d4c5e51c76b66d3825f4883ddfd3eaf9eefea569da30f4f120e2552c5c49361932472cecff98c12a11fe7a29b6575591d009634799f1e413096d
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/BoussinesqBubble.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/physics/BoussinesqBubble.cpp File Reference
+===================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _boussinesq_bubble_8cpp.html

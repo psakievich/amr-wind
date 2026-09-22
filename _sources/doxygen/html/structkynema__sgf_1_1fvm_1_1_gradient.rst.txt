@@ -1,0 +1,14 @@
+.. meta::595e66b2ebec72b8a9a983fc1bca4cdb6456b82d0a849a767a29e47c4d589daed5f0c7bd2624fe66d21d1e10fbefc022b82e26034d4cdbdc68b7d9c88b840f07
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::fvm::Gradient&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+
+Gradient&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+=============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1fvm_1_1_gradient.html

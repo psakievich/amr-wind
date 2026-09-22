@@ -1,0 +1,14 @@
+.. meta::41074a31527593ccd2be65868709480f09066e19f683729576cad1a1eeb7f2710d859aa45650533b4389031c3287ed151c46a267ed0ac4f2182b872e0df6bda0
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UpdatePosOp&lt; ActTrait, SrcTrait, typename &gt; Struct Template Reference
+
+UpdatePosOp&lt; ActTrait, SrcTrait, typename &gt; Struct Template Reference
+===========================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_update_pos_op.html

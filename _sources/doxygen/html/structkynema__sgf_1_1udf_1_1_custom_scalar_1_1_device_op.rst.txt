@@ -1,0 +1,14 @@
+.. meta::38ca8635eca5009bbf15489e50d41396678a684da39b7e0db33cfe87de1320255a998fe50b699aa3cb678c45f56479b86d5baa813be8543bb358bb5607341400
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::udf::CustomScalar::DeviceOp Struct Reference
+
+DeviceOp Struct Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1udf_1_1_custom_scalar_1_1_device_op.html

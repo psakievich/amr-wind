@@ -1,0 +1,14 @@
+.. meta::9d991ef82f946cfe1dab5cfd763d7633672b68261758ddd1e0d08b2f4d0096e56d9ce730b259be8a9f677ded68b1a47c587be63f743070b5147414f999763d66
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::BCFillPatchExtrap Class Reference
+
+BCFillPatchExtrap Class Reference
+=================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_b_c_fill_patch_extrap.html

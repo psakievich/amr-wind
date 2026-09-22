@@ -1,0 +1,14 @@
+.. meta::e11c4d464660b02097b5db73b4abdb2858313f11143970d1f61d9f45f70707d11f5f417cfe5bf5a6c030802c4dab3f38371f4a0dbf9ef0c1e1bfb2625ef6308e
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::forestdrag::ForestPoint Struct Reference
+
+ForestPoint Struct Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1forestdrag_1_1_forest_point.html

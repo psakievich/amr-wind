@@ -1,0 +1,14 @@
+.. meta::83ee21b0abfc5b47d30151b0b1f6784efb619fd8513d147da2721ba7de9e2340d46619ac459f5b6ad26cdd7d2aa75bbb2e582c9ea865854da19d32ec4170889a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::IOManager Class Reference
+
+IOManager Class Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_i_o_manager.html

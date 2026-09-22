@@ -1,0 +1,14 @@
+.. meta::74ae608177603120ffed14e048347ee546bc9a4d07646e00c270955e2e4ae0057a44ed938d746375704a40a8c8f37a8c5e7ff59ece9bc0fc6ac3f03127cad06e
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/disk Directory Reference
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/disk Directory Reference
+======================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_39f1250b29dec21b996e54241e839ffc.html

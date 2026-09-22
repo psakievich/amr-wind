@@ -1,0 +1,14 @@
+.. meta::58945ddcd51c71b6d268e4eea8c6e46ef3d16e97b6cdee6fcb6ae7ee26e546e6f83a04a89b24dd1197aae520619e07ebbb622c42b92ab272f2fec40a2629635d
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::BoundaryPlane Class Reference
+
+BoundaryPlane Class Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_boundary_plane.html

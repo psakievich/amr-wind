@@ -1,0 +1,14 @@
+.. meta::4a61bebda7c0a126b74d217628b7dcde74714933f21704b630d37bb165b5f5a2c0a690becc4af49041ab2a7e40a32e85b8bb11efa44e1ca0009329e0ea947e05
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UpdatePosOp&lt; UniformCt, ActSrcDisk &gt; Struct Reference
+
+UpdatePosOp&lt; UniformCt, ActSrcDisk &gt; Struct Reference
+===========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_update_pos_op_3_01_uniform_ct_00_01_act_src_disk_01_4.html

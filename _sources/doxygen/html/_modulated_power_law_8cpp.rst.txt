@@ -1,0 +1,14 @@
+.. meta::cde7e4c23a4eab0f08ec442e10c1420c3846ab60c86dc2fd48b11276e1d0db4db1eeeb738e0c8d70a0115844c364b67d72325153bfaad65c0f01af385cd2261a
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/boundary_conditions/field_boundary_fill/ModulatedPowerLaw.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/boundary\_conditions/field\_boundary\_fill/ModulatedPowerLaw.cpp File Reference
+=======================================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _modulated_power_law_8cpp.html

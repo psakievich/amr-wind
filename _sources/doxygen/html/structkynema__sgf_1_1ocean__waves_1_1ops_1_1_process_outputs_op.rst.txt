@@ -1,0 +1,14 @@
+.. meta::ddc5e7156de346616099f0a849cf49976679201ac05fbd439a9744c20833ddba7bc6a325d5611d7296bed7445a6e6a982914d897661eba30b33a610fb3129a4a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ocean_waves::ops::ProcessOutputsOp&lt; WaveTheoryTrait, typename &gt; Struct Template Reference
+
+ProcessOutputsOp&lt; WaveTheoryTrait, typename &gt; Struct Template Reference
+=============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ocean__waves_1_1ops_1_1_process_outputs_op.html

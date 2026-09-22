@@ -1,0 +1,14 @@
+.. meta::2fdaf5c4af5562cf8d27de976d045d97dc7fa62a1c105e282d14a74f5d17fa6d44c7ac4afca341d6cda841bb79a2944fe0383e8a094166575630d01c358e7395
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/boundary_conditions -&gt; core Relation
+
+/home/runner/work/amr-wind/amr-wind/src/boundary\_conditions -&gt; core Relation
+================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000006_000008.html

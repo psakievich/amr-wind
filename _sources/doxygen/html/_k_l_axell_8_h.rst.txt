@@ -1,0 +1,14 @@
+.. meta::90d8baf212495288a7188361a7b4164b1cf817be56adc646789f6015b34b9c5ac1cfdb8faa5527959fd3bad7a106f28763d2dbd1e17967be892dace0bc4ba225
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/turbulence/RANS/KLAxell.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/turbulence/RANS/KLAxell.H File Reference
+================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _k_l_axell_8_h.html

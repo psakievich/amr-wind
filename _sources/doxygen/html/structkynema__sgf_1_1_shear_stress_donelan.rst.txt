@@ -1,0 +1,14 @@
+.. meta::24f38deaa574478e8ff2480ab262eb4d779351c4b77038a2740ccecef6d469140fcb37ecabb6e19617c5041fadf8e18cf0bf5702c9b40c0dfbd1720d5e3cfdc3
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ShearStressDonelan Struct Reference
+
+ShearStressDonelan Struct Reference
+===================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_shear_stress_donelan.html

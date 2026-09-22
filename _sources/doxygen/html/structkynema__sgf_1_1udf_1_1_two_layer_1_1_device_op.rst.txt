@@ -1,0 +1,14 @@
+.. meta::2a0567d7e338944f25914c1aad0afbe4513836e46e518c5be2f9da2cc7b553f22238925c620f427b2a73766567cb9988e4731713b613cffd06f80bb683ecc452
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::udf::TwoLayer::DeviceOp Struct Reference
+
+DeviceOp Struct Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1udf_1_1_two_layer_1_1_device_op.html

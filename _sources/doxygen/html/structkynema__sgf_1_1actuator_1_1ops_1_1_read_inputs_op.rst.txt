@@ -1,0 +1,14 @@
+.. meta::1a6e3c56965fc2fc1568f73da4dcc392f47c0481ddd7e591d34591aab1cac19dff9058c8b535b4700d682e32ad5e1acc51ce16c72f9bc988aa8d433f035198ac
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::ReadInputsOp&lt; ActTrait, SrcTrait, typename &gt; Struct Template Reference
+
+ReadInputsOp&lt; ActTrait, SrcTrait, typename &gt; Struct Template Reference
+============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_read_inputs_op.html

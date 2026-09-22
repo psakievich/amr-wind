@@ -1,0 +1,14 @@
+.. meta::e24781382e16eda0cc8d100ecccffcd7a45433e9acb200cf7019af38bd135a40028ed2924d7994c02c1134d3990e7b8d6b7c28fdca25cb40100c7c0ee347bc12
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::DensitySource Class Reference
+
+DensitySource Class Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1_density_source.html

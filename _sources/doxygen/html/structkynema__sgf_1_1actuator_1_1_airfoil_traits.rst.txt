@@ -1,0 +1,14 @@
+.. meta::f44fe1c37a6bfb275b755e62996d33063f326f00875860e157f2532c2c9f4578de935fa7ecf888ce587f7e2a036162f7d83fda189f636645c8c02daff55fef7b
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::AirfoilTraits&lt; T &gt; Struct Template Reference
+
+AirfoilTraits&lt; T &gt; Struct Template Reference
+==================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1_airfoil_traits.html

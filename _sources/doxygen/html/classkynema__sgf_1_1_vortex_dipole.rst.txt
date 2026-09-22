@@ -1,0 +1,14 @@
+.. meta::18d13751cc03a0fbb3bd1e832e7dccc0a951971ee64ee83b5f6353a496491e2c6f2843a6f93928235c5bc35fd8c2f80fdac2f8ab0a5d5990ff78c15beb54551d
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::VortexDipole Class Reference
+
+VortexDipole Class Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_vortex_dipole.html

@@ -1,0 +1,14 @@
+.. meta::f1efd9e0f3e067b175fd62a89115970767046e7471899ca5620a42be47bc3ae7de13ee1da1c34bdfc2a7de404f1c593d1d547b649fe8d495dcc5a779adc0632e
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UpdatePosOp&lt; TurbineKynemaFMB, SrcTrait &gt; Struct Template Reference
+
+UpdatePosOp&lt; TurbineKynemaFMB, SrcTrait &gt; Struct Template Reference
+=========================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_update_pos_op_3_01_turbine_kynema_f_m_b_00_01_src_trait_01_4.html

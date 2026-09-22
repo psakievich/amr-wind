@@ -1,0 +1,14 @@
+.. meta::61301e23f64cd0f86e9369ff2bd92320cf825c0ac38045bb3c50f1f31171d24968567161c01147a7d776b70e5963678d7315a5ee831e052073d81230fb71ab56
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/tagging/FieldRefinement.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/tagging/FieldRefinement.H File Reference
+==========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _field_refinement_8_h.html

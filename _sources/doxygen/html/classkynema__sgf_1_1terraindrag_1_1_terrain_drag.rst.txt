@@ -1,0 +1,14 @@
+.. meta::6822c4d3b756a69ed031aedfdf355129fcffa2239c123555cdf423e397457e26260e98dfdfa8c9ae3a61134c20f4a959fa914372ba94d3c1274e4c902ac3abd2
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::terraindrag::TerrainDrag Class Reference
+
+TerrainDrag Class Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1terraindrag_1_1_terrain_drag.html

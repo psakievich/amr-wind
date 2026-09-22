@@ -1,0 +1,14 @@
+.. meta::97d5badf4e23d617c31514bb417752338803d89ca3affc38fcc01f77e8a0adab2ef862adcf2c6fe217708ce148c61ec23813697c8bc5b186b1fe0c1623368822
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::TwoDimGaussianPulseFV Struct Reference
+
+TwoDimGaussianPulseFV Struct Reference
+======================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_two_dim_gaussian_pulse_f_v.html

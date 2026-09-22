@@ -1,0 +1,14 @@
+.. meta::ab9dac8de68551204322ce4fc0a7884bf759c2438af8ec90a257b11bb5a291d1250696669fb79706a5e02cd809c66ac4ec1b3d0061f779d6a15bcee556760f01
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/sampling/PlaneSampler.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/sampling/PlaneSampler.H Source File
+=====================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _plane_sampler_8_h_source.html

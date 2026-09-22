@@ -1,0 +1,14 @@
+.. meta::ba94d5efcc3c9073b1d7628b5e212c7002414e446a383c05db6720f23973dbfa1346fb5b3ed466d89fa93313a94af556dc0277b9ad8daee2613f5d6173ea0c88
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::udf::CustomVelocity Struct Reference
+
+CustomVelocity Struct Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1udf_1_1_custom_velocity.html
