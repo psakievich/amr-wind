@@ -1,0 +1,14 @@
+.. meta::41fb647a272b8fef13f2af39d4ebc50cb337a3ae77432d63fb0240bd485abed0c1727aaead8022ec150418938e2d1636c91285896b228184781c38b8cd9d6118
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::udf::PowerLawProfile Struct Reference
+
+PowerLawProfile Struct Reference
+================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1udf_1_1_power_law_profile.html

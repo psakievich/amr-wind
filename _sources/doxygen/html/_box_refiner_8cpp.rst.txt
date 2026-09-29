@@ -1,0 +1,14 @@
+.. meta::02b4c658017d23295ad24066d496e0726c43814485aa28520ff4a9d77737c5e4b17e2558d105642a4bdc18548406839d554ffe07fbbf0457cb6ec756f3bff0a3
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/tagging/BoxRefiner.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/tagging/BoxRefiner.cpp File Reference
+=======================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _box_refiner_8cpp.html

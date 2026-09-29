@@ -1,0 +1,14 @@
+.. meta::5c195b46a9f8f83536203ec7e686d5a0afe143745c979b88d10c6addbe811aed479d7834eefbdfca4e0f90313be6f77cea694dc0d929e714f43ecc677d13e5d5
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ComponentView Struct Reference
+
+ComponentView Struct Reference
+==============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1_component_view.html

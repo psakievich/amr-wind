@@ -1,0 +1,14 @@
+.. meta::df10f0a748d5ab517ec7c345fc34d970388c3286c38214258ce9e3e76af4871b14e30ae7a17c0b15c1e99617c01defe9ba14033c426d56211edc180f915c5033
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::SynthTurbDeviceData Struct Reference
+
+SynthTurbDeviceData Struct Reference
+====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_synth_turb_device_data.html

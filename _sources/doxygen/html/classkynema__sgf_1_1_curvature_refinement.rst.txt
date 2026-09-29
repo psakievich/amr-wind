@@ -1,0 +1,14 @@
+.. meta::fb144b7f257694242900fb2e5b120342edf08ea3805aed1b4da59b4a0cb4b5a5471025dc7d90d1e20dc920afdc0bfa11a864ffaf83dbf9a4830f60ef2d0a318c
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::CurvatureRefinement Class Reference
+
+CurvatureRefinement Class Reference
+===================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_curvature_refinement.html

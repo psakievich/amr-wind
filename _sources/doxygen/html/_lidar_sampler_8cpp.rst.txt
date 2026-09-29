@@ -1,0 +1,14 @@
+.. meta::8c6170d14e53698626f8078760af785db1e5b154fa6a4150554957391c0cf1b8d01ebd14f2795c0591efe506dc0b9f5700d14d57f89a6b9c028a408093fab006
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/sampling/LidarSampler.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/sampling/LidarSampler.cpp File Reference
+==========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _lidar_sampler_8cpp.html

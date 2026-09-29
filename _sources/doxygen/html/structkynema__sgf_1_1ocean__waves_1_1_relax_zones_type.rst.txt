@@ -1,0 +1,14 @@
+.. meta::9640e358ca36de80ac723881f7914b43c5ff84baec24649f30734110373f48e1fa96298e45b1ac6db2470af5bb88afaf9728fec8c03b79948a14db13630daf71
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ocean_waves::RelaxZonesType Struct Reference
+
+RelaxZonesType Struct Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ocean__waves_1_1_relax_zones_type.html

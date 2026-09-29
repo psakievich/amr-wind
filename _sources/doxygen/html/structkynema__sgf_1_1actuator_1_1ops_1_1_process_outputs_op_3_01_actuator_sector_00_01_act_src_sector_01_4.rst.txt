@@ -1,0 +1,14 @@
+.. meta::b169017fb884e54168dd5f510180ad6f8dd9485271b3c9fff36f589d691df3867c32062e7b7f1f2975a8461f8cf8e3c64112f06409821fdb4f908ae0aef2851d
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::ProcessOutputsOp&lt; ActuatorSector, ActSrcSector &gt; Struct Reference
+
+ProcessOutputsOp&lt; ActuatorSector, ActSrcSector &gt; Struct Reference
+=======================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_process_outputs_op_3_01_actuator_sector_00_01_act_src_sector_01_4.html

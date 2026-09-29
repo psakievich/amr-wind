@@ -1,0 +1,14 @@
+.. meta::6fe4e8d258086fcfdf6456d01c053f2a73923d115941250d13d16d1ce6df3b58f2ad20ba72dd1c2566f6da3cc6c7c836a3910a18637bcff06748d27fc8d2a7e9
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::ActSrcOp&lt; Drone, ActSrcDrone &gt; Class Reference
+
+ActSrcOp&lt; Drone, ActSrcDrone &gt; Class Reference
+====================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1actuator_1_1ops_1_1_act_src_op_3_01_drone_00_01_act_src_drone_01_4.html

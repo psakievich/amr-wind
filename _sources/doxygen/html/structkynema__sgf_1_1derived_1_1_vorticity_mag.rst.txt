@@ -1,0 +1,14 @@
+.. meta::9b17cffbd634f5c4e5ea140a27783ed00f10d7ec064aa858e9b19d9b30e812b8324deb4c443f2efb518417a140bf020820be243efddf4f448a74d59832e1956a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::derived::VorticityMag Struct Reference
+
+VorticityMag Struct Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1derived_1_1_vorticity_mag.html

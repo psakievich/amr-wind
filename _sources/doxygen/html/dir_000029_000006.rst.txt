@@ -1,0 +1,14 @@
+.. meta::7cc41c13186f645c53973eab286814ad68e8771b14a2865f3fabe117c85131a60da1416e6c51cf682f0dbf5bdb0b3edd75f3ade04d1a0d4419be313d17aeed5b
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/multiphase -&gt; boundary_conditions Relation
+
+/home/runner/work/amr-wind/amr-wind/src/physics/multiphase -&gt; boundary\_conditions Relation
+==============================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000029_000006.html

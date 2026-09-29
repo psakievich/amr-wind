@@ -1,0 +1,14 @@
+.. meta::05824b0499db3ad2104b52cd7250a513486f98bdd6f0e2efc762dec92106a705f8dc1a8226261e87633c372193ef2dd4630cca3d420c83670b4840c4433c0267
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/ChannelFlow.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/physics/ChannelFlow.H File Reference
+============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _channel_flow_8_h.html

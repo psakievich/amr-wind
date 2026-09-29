@@ -1,0 +1,14 @@
+.. meta::315ab446955aa90977eeb1eaee31f8cd0f887e26f8ff7a560642a6da8ba27d8b4786d3dd02405eba2158fad0aaf4d1ce32da6b2baf006f5a30a988ea04292a27
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::SrcTermOpBase&lt; PDE &gt; Struct Template Reference
+
+SrcTermOpBase&lt; PDE &gt; Struct Template Reference
+====================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_src_term_op_base.html

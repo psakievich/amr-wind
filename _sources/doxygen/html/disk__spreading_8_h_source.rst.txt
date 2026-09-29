@@ -1,0 +1,14 @@
+.. meta::82f419adaac08fa9f49bcd0e7d6567a44f6ca6834a92fd02d970ff44f51e193f20a08292cb39b1dd2ede058c22bc861f1160e9325867101d7e971bba59101cb5
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/disk/disk_spreading.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/disk/disk\_spreading.H Source File
+================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: disk__spreading_8_h_source.html

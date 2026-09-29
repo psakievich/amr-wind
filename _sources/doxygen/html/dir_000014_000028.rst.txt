@@ -1,0 +1,14 @@
+.. meta::d9a9c3a55d6afd9b92eb14a8e8eeee8b963b11893597b116ca3073637ecf03abe54eaa1b1967ee41cf95c79a72559e28416c22f264f824b429592aeb7d14f46a
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/drone -&gt; motion Relation
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/drone -&gt; motion Relation
+=========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000014_000028.html

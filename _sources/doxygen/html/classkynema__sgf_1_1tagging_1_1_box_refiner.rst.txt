@@ -1,0 +1,14 @@
+.. meta::3d370c31428e5580606ba92134d48b4ad7bd7d701057b468f336f7ff95a9c7c61dc742dd0cf40eb827522299af33e4d672fc36bc5d622bb567558bf5cb2a69c3
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::tagging::BoxRefiner Class Reference
+
+BoxRefiner Class Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1tagging_1_1_box_refiner.html

@@ -1,0 +1,14 @@
+.. meta::42a3da5509875fcead8a7c3adb1a4d1153193d76dafc918daf52828ce760a3b2b8c952bfcee97d562c34c16c4cb0e39033f3313582611fb90a39301366852153
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::kinetic_energy::KineticEnergy Class Reference
+
+KineticEnergy Class Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1kinetic__energy_1_1_kinetic_energy.html

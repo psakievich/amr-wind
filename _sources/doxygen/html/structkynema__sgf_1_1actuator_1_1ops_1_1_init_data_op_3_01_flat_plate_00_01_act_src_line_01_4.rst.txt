@@ -1,0 +1,14 @@
+.. meta::0a899a3e16b9dd1bb1028518422da6ac8dddb9b3c44591d649e2e9e9b3c5641a42e5358cfb57386c3d7ccc63f2ba61405bfb38b985b05ba636124e4965e3e37b
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::InitDataOp&lt; FlatPlate, ActSrcLine &gt; Struct Reference
+
+InitDataOp&lt; FlatPlate, ActSrcLine &gt; Struct Reference
+==========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_init_data_op_3_01_flat_plate_00_01_act_src_line_01_4.html

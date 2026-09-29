@@ -1,0 +1,14 @@
+.. meta::fde28332345df80bd6e6429498d8778997d337a66079b2be3299a77d18df6394eead5d8f77dd8cba6fe2c765951fd443795457ab1d1af7eae518d2e663ea155c
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::TurbulenceOp&lt; TKE &gt; Struct Reference
+
+TurbulenceOp&lt; TKE &gt; Struct Reference
+==========================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_turbulence_op_3_01_t_k_e_01_4.html

@@ -1,0 +1,14 @@
+.. meta::39ece22c4a41f8b3f76a35f287f343ecf7ea251cac452e67ef55e4098a5e0aabed204713073c185b70d18c14101bd39d9026ff0f26b456f77bceee2b29994bad
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/VortexRing.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/physics/VortexRing.cpp File Reference
+=============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _vortex_ring_8cpp.html

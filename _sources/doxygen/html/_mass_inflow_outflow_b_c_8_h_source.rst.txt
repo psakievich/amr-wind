@@ -1,0 +1,14 @@
+.. meta::046280fab66f8c25a965c7c621fd31600a27cffc01f4317c73d088268f1975cb6c3ca975c4355097409e7445484b144d73c62262c6021f75bcd4049bfe47b269
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/boundary_conditions/MassInflowOutflowBC.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/boundary\_conditions/MassInflowOutflowBC.H Source File
+==============================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _mass_inflow_outflow_b_c_8_h_source.html

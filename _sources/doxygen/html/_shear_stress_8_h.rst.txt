@@ -1,0 +1,14 @@
+.. meta::693f84071cbf271f387d9e8ac3533fd4eb69ba71409b653c2ce7f76963d30854b17aa752ead66afad699c897b89cad9b2d5fac3547c2f7ed1411d119bf8111fb
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/ShearStress.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/ShearStress.H File Reference
+=================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _shear_stress_8_h.html

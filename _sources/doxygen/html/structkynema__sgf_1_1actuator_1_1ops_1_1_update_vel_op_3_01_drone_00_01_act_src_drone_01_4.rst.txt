@@ -1,0 +1,14 @@
+.. meta::c5682fd87b0e9de917df2e76c14684bbbb548cea7817210470905fbb1de6f1ef52482fa3d82be80ba027c0890298cf62e9564b77575fb2e9d7c10f37ef9753eb
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::UpdateVelOp&lt; Drone, ActSrcDrone &gt; Struct Reference
+
+UpdateVelOp&lt; Drone, ActSrcDrone &gt; Struct Reference
+========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1ops_1_1_update_vel_op_3_01_drone_00_01_act_src_drone_01_4.html

@@ -1,0 +1,14 @@
+.. meta::7391b0d92acb015f5890655875dc6b70815f3267ced0377f3ecbb45bf700d4fbce8ccdc6fd451b31805ed33cf7623534f8682bfd3d9506edb1bd3fd407aeed94
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/output_quantities/WaveEnergy.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/output\_quantities/WaveEnergy.H Source File
+=============================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _wave_energy_8_h_source.html

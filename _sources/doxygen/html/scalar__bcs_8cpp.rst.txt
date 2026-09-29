@@ -1,0 +1,14 @@
+.. meta::db85aa209870222504f3ad0b0771f96162fc4d2c1b222a5de96d69fb5c3fdd255deb8219bf3b423b828e22f290612f7cb946208ec8eb8f93e2e01dc8bf2f02ca
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/boundary_conditions/scalar_bcs.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/boundary\_conditions/scalar\_bcs.cpp File Reference
+===========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: scalar__bcs_8cpp.html

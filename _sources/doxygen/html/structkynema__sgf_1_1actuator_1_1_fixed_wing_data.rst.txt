@@ -1,0 +1,14 @@
+.. meta::7680c9efd0be00e28e42a58ee9d86b80b57d5e01fcc0dee0c1c80fcc69e7c39deb0f1b6b04fe246984777c679e6404b779d05f7f7dc5b29d3eb2cd5d468ea77a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::FixedWingData Struct Reference
+
+FixedWingData Struct Reference
+==============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1_fixed_wing_data.html

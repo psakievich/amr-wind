@@ -1,0 +1,14 @@
+.. meta::84ce986d350153b5aa60b63fee06a5146d242f472ebf466566d0d6afd7f100a0cf2a2161dc782a4eaa5907a0b80750e0425dd2d2aa9b990c49124b5db882c6a6
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::PhysicsMgr Class Reference
+
+PhysicsMgr Class Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_physics_mgr.html

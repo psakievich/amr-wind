@@ -1,0 +1,14 @@
+.. meta::49e8cd081cb508eb284b55ddf4fc7ff065dc06624e23b2cd9516df041d5d75bd4598b422f8a097f4d5106ca1ceaf83a6dc146354d63e4a84417bd54f0a4f6ac9
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ThirdMomentAveraging Class Reference
+
+ThirdMomentAveraging Class Reference
+====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_third_moment_averaging.html

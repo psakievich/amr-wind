@@ -1,0 +1,14 @@
+.. meta::e05c4f39d001429484ba29ba34d53df63492360ded714d453d7b4a0cec8a5542496df9a091df23656206500fe22237a6211ff0c1b2a2cb7f5765ba04717e8d95
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::turbulence::TurbModel&lt; Transport &gt; Class Template Reference
+
+TurbModel&lt; Transport &gt; Class Template Reference
+=====================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1turbulence_1_1_turb_model.html

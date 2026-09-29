@@ -1,0 +1,14 @@
+.. meta::ae63732adbc398e5e118abee5279fcf561d4e6576a1aab62595c55bc9b46f00afe25cd691dd1bcc089577cf23f46700914e4f25a1024e44dc6b6e36c0dd1a831
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::ActSrcOp&lt; ActTrait, ActSrcDisk, std::enable_if_t&lt; std::is_base_of_v&lt; DiskType, ActTrait &gt; &gt; &gt; Class Template Reference
+
+is\_base\_of\_v&lt; DiskType, ActTrait &gt; &gt; &gt; Class Template Reference
+==============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1actuator_1_1ops_1_1_act_src_op_3_01_act_trait_00_01_act_src_disk_00_01std_1_ebca356fcd5bf2d26a89d157a4d97d95.html

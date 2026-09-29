@@ -1,0 +1,14 @@
+.. meta::bf11939aee4ee6af2f0d78d7f2c18baf43565498b2812b293afcde59424b853bd7e5dd9a9ee52bf8854bf87e74ab5588edf372aed610f87f8609837f79d2324a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ocean_waves::ops::UseDefaultOp&lt; WaveTheoryTrait &gt; Struct Template Reference
+
+UseDefaultOp&lt; WaveTheoryTrait &gt; Struct Template Reference
+===============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ocean__waves_1_1ops_1_1_use_default_op.html

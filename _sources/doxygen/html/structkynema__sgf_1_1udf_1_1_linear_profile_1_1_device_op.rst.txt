@@ -1,0 +1,14 @@
+.. meta::e329965b5fb5714ee4a85882f0e22ff2d70828bfd7282a0cf6b8c46313edf981c414f77386ddac4353afbce3828a5de67719bd120e87b126fe5e384221041197
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::udf::LinearProfile::DeviceOp Struct Reference
+
+DeviceOp Struct Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1udf_1_1_linear_profile_1_1_device_op.html

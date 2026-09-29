@@ -1,0 +1,14 @@
+.. meta::c3220e01fb42e78d42ebdbfa445bbc40af8fe704db1b3ea427fbd046cafa5269aedcc6adfe10da31a602704a932c69622116340021dcc9522a92d6456253bc4a
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/console_io.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/console\_io.cpp File Reference
+================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: console__io_8cpp.html

@@ -1,0 +1,14 @@
+.. meta::6c48196b48fd11a59ee8336603ff800517bd238a070ee73bb2a8797f972b6fd27cbfdf6dd84494b0d9020ca0ca0bdc5a54c7e9cbd5ed0c09eb5a92f05165c144
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::derived::Gradient Struct Reference
+
+Gradient Struct Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1derived_1_1_gradient.html

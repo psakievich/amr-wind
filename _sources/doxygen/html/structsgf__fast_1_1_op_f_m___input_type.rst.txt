@@ -1,0 +1,14 @@
+.. meta::9a57885afeb526192919148ed479fa30dbf4a5a3a7e59feb922368532f362eb8b13ef69523afb155030d095e0d50e1834a42695fb603ff214c91128fb42c5713
+
+:orphan:
+
+.. title:: Kynema-SGF API: sgf_fast::OpFM_InputType Struct Reference
+
+OpFM\_InputType Struct Reference
+================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structsgf__fast_1_1_op_f_m___input_type.html

@@ -1,0 +1,14 @@
+.. meta::bc7266302e3b489f6f68e70322b3bab3e2cf38a0436c42784b84b90825690a4058984afad8186fe9db6e733ddd6403e3dd75f5aa8a2b5b74466fc24d08ffcb0d
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::MOSD Struct Reference
+
+MOSD Struct Reference
+=====================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_m_o_s_d.html

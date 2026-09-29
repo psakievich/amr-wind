@@ -1,0 +1,14 @@
+.. meta::bb13d809728e95313e6ac8ab66a81f86a3d39308d3552c319b835b14b3e06ab819b937ed1ed9c210f442606f3c668be3f0445e373d8617f7f228102da2305fd4
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::MultiLevelVector Class Reference
+
+MultiLevelVector Class Reference
+================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_multi_level_vector.html

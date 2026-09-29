@@ -1,0 +1,14 @@
+.. meta::560226a91a97e6a9729064d74ca518a8838b7fe101eb6855ef9e43d85ae2a531edd091f3bfb4a2d498f4171d26ee91a1c3513e602ae2ef1a480eef945369e725
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::fvm::stencil::StencilJLO Struct Reference
+
+StencilJLO Struct Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1fvm_1_1stencil_1_1_stencil_j_l_o.html

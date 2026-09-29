@@ -1,0 +1,14 @@
+.. meta::4ed74b6b4bfa3992a91ab7fcd55e1ede14552d42c01ac0dcaa36d13c614bb8857cde01c54e5808338434d8b1f6dac2eec828751c995edb47545231823d8ee2ea
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/turbulence/LES/Smagorinsky.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/turbulence/LES/Smagorinsky.cpp File Reference
+=====================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _smagorinsky_8cpp.html

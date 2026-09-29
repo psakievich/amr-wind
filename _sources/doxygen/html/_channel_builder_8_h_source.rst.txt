@@ -1,0 +1,14 @@
+.. meta::57608b6d473721dc4ff53f38e7d29ceb961303258ef35b1f27655c2c8eed983f850ee277df0199ab9cc1fe3510ead9ecf6fe365f2a34a01d6bad0597289fed18
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/physics/multiphase/ChannelBuilder.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/physics/multiphase/ChannelBuilder.H Source File
+=======================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _channel_builder_8_h_source.html

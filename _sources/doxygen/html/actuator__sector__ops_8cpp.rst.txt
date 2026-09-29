@@ -1,0 +1,14 @@
+.. meta::b5843874fcd455223ed04e9fe43459743e0911a45038f8be0d6fe524f270e2f9800afc3bb5464cd994d97954d6cdd124c6dc7b87b44a3dc8f31c0fbce584b317
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/sector/actuator_sector_ops.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/sector/actuator\_sector\_ops.cpp File Reference
+=============================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: actuator__sector__ops_8cpp.html

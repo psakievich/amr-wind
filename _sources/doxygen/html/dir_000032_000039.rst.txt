@@ -1,0 +1,14 @@
+.. meta::2e01a708288b0bd5760a5046598eafab23a6d3ef49fbe8ea3b081e153e4c459d01c167b7e58081d9c5812c36d0da5e28df4678e19cb8f9535f6dfa391d714d2c
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/output_quantities -&gt; sampling Relation
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/output\_quantities -&gt; sampling Relation
+============================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000032_000039.html

@@ -1,0 +1,14 @@
+.. meta::d492d9225f91d0a45507c0e7663a6ca4b3cfbe006081a17c7a13245b2f2fa19d26d24ebfdaaf9ec1fe2aa7b2467665e28b9188683621c21605b3b25895b612f5
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::ops::ActSrcOp&lt; ActTrait, SrcTrait, typename &gt; Class Template Reference
+
+ActSrcOp&lt; ActTrait, SrcTrait, typename &gt; Class Template Reference
+=======================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1actuator_1_1ops_1_1_act_src_op.html

@@ -1,0 +1,14 @@
+.. meta::895e17fba31cb52da02c5f86944bc42b5993f797080d3fbb0e2c57dd8a0583335abb9839fcb0520b6147ba95ce6d581a4f2d604477c371150ea125351d34e557
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ib::ops::UpdateVelOp&lt; GeomTrait, typename &gt; Struct Template Reference
+
+UpdateVelOp&lt; GeomTrait, typename &gt; Struct Template Reference
+==================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ib_1_1ops_1_1_update_vel_op.html

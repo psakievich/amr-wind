@@ -1,0 +1,14 @@
+.. meta::42150e54c0f357c1f4229b6c92be3987dc198b3353513abfefdef0a7b27186e9500065787b5a7501f0fa550eb7d8909a159fb219b2ba73f024d2f3ff28253220
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ViewField&lt; T &gt; Class Template Reference
+
+ViewField&lt; T &gt; Class Template Reference
+=============================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_view_field.html

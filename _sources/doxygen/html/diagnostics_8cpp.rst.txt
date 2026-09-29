@@ -1,0 +1,14 @@
+.. meta::54651fedc36107635c0baf7b087c8984292561ec997301eb5309fc2c5dc0981f2619f6f07d0eb8a1770ebac6d498930a624c22a70c0e74549c31c8eb1ac609ea
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/diagnostics.cpp File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/diagnostics.cpp File Reference
+================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: diagnostics_8cpp.html

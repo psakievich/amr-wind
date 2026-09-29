@@ -1,0 +1,14 @@
+.. meta::e839ff6029ebaad0788fe4bcd0eb4fb6c15dc092f823d148b079dc69ef07e5589be4882ee3b0838e0879101750007deee8586b5fbb77fcf97d744c0e5f79fb43
+
+:orphan:
+
+.. title:: Kynema-SGF API: ext_turb::FastSolverData Struct Reference
+
+FastSolverData Struct Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structext__turb_1_1_fast_solver_data.html

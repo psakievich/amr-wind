@@ -1,0 +1,14 @@
+.. meta::f82eafaf7c082a2d24d36a347fb012506ff5394b493ddc2152b1629e46e74ef2f093f899d97bee74573ef1dfde16ffab8d34742286170eee7df0cd0a1e9d5754
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ABLTempWallFunc Class Reference
+
+ABLTempWallFunc Class Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_a_b_l_temp_wall_func.html

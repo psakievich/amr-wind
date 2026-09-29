@@ -1,0 +1,14 @@
+.. meta::1e79b998ca85af672b0896301d859ca2e8dce318e9f8f13b82e61b2c7d308102168fa7a177c7a4946620b38b85279bc10804047294697a2cbe74323978c09d23
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::synth_turb::LinearShearOp Struct Reference
+
+LinearShearOp Struct Reference
+==============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1synth__turb_1_1_linear_shear_op.html

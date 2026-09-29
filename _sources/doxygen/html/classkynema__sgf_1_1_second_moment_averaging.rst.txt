@@ -1,0 +1,14 @@
+.. meta::7337d9f0a12ee2b31bd4da18c3d00f16573bbc0b8990712996ff1dad2b022f0033471fb81d96e7b56db449d371eaff76ad62116fbf0b514d2107b7633c27d453
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::SecondMomentAveraging Class Reference
+
+SecondMomentAveraging Class Reference
+=====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_second_moment_averaging.html

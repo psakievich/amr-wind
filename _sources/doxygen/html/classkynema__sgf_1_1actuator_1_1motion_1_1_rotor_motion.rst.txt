@@ -1,0 +1,14 @@
+.. meta::0699e61e21efbab947b5128e47895f873516e64e3f71f7ae11d9202890176f1580a6a954a2c62657a325183e8f9aed6847fe6c99264a6015f807843a1c4f4e4a
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::motion::RotorMotion Class Reference
+
+RotorMotion Class Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1actuator_1_1motion_1_1_rotor_motion.html

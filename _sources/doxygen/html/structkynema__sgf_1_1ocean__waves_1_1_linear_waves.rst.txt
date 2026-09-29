@@ -1,0 +1,14 @@
+.. meta::05e52b997e3282b721e481d56d104eda50ae516592d3b9b2570d597be5bac2fa5a3c3dde7c26957235ee4f07a488ea77487a9663a6c1f02adafd153b2fc07868
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ocean_waves::LinearWaves Struct Reference
+
+LinearWaves Struct Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ocean__waves_1_1_linear_waves.html

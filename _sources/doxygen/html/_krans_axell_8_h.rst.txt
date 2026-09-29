@@ -1,0 +1,14 @@
+.. meta::250e556bfa49f0f405d94e082ebbe9a37cc06d7996ba5d61684011e3e100738d59b9200c25c9265545b93acc4ee8de176050164379c8bced7cba6085111aac6b
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/tke/source_terms/KransAxell.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/tke/source\_terms/KransAxell.H File Reference
+=======================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _krans_axell_8_h.html

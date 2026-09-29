@@ -1,0 +1,14 @@
+.. meta::594df2f3757f5de89ba680c2e6a662450266212856bb49590dd937546c2b73eae2ba326fd14a9db564017a07a7d310e687a18cc468a0deb5def3537b01062163
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::RainDrop Class Reference
+
+RainDrop Class Reference
+========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_rain_drop.html

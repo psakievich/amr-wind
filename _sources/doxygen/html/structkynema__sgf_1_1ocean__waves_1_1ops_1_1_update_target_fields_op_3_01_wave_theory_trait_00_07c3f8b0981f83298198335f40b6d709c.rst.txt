@@ -1,0 +1,14 @@
+.. meta::e369783f40dbabae3973f8bdab2fedeca446d06fb258369fbb1825bdcaf72b74885e9c9d597e69225702240ec64ed64705fdc46a17117b788134d07727083ad2
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ocean_waves::ops::UpdateTargetFieldsOp&lt; WaveTheoryTrait, typename std::enable_if_t&lt; std::is_base_of_v&lt; RelaxZonesType, WaveTheoryTrait &gt; &gt; &gt; Struct Template Reference
+
+is\_base\_of\_v&lt; RelaxZonesType, WaveTheoryTrait &gt; &gt; &gt; Struct Template Reference
+============================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ocean__waves_1_1ops_1_1_update_target_fields_op_3_01_wave_theory_trait_00_07c3f8b0981f83298198335f40b6d709c.html

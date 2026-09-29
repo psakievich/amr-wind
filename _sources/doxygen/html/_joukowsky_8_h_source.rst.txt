@@ -1,0 +1,14 @@
+.. meta::cc306c75a52260e904e88af28bd7eb58f896a4c3a81a0372b326634c02bc4efd801b4bbabd80ca85d5c8b70cab0b2d4b065f66983afc8d303dccf05c42d7b9e1
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/disk/Joukowsky.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/disk/Joukowsky.H Source File
+==========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _joukowsky_8_h_source.html

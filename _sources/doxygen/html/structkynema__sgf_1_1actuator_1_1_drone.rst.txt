@@ -1,0 +1,14 @@
+.. meta::3d0f30c5dca5dcef3a4f69fa78c4d1a097224947f854fd5191d2abeb7ed697f5580d6a56a4e06957197c6398e5bcd91ec1568f24fe54429ac5f065c3bfbfb0ec
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::Drone Struct Reference
+
+Drone Struct Reference
+======================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1_drone.html

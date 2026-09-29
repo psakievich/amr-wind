@@ -1,0 +1,14 @@
+.. meta::0368197dd901b1ea2d22c64d309fc1aa4695a8dd8622c4a8eaf4a1107f7a81bb9a636d67c56400184936438d51b533b9406786c54c6ce759ecb63d9790a026c7
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/core/CollMgr.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/core/CollMgr.H File Reference
+=====================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _coll_mgr_8_h.html

@@ -1,0 +1,14 @@
+.. meta::652adbfac60ddd1107aa35924aabe4a3fed38c0899002612a24204ae63cd60aa3a68cd0ebff2c749d3fc44b45539b92111fd235e6ac2d1fc1d5f4f4ee51b3825
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::TurbineInfo Struct Reference
+
+TurbineInfo Struct Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1actuator_1_1_turbine_info.html

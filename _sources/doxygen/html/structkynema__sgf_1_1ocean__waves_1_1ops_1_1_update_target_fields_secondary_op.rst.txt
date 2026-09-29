@@ -1,0 +1,14 @@
+.. meta::cfc8045aa50da531825d9ab605166023911a929fec177595b2df13b20d44fb23a406e390c6450655693f3e2a25036cd48d17d915e03355131fd7aa062e095e62
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ocean_waves::ops::UpdateTargetFieldsSecondaryOp&lt; WaveTheoryTrait, typename &gt; Struct Template Reference
+
+UpdateTargetFieldsSecondaryOp&lt; WaveTheoryTrait, typename &gt; Struct Template Reference
+==========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1ocean__waves_1_1ops_1_1_update_target_fields_secondary_op.html

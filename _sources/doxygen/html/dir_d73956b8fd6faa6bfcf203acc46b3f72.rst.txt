@@ -1,0 +1,14 @@
+.. meta::e95c0d04cfa8843393e9daec24b245c5b7ce23eada9fe1ec82263dba7e2a1a724e2ed5485572ee65ad8cc03dd83b8f4790366e1a6cf6b8ea78933cb03795740b
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/immersed_boundary/bluff_body Directory Reference
+
+/home/runner/work/amr-wind/amr-wind/src/immersed\_boundary/bluff\_body Directory Reference
+==========================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_d73956b8fd6faa6bfcf203acc46b3f72.html

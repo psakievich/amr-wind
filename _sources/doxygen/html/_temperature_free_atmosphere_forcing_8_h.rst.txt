@@ -1,0 +1,14 @@
+.. meta::a904f9d712ff6fff3b1184776a1f8f94ced25a0def490efdc1ed06d175fb0d581584baf3cfc8bce0c310de0fa78e820634d8b3dc29e6ff2a81b7bbdeee92af3f
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/equation_systems/temperature/source_terms/TemperatureFreeAtmosphereForcing.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/equation\_systems/temperature/source\_terms/TemperatureFreeAtmosphereForcing.H File Reference
+=====================================================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _temperature_free_atmosphere_forcing_8_h.html

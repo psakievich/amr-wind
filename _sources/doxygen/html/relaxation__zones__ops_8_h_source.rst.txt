@@ -1,0 +1,14 @@
+.. meta::7777fad4df13c72f379f1832d4b3d5dc16a5a59796beb71da84104ee44efe0225e734f6bbb28db72aced527408ec136b9b55434a53151914cf365ab4a72c1ead
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/ocean_waves/relaxation_zones/relaxation_zones_ops.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/ocean\_waves/relaxation\_zones/relaxation\_zones\_ops.H Source File
+===========================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: relaxation__zones__ops_8_h_source.html

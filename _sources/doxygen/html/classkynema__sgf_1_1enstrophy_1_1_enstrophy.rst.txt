@@ -1,0 +1,14 @@
+.. meta::78ca48a29dc77ed3357277f4ea220d2de1468bf2ba346fcb498aeace33d2ea0b44f81b6b3a88d81f1e50aae293e3e18eafabd7070bf10559f78a3f1db8c45533
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::enstrophy::Enstrophy Class Reference
+
+Enstrophy Class Reference
+=========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1enstrophy_1_1_enstrophy.html

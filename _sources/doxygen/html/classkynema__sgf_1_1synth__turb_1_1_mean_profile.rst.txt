@@ -1,0 +1,14 @@
+.. meta::64c0daae4b89fff39c2ec5aa3bac50e4b7af7b73d6155a08b6cd56f31d71df48b26445eaeb666692b3cd6febee4089a390d2244c34c4ab384bec7f3ca19a30ca
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::synth_turb::MeanProfile Class Reference
+
+MeanProfile Class Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1synth__turb_1_1_mean_profile.html

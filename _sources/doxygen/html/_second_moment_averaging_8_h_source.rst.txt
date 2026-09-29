@@ -1,0 +1,14 @@
+.. meta::4ba8738e5dfca05717985a407438c939311457e7081a5c36f774aae29a37fa2a9c3c126f3efa015efad6a991f523d483163c7e0ba9c9d963f15ea2e89374f994
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/SecondMomentAveraging.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/SecondMomentAveraging.H Source File
+=====================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _second_moment_averaging_8_h_source.html

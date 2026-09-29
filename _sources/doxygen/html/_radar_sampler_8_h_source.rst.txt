@@ -1,0 +1,14 @@
+.. meta::3736da295e1468450cc6519a3b30ab10ce9ae4b03621bfdfa50806780d869742fc66184481f692bdcd0210a6eefd0ac5be222a58923dac9ec135cf3479f53433
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/utilities/sampling/RadarSampler.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/utilities/sampling/RadarSampler.H Source File
+=====================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _radar_sampler_8_h_source.html

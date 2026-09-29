@@ -1,0 +1,14 @@
+.. meta::510dae719b18575a5bb47951b8a45fcb33188e2eaaef90d284837b44ed9e27d12ad07895036d21bc2ee350380fd0620a79a6568d9c8fc3a6eeffc0db7116aeb1
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::actuator::AirfoilLoader Class Reference
+
+AirfoilLoader Class Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1actuator_1_1_airfoil_loader.html

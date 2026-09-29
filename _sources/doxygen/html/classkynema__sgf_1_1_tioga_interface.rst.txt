@@ -1,0 +1,14 @@
+.. meta::3523b2f8aa535f7ea63890eb0766f2f3b6402c35af389f9edd64feebc84b75810d6e2b77d0ba874f18a147af68dbaddc75bb3d15dc60799c2da6b2ff1454906f
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::TiogaInterface Class Reference
+
+TiogaInterface Class Reference
+==============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_tioga_interface.html

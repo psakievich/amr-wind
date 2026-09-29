@@ -1,0 +1,14 @@
+.. meta::fb0187c22e92d3212d56d9496902a021dd07c4978528c6944195e72e107971df24dde2cc7f5623f8496418adafa3f5d9bc72c28f9de270c7d52b4193849a3ec4
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::fvm::Laplacian&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+
+Laplacian&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+==============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1fvm_1_1_laplacian.html

@@ -1,0 +1,14 @@
+.. meta::f001507972c213c95d2a241610cb715181776b782fafcf3a698784b4520bbf4f8fc32ec09115b3a3cb3b95bc529b3b9f6b2a5083082cebe168710ffcf34c27d7
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::ShearStressSchumann Struct Reference
+
+ShearStressSchumann Struct Reference
+====================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_shear_stress_schumann.html

@@ -1,0 +1,14 @@
+.. meta::4aea61cdc1deb10d17aba24fcdc2c078356f0a50cc801930063c0cbf2be7582cc2df143f16e2977e69a7d2efee27353f6ca098d0193fe6193bcc101b2f650a25
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::fvm::StrainRate&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+
+StrainRate&lt; FTypeIn, FTypeOut &gt; Struct Template Reference
+===============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1fvm_1_1_strain_rate.html

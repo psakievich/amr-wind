@@ -1,0 +1,14 @@
+.. meta::be1fd254a734ef23d7f28e4e1e44f0ed11a0f8c3322f4cbd427a9a6551e1acc05373659b60fff32a4b487755ffd1d0e8d2ee553631f97f06fb634f35cb5a9b34
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::rans_convergence::EnvelopeFit Struct Reference
+
+EnvelopeFit Struct Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1rans__convergence_1_1_envelope_fit.html

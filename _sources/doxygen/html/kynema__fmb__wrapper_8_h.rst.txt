@@ -1,0 +1,14 @@
+.. meta::d3840b95262696a5f791ec9ff889843a3e2196657e4ed47890490df99e5df8e4e029bffab371bc52470aa3c9a1ab4b05d6b57ea69edf7e7d3072cbb1c44cffca
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/wind_energy/actuator/turbine/kynema_fmb/kynema_fmb_wrapper.H File Reference
+
+/home/runner/work/amr-wind/amr-wind/src/wind\_energy/actuator/turbine/kynema\_fmb/kynema\_fmb\_wrapper.H File Reference
+=======================================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: kynema__fmb__wrapper_8_h.html

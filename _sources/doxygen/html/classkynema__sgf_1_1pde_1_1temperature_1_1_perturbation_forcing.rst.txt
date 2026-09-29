@@ -1,0 +1,14 @@
+.. meta::23fef5f3946348483ecd5f1a7449fe29dd7a6d55fdc6cab2ac0e6da8055a53603580860c9e90f98e73d3bf759bcdb99404b83c74388b331305f68306b6bea947
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::temperature::PerturbationForcing Class Reference
+
+PerturbationForcing Class Reference
+===================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1temperature_1_1_perturbation_forcing.html

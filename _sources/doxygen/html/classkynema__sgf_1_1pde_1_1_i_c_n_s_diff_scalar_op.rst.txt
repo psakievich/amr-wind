@@ -1,0 +1,14 @@
+.. meta::adc62188aea9afa186c2d4a8da078c21930e8f95a0516e62c37e653e54044b5d755bffe65060b7f13f76635990d6e50ac0a9ee1c561665cd561bea12310a1e84
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::ICNSDiffScalarOp Class Reference
+
+ICNSDiffScalarOp Class Reference
+================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1pde_1_1_i_c_n_s_diff_scalar_op.html

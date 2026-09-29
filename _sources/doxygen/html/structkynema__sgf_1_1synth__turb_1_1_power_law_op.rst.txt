@@ -1,0 +1,14 @@
+.. meta::fd5b52d0a5429c3e1bfe61c6650adad03cbf2d4c35848ad2ebc3e0030e17df8771ef74a7f1400d3d0842bb2a3c13317183d049f88aa768a21fa77ee4f5f62cb6
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::synth_turb::PowerLawOp Struct Reference
+
+PowerLawOp Struct Reference
+===========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1synth__turb_1_1_power_law_op.html

@@ -1,0 +1,14 @@
+.. meta::b5c8783912bfbe16af7847fa596be246d697b277fae4359f228a8c84cbc0ae6cf609870c54b925ac54a04aa3d2f66535743c8d2a0a7b4b79b3013b8fff53bbb7
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::IntScratchField Class Reference
+
+IntScratchField Class Reference
+===============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__sgf_1_1_int_scratch_field.html

@@ -1,0 +1,14 @@
+.. meta::a67ed884989f1ce21ba0eceb74c3d0daadea65341acfde717028ad0b6f04fbb526ecb2463f8541928a97d2f5e16cabfeb163f4a95c286d8a7526dd792f9b2fb9
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::pde::TurbulenceOp&lt; Temperature &gt; Struct Reference
+
+TurbulenceOp&lt; Temperature &gt; Struct Reference
+==================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1pde_1_1_turbulence_op_3_01_temperature_01_4.html

@@ -1,0 +1,14 @@
+.. meta::39d77ecb706633506a7407522343dff381fc8a1166154663a16a2b85ff421d27c586974481ad4fc7def80902fdab63c67ea72a9b912fa59c0ac66de228f66a54
+
+:orphan:
+
+.. title:: Kynema-SGF API: /home/runner/work/amr-wind/amr-wind/src/core/Physics.H Source File
+
+/home/runner/work/amr-wind/amr-wind/src/core/Physics.H Source File
+==================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: _physics_8_h_source.html

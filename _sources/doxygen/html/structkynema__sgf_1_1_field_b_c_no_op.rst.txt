@@ -1,0 +1,14 @@
+.. meta::0d357a80fd22cca79f8629c190584f7fa3a118166063bed290283df7d5940823ac82a56d4ebb30d79aae391212db6b5309865acbae885f1bb630fd18620f2882
+
+:orphan:
+
+.. title:: Kynema-SGF API: kynema_sgf::FieldBCNoOp Struct Reference
+
+FieldBCNoOp Struct Reference
+============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__sgf_1_1_field_b_c_no_op.html
